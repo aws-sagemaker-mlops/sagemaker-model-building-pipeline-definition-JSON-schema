@@ -20,7 +20,7 @@ jobs:
       - name: commit auto generated schema markdown
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: [auto-commit] generate schema markdown
+          commit_message: "[auto-commit] generate schema markdown"
 
 
 
