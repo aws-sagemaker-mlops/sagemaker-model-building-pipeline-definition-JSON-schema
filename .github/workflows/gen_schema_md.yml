@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Auto generate json schema markdown
-        run: jsonschema2md -d ./schema -o ./schema/README.md
+        run: jsonschema2md -d schema -o schema/docs
 
       - name: Commit auto generated schema markdown
         uses: stefanzweifel/git-auto-commit-action@v4
