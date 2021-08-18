@@ -9,4 +9,9 @@ jobs:
       - name: Check out repo
         uses: actions/checkout@v2
       - run: jsonschema2md ./schema/pipeline-definition-schema.json ./schema/README.md
+      - run: git remote set-url origin ${{ secrets.ssh }}
+      - run: git add .
+      - run: git commit -m "update schema markdown @ `date +%s`"
+      - run: git fetch origin master
+      - run: git push origin HEAD:master
 
