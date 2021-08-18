@@ -1,0 +1,2 @@
+# sagemaker-model-building-pipeline-definition-JSON-schema
+Amazon SageMaker Model Building Pipelines is a tool for building machine learning pipelines that take advantage of direct SageMaker integration. Because of this integration, you can create a pipeline and set up SageMaker Projects for orchestration using a tool that handles much of the step creation and management for you. This repository hosts the pipeline definition JSON schema
