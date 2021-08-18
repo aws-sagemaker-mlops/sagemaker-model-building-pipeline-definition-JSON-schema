@@ -6,21 +6,22 @@ jobs:
 
   gen-schema:
     runs-on: ubuntu-latest
-    container: python:3.7
+    container:
+      image: node:14.15.0-alpine3.12
     steps:
       - name: install deps
-        run: python -m pip install jsonschema2md boto3
+        run: npm install -g @adobe/jsonschema2md
 
       - name: check out repo
         uses: actions/checkout@v2
 
       - name: auto generate json schema markdown
-        run: jsonschema2md ./schema/pipeline-definition-schema.json ./schema/README.md
+        run: jsonschema2md -d ./schema/pipeline-definition.schema.json ./schema/README.md
 
       - name: commit auto generated schema markdown
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: "[auto-commit] generate schema markdown"
+          commit_message: "[auto-commit] auto-gen json schema markdown"
 
 
 
