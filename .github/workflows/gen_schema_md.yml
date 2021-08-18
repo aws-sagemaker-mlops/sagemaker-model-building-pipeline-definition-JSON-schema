@@ -3,7 +3,7 @@ on: push
 jobs:
   gen-schema:
     runs-on: ubuntu-latest
-    if: !startsWith(github.event.head_commit.message, '[auto-gen]')
+    if: !startsWith(github.event.head_commit.message, '[auto-commit]')
     container: python:3.7
     steps:
       - run: python -m pip install jsonschema2md boto3
