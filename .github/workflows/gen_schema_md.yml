@@ -6,13 +6,24 @@ jobs:
     if: ${{ !startsWith(github.event.head_commit.message, '[auto-commit]') }}
     container: python:3.7
     steps:
-      - run: python -m pip install jsonschema2md boto3
+      - name: install deps
+        run: python -m pip install jsonschema2md boto3
+
       - name: check out repo
         uses: actions/checkout@v2
-      - run: jsonschema2md ./schema/pipeline-definition-schema.json ./schema/README.md
-      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: auto generate json schema markdown
+        run: jsonschema2md ./schema/pipeline-definition-schema.json ./schema/README.md
+
+      - name: commit auto generated schema markdown
+        uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: [auto-commit] generate schema markdown
+          branch: ${{ github.head_ref }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 
 
