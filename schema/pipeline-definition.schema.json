@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/schema#",
   "$id": "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/",
-  "title": "SageMaker Pipeline Definition JSON schema",
+  "title": "SageMaker Pipeline Definition",
   "type": "object",
   "definitions": {
     "ParameterName": {
