@@ -17,13 +17,16 @@ jobs:
         run: npm install
 
       - name: Install deps
-        run: npm install -g @adobe/jsonschema2md
+        run: npm install -g @adobe/jsonschema2md && python -m pip install json-schema-for-humans
 
       - name: Check out repo
         uses: actions/checkout@v2
 
       - name: Auto generate json schema markdown
-        run: jsonschema2md -d schema -o schema/docs -h false && rm -rf ./out
+        run: rm -rf schema/docs && jsonschema2md -d schema -o schema/docs -h false && rm -rf ./out
+
+      - name: Auto generate human readbale json schema html
+        run: rm -rf html && mkdir html && generate-schema-doc schema/pipeline-definition.schema.json html/pipeline-definition-schema.html
 
       - name: Commit auto generated schema markdown
         uses: stefanzweifel/git-auto-commit-action@v4
