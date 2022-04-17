@@ -4,7 +4,7 @@ merged type ([Details](pipeline-definition-properties-steps-items.md))
 
 one (and only one) of
 
-*   [Untitled undefined type in SageMaker Pipeline Definition](pipeline-definition-definitions-conditionstep.md "check type definition")
+*   [Untitled object in SageMaker Pipeline Definition](pipeline-definition-definitions-conditionstep.md "check type definition")
 
 *   [Untitled object in SageMaker Pipeline Definition](pipeline-definition-definitions-trainingstep.md "check type definition")
 

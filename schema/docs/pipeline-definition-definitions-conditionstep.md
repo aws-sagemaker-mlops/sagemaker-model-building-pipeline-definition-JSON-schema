@@ -1,6 +1,6 @@
 ## 0 Type
 
-unknown
+`object` ([Details](pipeline-definition-definitions-conditionstep.md))
 
 # 0 Properties
 

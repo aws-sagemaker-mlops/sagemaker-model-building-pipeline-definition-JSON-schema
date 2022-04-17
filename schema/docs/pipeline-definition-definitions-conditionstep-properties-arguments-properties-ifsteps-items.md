@@ -6,7 +6,7 @@ one (and only one) of
 
 *   [Untitled object in SageMaker Pipeline Definition](pipeline-definition-definitions-trainingstep.md "check type definition")
 
-*   [Untitled undefined type in SageMaker Pipeline Definition](pipeline-definition-definitions-failstep.md "check type definition")
+*   [Untitled object in SageMaker Pipeline Definition](pipeline-definition-definitions-failstep.md "check type definition")
 
 *   [Untitled object in SageMaker Pipeline Definition](pipeline-definition-definitions-processingstep.md "check type definition")
 

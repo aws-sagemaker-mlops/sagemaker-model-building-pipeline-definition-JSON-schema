@@ -12,7 +12,7 @@
 | [DisplayName](#displayname)     | `string` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-stepname.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TransformStep/properties/DisplayName")                                 |
 | [Description](#description)     | `string` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-parameterdescription.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TransformStep/properties/Description")                     |
 | [RetryPolicies](#retrypolicies) | `array`  | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-transformstep-properties-retrypolicies.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TransformStep/properties/RetryPolicies") |
-| [Arguments](#arguments)         | `object` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-transformstep-properties-arguments.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TransformStep/properties/Arguments")         |
+| [Arguments](#arguments)         | `object` | Required | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-transformstep-properties-arguments.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TransformStep/properties/Arguments")         |
 
 ## Name
 
@@ -162,7 +162,7 @@
 
 `Arguments`
 
-*   is optional
+*   is required
 
 *   Type: `object` ([Details](pipeline-definition-definitions-transformstep-properties-arguments.md))
 

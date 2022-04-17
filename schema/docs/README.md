@@ -20,6 +20,8 @@
 
 *   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-retrypolicy.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/RetryPolicy`
 
+*   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-conditionstep.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ConditionStep`
+
 *   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-conditionstep-properties-arguments.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ConditionStep/properties/Arguments`
 
 *   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-trainingstep-properties-arguments.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TrainingStep/properties/Arguments`
@@ -402,13 +404,13 @@
 
 *   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-createmodelstep-properties-arguments-properties-containers-items.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/CreateModelStep/properties/Arguments/properties/Containers/items`
 
-*   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-createmodelstep-properties-arguments-properties-containers-items-properties-environment.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/CreateModelStep/properties/Arguments/properties/Containers/items/properties/Environment`
+*   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-createmodelstep-properties-arguments-properties-environment.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/CreateModelStep/properties/Arguments/properties/Environment`
 
-*   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-createmodelstep-properties-arguments-properties-containers-items-properties-imageconfig.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/CreateModelStep/properties/Arguments/properties/Containers/items/properties/ImageConfig`
+*   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-createmodelstep-properties-arguments-properties-imageconfig.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/CreateModelStep/properties/Arguments/properties/ImageConfig`
 
-*   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-createmodelstep-properties-arguments-properties-containers-items-properties-imageconfig-properties-repositoryauthconfig.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/CreateModelStep/properties/Arguments/properties/Containers/items/properties/ImageConfig/properties/RepositoryAuthConfig`
+*   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-createmodelstep-properties-arguments-properties-imageconfig-properties-repositoryauthconfig.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/CreateModelStep/properties/Arguments/properties/ImageConfig/properties/RepositoryAuthConfig`
 
-*   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-createmodelstep-properties-arguments-properties-containers-items-properties-multimodelconfig.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/CreateModelStep/properties/Arguments/properties/Containers/items/properties/MultiModelConfig`
+*   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-createmodelstep-properties-arguments-properties-multimodelconfig.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/CreateModelStep/properties/Arguments/properties/MultiModelConfig`
 
 *   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-registermodelstep.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/RegisterModelStep`
 
@@ -449,6 +451,8 @@
 *   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-registermodelstep-properties-arguments-properties-modelmetrics-properties-deploymentspecification-properties-testinput-properties-datasource-properties-s3datasource.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/RegisterModelStep/properties/Arguments/properties/ModelMetrics/properties/DeploymentSpecification/properties/TestInput/properties/DataSource/properties/S3DataSource`
 
 *   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-registermodelstep-properties-arguments-properties-modelmetrics-properties-deploymentspecification-properties-healthcheckconfig.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/RegisterModelStep/properties/Arguments/properties/ModelMetrics/properties/DeploymentSpecification/properties/HealthCheckConfig`
+
+*   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-failstep.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/FailStep`
 
 *   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-failstep-properties-arguments.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/FailStep/properties/Arguments`
 
@@ -828,13 +832,13 @@
 
 *   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-createmodelstep-properties-arguments-properties-containers-items.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/CreateModelStep/properties/Arguments/properties/Containers/items`
 
-*   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-createmodelstep-properties-arguments-properties-containers-items-properties-environment.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/CreateModelStep/properties/Arguments/properties/Containers/items/properties/Environment`
+*   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-createmodelstep-properties-arguments-properties-environment.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/CreateModelStep/properties/Arguments/properties/Environment`
 
-*   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-createmodelstep-properties-arguments-properties-containers-items-properties-imageconfig.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/CreateModelStep/properties/Arguments/properties/Containers/items/properties/ImageConfig`
+*   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-createmodelstep-properties-arguments-properties-imageconfig.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/CreateModelStep/properties/Arguments/properties/ImageConfig`
 
-*   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-createmodelstep-properties-arguments-properties-containers-items-properties-imageconfig-properties-repositoryauthconfig.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/CreateModelStep/properties/Arguments/properties/Containers/items/properties/ImageConfig/properties/RepositoryAuthConfig`
+*   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-createmodelstep-properties-arguments-properties-imageconfig-properties-repositoryauthconfig.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/CreateModelStep/properties/Arguments/properties/ImageConfig/properties/RepositoryAuthConfig`
 
-*   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-createmodelstep-properties-arguments-properties-containers-items-properties-multimodelconfig.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/CreateModelStep/properties/Arguments/properties/Containers/items/properties/MultiModelConfig`
+*   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-createmodelstep-properties-arguments-properties-multimodelconfig.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/CreateModelStep/properties/Arguments/properties/MultiModelConfig`
 
 *   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-registermodelstep-properties-arguments.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/RegisterModelStep/properties/Arguments`
 

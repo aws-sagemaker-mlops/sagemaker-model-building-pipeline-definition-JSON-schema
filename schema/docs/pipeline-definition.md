@@ -1265,7 +1265,7 @@ Reference this group by using
 | [DisplayName](#displayname-1)   | `string` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-trainingstep-properties-displayname.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TrainingStep/properties/DisplayName")     |
 | [Description](#description-5)   | `string` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-trainingstep-properties-description.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TrainingStep/properties/Description")     |
 | [RetryPolicies](#retrypolicies) | `array`  | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-trainingstep-properties-retrypolicies.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TrainingStep/properties/RetryPolicies") |
-| [Arguments](#arguments-1)       | `object` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-trainingstep-properties-arguments.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TrainingStep/properties/Arguments")         |
+| [Arguments](#arguments-1)       | `object` | Required | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-trainingstep-properties-arguments.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TrainingStep/properties/Arguments")         |
 
 ### Name
 
@@ -1415,7 +1415,7 @@ Reference this group by using
 
 `Arguments`
 
-*   is optional
+*   is required
 
 *   Type: `object` ([Details](pipeline-definition-definitions-trainingstep-properties-arguments.md))
 
@@ -1443,7 +1443,7 @@ Reference this group by using
 | [DisplayName](#displayname-2)     | `string` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-processingstep-properties-displayname.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingStep/properties/DisplayName")     |
 | [Description](#description-6)     | `string` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-processingstep-properties-description.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingStep/properties/Description")     |
 | [RetryPolicies](#retrypolicies-1) | `array`  | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-processingstep-properties-retrypolicies.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingStep/properties/RetryPolicies") |
-| [Arguments](#arguments-2)         | `object` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-processingstep-properties-arguments.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingStep/properties/Arguments")         |
+| [Arguments](#arguments-2)         | `object` | Required | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-processingstep-properties-arguments.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingStep/properties/Arguments")         |
 
 ### Name
 
@@ -1593,7 +1593,7 @@ Reference this group by using
 
 `Arguments`
 
-*   is optional
+*   is required
 
 *   Type: `object` ([Details](pipeline-definition-definitions-processingstep-properties-arguments.md))
 
@@ -1621,7 +1621,7 @@ Reference this group by using
 | [DisplayName](#displayname-3)     | `string` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-transformstep-properties-displayname.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TransformStep/properties/DisplayName")     |
 | [Description](#description-7)     | `string` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-transformstep-properties-description.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TransformStep/properties/Description")     |
 | [RetryPolicies](#retrypolicies-2) | `array`  | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-transformstep-properties-retrypolicies.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TransformStep/properties/RetryPolicies") |
-| [Arguments](#arguments-3)         | `object` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-transformstep-properties-arguments.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TransformStep/properties/Arguments")         |
+| [Arguments](#arguments-3)         | `object` | Required | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-transformstep-properties-arguments.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TransformStep/properties/Arguments")         |
 
 ### Name
 
@@ -1771,7 +1771,7 @@ Reference this group by using
 
 `Arguments`
 
-*   is optional
+*   is required
 
 *   Type: `object` ([Details](pipeline-definition-definitions-transformstep-properties-arguments.md))
 
@@ -1799,7 +1799,7 @@ Reference this group by using
 | [DisplayName](#displayname-4)     | `string` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-createmodelstep-properties-displayname.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/CreateModelStep/properties/DisplayName")     |
 | [Description](#description-8)     | `string` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-createmodelstep-properties-description.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/CreateModelStep/properties/Description")     |
 | [RetryPolicies](#retrypolicies-3) | `array`  | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-createmodelstep-properties-retrypolicies.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/CreateModelStep/properties/RetryPolicies") |
-| [Arguments](#arguments-4)         | `object` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-createmodelstep-properties-arguments.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/CreateModelStep/properties/Arguments")         |
+| [Arguments](#arguments-4)         | `object` | Required | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-createmodelstep-properties-arguments.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/CreateModelStep/properties/Arguments")         |
 
 ### Name
 
@@ -1949,7 +1949,7 @@ Reference this group by using
 
 `Arguments`
 
-*   is optional
+*   is required
 
 *   Type: `object` ([Details](pipeline-definition-definitions-createmodelstep-properties-arguments.md))
 
@@ -1977,7 +1977,7 @@ Reference this group by using
 | [DisplayName](#displayname-5)     | `string` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-registermodelstep-properties-displayname.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/RegisterModelStep/properties/DisplayName")     |
 | [Description](#description-9)     | `string` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-registermodelstep-properties-description.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/RegisterModelStep/properties/Description")     |
 | [RetryPolicies](#retrypolicies-4) | `array`  | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-registermodelstep-properties-retrypolicies.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/RegisterModelStep/properties/RetryPolicies") |
-| [Arguments](#arguments-5)         | `object` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-registermodelstep-properties-arguments.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/RegisterModelStep/properties/Arguments")         |
+| [Arguments](#arguments-5)         | `object` | Required | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-registermodelstep-properties-arguments.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/RegisterModelStep/properties/Arguments")         |
 
 ### Name
 
@@ -2127,7 +2127,7 @@ Reference this group by using
 
 `Arguments`
 
-*   is optional
+*   is required
 
 *   Type: `object` ([Details](pipeline-definition-definitions-registermodelstep-properties-arguments.md))
 
@@ -2215,12 +2215,12 @@ Reference this group by using
 
 | Property                       | Type     | Required | Nullable       | Defined by                                                                                                                                                                                                                                           |
 | :----------------------------- | :------- | :------- | :------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Name](#name-10)               | `string` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-failstep-properties-name.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/FailStep/properties/Name")               |
+| [Name](#name-10)               | `string` | Required | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-failstep-properties-name.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/FailStep/properties/Name")               |
 | [Type](#type-13)               | `string` | Required | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-failstep-properties-type.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/FailStep/properties/Type")               |
 | [DependsOn](#dependson-6)      | `array`  | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-failstep-properties-dependson.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/FailStep/properties/DependsOn")     |
 | [DisplayName](#displayname-6)  | `string` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-failstep-properties-displayname.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/FailStep/properties/DisplayName") |
 | [Description](#description-10) | `string` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-failstep-properties-description.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/FailStep/properties/Description") |
-| [Arguments](#arguments-6)      | `object` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-failstep-properties-arguments.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/FailStep/properties/Arguments")     |
+| [Arguments](#arguments-6)      | `object` | Required | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-failstep-properties-arguments.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/FailStep/properties/Arguments")     |
 
 ### Name
 
@@ -2228,7 +2228,7 @@ Reference this group by using
 
 `Name`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
@@ -2352,7 +2352,7 @@ Reference this group by using
 
 `Arguments`
 
-*   is optional
+*   is required
 
 *   Type: `object` ([Details](pipeline-definition-definitions-failstep-properties-arguments.md))
 
