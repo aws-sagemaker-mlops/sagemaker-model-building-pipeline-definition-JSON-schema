@@ -1,1301 +1,1625 @@
 {
-  "$schema": "http://json-schema.org/schema#",
-  "$id": "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/",
-  "title": "SageMaker Pipeline Definition",
-  "type": "object",
-  "definitions": {
-    "ParameterName": {
-      "type": "string",
-      "pattern": "^[A-Za-z0-9\\-_]{1,64}$"
-    },
-    "ParameterDescription": {
-      "type": "string",
-      "minLength": 0,
-      "maxLength": 4096
-    },
-    "StringParameter": {
-      "properties": {
-        "Name": {
-          "$ref": "#/definitions/ParameterName"
-        },
-        "Description": {
-          "$ref": "#/definitions/ParameterDescription"
-        },
-        "DefaultValue": {
-          "type": "string",
-          "maxLength": 4096
-        },
-        "Type": {
-          "type": "string",
-          "enum": ["String"]
-        }
-      },
-      "required": ["Name"],
-      "additionalProperties": false
-    },
-    "IntegerParameter": {
-      "properties": {
-        "Name": {
-          "$ref": "#/definitions/ParameterName"
-        },
-        "Description": {
-          "$ref": "#/definitions/ParameterDescription"
-        },
-        "DefaultValue": {
-          "type": "integer"
-        },
-        "Type": {
-          "type": "string",
-          "enum": ["Integer"]
-        }
-      },
-      "required": ["Name", "Type"],
-      "additionalProperties": false
-    },
-    "FloatParameter": {
-      "properties": {
-        "Name": {
-          "$ref": "#/definitions/ParameterName"
-        },
-        "Description": {
-          "$ref": "#/definitions/ParameterDescription"
-        },
-        "DefaultValue": {
-          "type": "number"
-        },
-        "Type": {
-          "type": "string",
-          "enum": ["Float"]
-        }
-      },
-      "required": ["Name", "Type"],
-      "additionalProperties": false
-    },
-    "BooleanParameter": {
-      "properties": {
-        "Name": {
-          "$ref": "#/definitions/ParameterName"
-        },
-        "Description": {
-          "$ref": "#/definitions/ParameterDescription"
-        },
-        "DefaultValue": {
-          "type": "boolean"
-        },
-        "Type": {
-          "type": "string",
-          "enum": ["Boolean"]
-        }
-      },
-      "required": ["Name", "Type"],
-      "additionalProperties": false
-    },
-    "GetFunction": {
-      "type": "object",
-      "properties": {
-        "Get": {
-          "type": "string"
-        }
-      },
-      "required": ["Get"],
-      "additionalProperties": false
-    },
-    "StringArgumentValue": {
-      "oneOf": [
-        {"type": "string"},
-        {"$ref": "#/definitions/GetFunction"}
-      ]
-    },
-    "IntegerArgumentValue": {
-      "oneOf": [
-        {"type": "integer"},
-        {"$ref": "#/definitions/GetFunction"}
-      ]
-    },
-    "FloatArgumentValue": {
-      "oneOf": [
-        {"type": "number"},
-        {"$ref": "#/definitions/GetFunction"}
-      ]
-    },
-    "BooleanArgumentValue": {
-      "oneOf": [
-        {"type": "boolean"},
-        {"$ref": "#/definitions/GetFunction"}
-      ]
-    },
-    "StepName": {
-      "type": "string",
-      "pattern": "^[A-Za-z0-9\\-_]{1,64}$"
+	"$schema": "http://json-schema.org/schema#",
+	"$id": "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/",
+	"title": "SageMaker Pipeline Definition",
+	"type": "object",
+	"definitions": {
+		"ParameterName": {
+			"type": "string",
+			"pattern": "^[A-Za-z0-9\\-_]{1,64}$"
+		},
+		"ParameterDescription": {
+			"type": "string",
+			"minLength": 0,
+			"maxLength": 4096
+		},
+		"StringParameter": {
+			"properties": {
+				"Name": {
+					"$ref": "#/definitions/ParameterName"
+				},
+				"Description": {
+					"$ref": "#/definitions/ParameterDescription"
+				},
+				"DefaultValue": {
+					"type": "string",
+					"maxLength": 4096
+				},
+				"Type": {
+					"type": "string",
+					"enum": ["String"]
+				}
+			},
+			"required": ["Name"],
+			"additionalProperties": false
+		},
+		"IntegerParameter": {
+			"properties": {
+				"Name": {
+					"$ref": "#/definitions/ParameterName"
+				},
+				"Description": {
+					"$ref": "#/definitions/ParameterDescription"
+				},
+				"DefaultValue": {
+					"type": "integer"
+				},
+				"Type": {
+					"type": "string",
+					"enum": ["Integer"]
+				}
+			},
+			"required": ["Name", "Type"],
+			"additionalProperties": false
+		},
+		"FloatParameter": {
+			"properties": {
+				"Name": {
+					"$ref": "#/definitions/ParameterName"
+				},
+				"Description": {
+					"$ref": "#/definitions/ParameterDescription"
+				},
+				"DefaultValue": {
+					"type": "number"
+				},
+				"Type": {
+					"type": "string",
+					"enum": ["Float"]
+				}
+			},
+			"required": ["Name", "Type"],
+			"additionalProperties": false
+		},
+		"BooleanParameter": {
+			"properties": {
+				"Name": {
+					"$ref": "#/definitions/ParameterName"
+				},
+				"Description": {
+					"$ref": "#/definitions/ParameterDescription"
+				},
+				"DefaultValue": {
+					"type": "boolean"
+				},
+				"Type": {
+					"type": "string",
+					"enum": ["Boolean"]
+				}
+			},
+			"required": ["Name", "Type"],
+			"additionalProperties": false
+		},
+		"GetFunction": {
+			"type": "object",
+			"properties": {
+				"Get": {
+					"type": "string"
+				}
+			},
+			"required": ["Get"],
+			"additionalProperties": false
+		},
+		"JoinFunction": {
+			"type": "object",
+			"properties": {
+				"Std:Join": {
+					"Values": {
+						"type": "array",
+						"items": {
+							"oneOf": [{
+									"type": "string"
+								},
+								{
+									"$ref": "#/definitions/GetFunction"
+								}
+							]
+						}
+					},
+					"required": ["Values"],
+					"additionalProperties": false
+				}
+			},
+			"required": ["Std:Join"],
+			"additionalProperties": false
+		},
+		"StringArgumentValue": {
+			"oneOf": [{
+					"type": "string"
+				},
+				{
+					"$ref": "#/definitions/GetFunction"
+				}
+			]
+		},
+		"IntegerArgumentValue": {
+			"oneOf": [{
+					"type": "integer"
+				},
+				{
+					"$ref": "#/definitions/GetFunction"
+				}
+			]
+		},
+		"FloatArgumentValue": {
+			"oneOf": [{
+					"type": "number"
+				},
+				{
+					"$ref": "#/definitions/GetFunction"
+				}
+			]
+		},
+		"BooleanArgumentValue": {
+			"oneOf": [{
+					"type": "boolean"
+				},
+				{
+					"$ref": "#/definitions/GetFunction"
+				}
+			]
+		},
+		"StepName": {
+			"type": "string",
+			"pattern": "^[A-Za-z0-9\\-_]{1,64}$"
 
-    },
-    "BinaryCondition": {
-      "type": "object",
-      "properties": {
-        "LeftValue": {
-          "anyOf": [
-            {"$ref": "#/definitions/StringArgumentValue"},
-            {"$ref": "#/definitions/BooleanArgumentValue"},
-            {"$ref": "#/definitions/IntegerArgumentValue"},
-            {"$ref": "#/definitions/FloatArgumentValue"}
-          ]
-        },
-        "RightValue": {
-          "anyOf": [
-            {"$ref": "#/definitions/StringArgumentValue"},
-            {"$ref": "#/definitions/BooleanArgumentValue"},
-            {"$ref": "#/definitions/IntegerArgumentValue"},
-            {"$ref": "#/definitions/FloatArgumentValue"}
-          ]
-        },
-        "Type": {
-          "type": "string",
-          "enum": ["GreaterThan", "LessThan", "LessThanOrEqualTo", "GreaterThanOrEqualTo", "Equals", "NotEquals"]
-        }
-      },
-      "required": ["Type", "LeftValue", "RightValue"],
-      "additionalProperties": false
-    },
-    "InCondition": {
-      "type": "object",
-      "properties": {
-        "Type": {
-          "type": "string",
-          "enum": ["In", "NotIn"]
-        },
-        "Value": {
-          "oneOf": [
-            {"$ref": "#/definitions/StringArgumentValue"},
-            {"$ref": "#/definitions/BooleanArgumentValue"},
-            {"$ref": "#/definitions/IntegerArgumentValue"},
-            {"$ref": "#/definitions/FloatArgumentValue"}
-          ]
-        },
-        "In": {
-          "type": "array",
-          "items": {
-            "oneOf": [
-              {"$ref": "#/definitions/StringArgumentValue"},
-              {"$ref": "#/definitions/BooleanArgumentValue"},
-              {"$ref": "#/definitions/IntegerArgumentValue"},
-              {"$ref": "#/definitions/FloatArgumentValue"}
-            ]
-          }
-        }
-      },
-      "required": ["Type", "Value", "In"],
-      "additionalProperties": false
-    },
-    "OrCondition": {
-      "type": "object",
-      "properties": {
-        "Type":{
-          "type": "string",
-          "enum": ["Or"]
-        },
-        "Conditions": {
-          "type": "array",
-          "items": {
-            "anyOf": [
-              {"$ref": "#/definitions/BinaryCondition"},
-              {"$ref": "#/definitions/InCondition"}
-            ]
-          }
-        }
-      },
-      "required": ["Type", "Conditions"],
-      "additionalProperties": false
-    },
-    "ConditionStep": {
-      "properties": {
-        "Name": {
-          "$ref": "#/definitions/StepName"
-        },
-        "Type": {
-          "type": "string",
-          "enum": ["Condition"]
-        },
-        "Arguments": {
-          "type": "object",
-          "properties": {
-            "Conditions": {
-              "type": "array",
-              "items": {
-                "oneOf": [
-                  {
-                    "$ref": "#/definitions/BinaryCondition"
-                  },
-                  {
-                    "$ref": "#/definitions/InCondition"
-                  },
-                  {
-                    "$ref": "#/definitions/OrCondition"
-                  }
-                ]
-              }
-            },
-            "IfSteps": {
-              "type": "array",
-              "items": {
-                "oneOf": [
-                  {
-                    "$ref": "#/definitions/TrainingStep"
-                  },
-                  {
-                    "$ref": "#/definitions/FailStep"
-                  },
-                  {
-                    "$ref": "#/definitions/ProcessingStep"
-                  },
-                  {
-                    "$ref": "#/definitions/TransformStep"
-                  },
-                  {
-                    "$ref": "#/definitions/RegisterModelStep"
-                  }
-                ]
-              }
-            },
-            "ElseSteps": {
-              "type": "array",
-              "items": {
-                "oneOf": [
-                  {
-                    "$ref": "#/definitions/TrainingStep"
-                  },
-                  {
-                    "$ref": "#/definitions/FailStep"
-                  },
-                  {
-                    "$ref": "#/definitions/ProcessingStep"
-                  },
-                  {
-                    "$ref": "#/definitions/TransformStep"
-                  },
-                  {
-                    "$ref": "#/definitions/RegisterModelStep"
-                  }
-                ]
-              }
-            }
-          },
-          "required": ["Conditions"],
-          "additionalProperties": false
-        }
-      },
-      "required": ["Type", "Name", "Arguments"],
-      "additionalProperties": false
-    },
-    "TrainingStep": {
-      "type": "object",
-      "properties": {
-        "Name": {
-          "$ref": "#/definitions/StepName"
-        },
-        "Type": {
-          "type": "string",
-          "enum": ["Training"]
-        },
-        "Arguments": {
-          "type": "object",
-          "properties": {
-            "AlgorithmSpecification": {
-              "type": "object",
-              "properties": {
-                "AlgorithmName": {
-                  "$ref": "#/definitions/StringArgumentValue"
-                },
-                "EnableSageMakerMetricsTimeSeries": {
-                  "$ref": "#/definitions/BooleanArgumentValue"
-                },
-                "MetricDefinitions": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "properties": {
-                      "Name": {
-                        "$ref": "#/definitions/StringArgumentValue"
-                      },
-                      "Regex": {
-                        "$ref": "#/definitions/StringArgumentValue"
-                      }
-                    },
-                    "additionalProperties": false
-                  }
-                },
-                "TrainingImage": {
-                  "$ref": "#/definitions/StringArgumentValue"
-                },
-                "TrainingInputMode": {
-                  "$ref": "#/definitions/StringArgumentValue"
-                }
-              },
-              "additionalProperties": false
-            },
-            "CheckpointConfig": {
-              "type": "object",
-              "properties": {
-                "LocalPath": {
-                  "$ref": "#/definitions/StringArgumentValue"
-                },
-                "S3Uri": {
-                  "$ref": "#/definitions/StringArgumentValue"
-                }
-              },
-              "additionalProperties": false
-            },
-            "DebugHookConfig": {
-              "type": "object",
-              "properties": {
-                "CollectionConfigurations": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "properties": {
-                      "CollectionName": {
-                        "$ref": "#/definitions/StringArgumentValue"
-                      },
-                      "CollectionParameters": {
-                        "type": "object",
-                        "patternProperties": {
-                          ".*": {
-                            "$ref": "#/definitions/StringArgumentValue"
-                          }
-                        }
-                      }
-                    },
-                    "additionalProperties": false
-                  }
-                },
-                "HookParameters": {
-                  "type": "object",
-                  "patternProperties": {
-                    ".*": {
-                      "$ref": "#/definitions/StringArgumentValue"
-                    }
-                  }
-                },
-                "LocalPath": {
-                  "$ref": "#/definitions/StringArgumentValue"
-                },
-                "S3OutputPath": {
-                  "$ref": "#/definitions/StringArgumentValue"
-                }
-              },
-              "additionalProperties": false
-            },
-            "DebugRuleConfigurations": {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "properties": {
-                  "InstanceType": {
-                    "$ref": "#/definitions/StringArgumentValue"
-                  },
-                  "LocalPath": {
-                    "$ref": "#/definitions/StringArgumentValue"
-                  },
-                  "RuleConfigurationName": {
-                    "$ref": "#/definitions/StringArgumentValue"
-                  },
-                  "RuleEvaluatorImage": {
-                    "$ref": "#/definitions/StringArgumentValue"
-                  },
-                  "RuleParameters": {
-                    "type": "object",
-                    "patternProperties": {
-                      ".*": {
-                        "$ref": "#/definitions/StringArgumentValue"
-                      }
-                    }
-                  },
-                  "S3OutputPath": {
-                    "$ref": "#/definitions/StringArgumentValue"
-                  },
-                  "VolumeSizeInGB": {
-                    "$ref": "#/definitions/IntegerArgumentValue"
-                  }
-                },
-                "additionalProperties": false
-              }
-            },
-            "EnableInterContainerTrafficEncryption": {
-              "$ref": "#/definitions/BooleanArgumentValue"
-            },
-            "EnableManagedSpotTraining": {
-              "$ref": "#/definitions/BooleanArgumentValue"
-            },
-            "EnableNetworkIsolation": {
-              "$ref": "#/definitions/BooleanArgumentValue"
-            },
-            "HyperParameters": {
-              "type": "object",
-              "patternProperties": {
-                ".*": {
-                  "$ref": "#/definitions/StringArgumentValue"
-                }
-              }
-            },
-            "InputDataConfig": {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "properties": {
-                  "ChannelName": {
-                    "$ref": "#/definitions/StringArgumentValue"
-                  },
-                  "CompressionType": {
-                    "$ref": "#/definitions/StringArgumentValue"
-                  },
-                  "ContentType": {
-                    "$ref": "#/definitions/StringArgumentValue"
-                  },
-                  "DataSource": {
-                    "type": "object",
-                    "properties": {
-                      "FileSystemDataSource": {
-                        "type": "object",
-                        "properties": {
-                          "DirectoryPath": {
-                            "$ref": "#/definitions/StringArgumentValue"
-                          },
-                          "FileSystemAccessMode": {
-                            "$ref": "#/definitions/StringArgumentValue"
-                          },
-                          "FileSystemId": {
-                            "$ref": "#/definitions/StringArgumentValue"
-                          },
-                          "FileSystemType": {
-                            "$ref": "#/definitions/StringArgumentValue"
-                          }
-                        },
-                        "additionalProperties": false
-                      },
-                      "S3DataSource": {
-                        "type": "object",
-                        "properties": {
-                          "AttributeNames": {
-                            "type": "array",
-                            "items": {
-                              "$ref": "#/definitions/StringArgumentValue"
-                            }
-                          },
-                          "S3DataDistributionType": {
-                            "$ref": "#/definitions/StringArgumentValue"
-                          },
-                          "S3DataType": {
-                            "$ref": "#/definitions/StringArgumentValue"
-                          },
-                          "S3Uri": {
-                            "$ref": "#/definitions/StringArgumentValue"
-                          }
-                        },
-                        "additionalProperties": false
-                      }
-                    }
-                  },
-                  "InputMode": {
-                    "$ref": "#/definitions/StringArgumentValue"
-                  },
-                  "RecordWrapperType": {
-                    "$ref": "#/definitions/StringArgumentValue"
-                  },
-                  "ShuffleConfig": {
-                    "type": "object",
-                    "properties": {
-                      "Seed": {
-                        "$ref": "#/definitions/IntegerArgumentValue"
-                      }
-                    },
-                    "additionalProperties": false
-                  }
-                }
-              }
-            },
-            "OutputDataConfig": {
-              "type": "object",
-              "properties": {
-                "KmsKeyId": {
-                  "$ref": "#/definitions/StringArgumentValue"
-                },
-                "S3OutputPath": {
-                  "$ref": "#/definitions/StringArgumentValue"
-                }
-              },
-              "additionalProperties": false
-            },
-            "ResourceConfig": {
-              "type": "object",
-              "properties": {
-                "InstanceCount": {
-                  "$ref": "#/definitions/IntegerArgumentValue"
-                },
-                "InstanceType": {
-                  "$ref": "#/definitions/StringArgumentValue"
-                },
-                "VolumeKmsKeyId": {
-                  "$ref": "#/definitions/StringArgumentValue"
-                },
-                "VolumeSizeInGB": {
-                  "$ref": "#/definitions/IntegerArgumentValue"
-                }
-              },
-              "additionalProperties": false
-            },
-            "RoleArn": {
-              "$ref": "#/definitions/StringArgumentValue"
-            },
-            "StoppingCondition": {
-              "type": "object",
-              "properties": {
-                "MaxRuntimeInSeconds": {
-                  "$ref": "#/definitions/IntegerArgumentValue"
-                },
-                "MaxWaitTimeInSeconds": {
-                  "$ref": "#/definitions/IntegerArgumentValue"
-                }
-              },
-              "additionalProperties": false
-            },
-            "Tags": {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "properties": {
-                  "Key": {
-                    "$ref": "#/definitions/StringArgumentValue"
-                  },
-                  "Value": {
-                    "$ref": "#/definitions/StringArgumentValue"
-                  }
-                },
-                "additionalProperties": false
-              }
-            },
-            "TensorBoardOutputConfig": {
-              "type": "object",
-              "properties": {
-                "LocalPath": {
-                  "$ref": "#/definitions/StringArgumentValue"
-                },
-                "S3OutputPath": {
-                  "$ref": "#/definitions/StringArgumentValue"
-                }
-              },
-              "additionalProperties": false
-            },
-            "VpcConfig": {
-              "type": "object",
-              "properties": {
-                "SecurityGroupIds": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/definitions/StringArgumentValue"
-                  }
-                },
-                "Subnets": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/definitions/StringArgumentValue"
-                  }
-                }
-              },
-              "additionalProperties": false
-            }
-          },
-          "additionalProperties": false
-        }
-      },
-      "required": ["Type", "Name"],
-      "additionalProperties": false
-    },
-    "ProcessingStep": {
-      "type": "object",
-      "properties": {
-        "Name": {
-          "$ref": "#/definitions/StepName"
-        },
-        "Type": {
-          "type": "string",
-          "enum": ["Processing"]
-        },
-        "Arguments": {
-          "type": "object",
-          "properties": {
-            "AppSpecification": {
-              "type": "object",
-              "properties": {
-                "ContainerArguments": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/definitions/StringArgumentValue"
-                  }
-                },
-                "ContainerEntrypoint": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/definitions/StringArgumentValue"
-                  }
-                },
-                "ImageUri": {
-                  "$ref": "#/definitions/StringArgumentValue"
-                }
-              },
-              "additionalProperties": false
-            },
-            "Environment": {
-              "type": "object",
-              "patternProperties": {
-                ".*": {
-                  "$ref": "#/definitions/StringArgumentValue"
-                }
-              }
-            },
-            "ExperimentConfig": {
-              "type": "object",
-              "properties": {
-                "ExperimentName": {
-                  "$ref": "#/definitions/StringArgumentValue"
-                },
-                "TrialComponentDisplayName": {
-                  "$ref": "#/definitions/StringArgumentValue"
-                },
-                "TrialName": {
-                  "$ref": "#/definitions/StringArgumentValue"
-                }
-              },
-              "additionalProperties": false
-            },
-            "NetworkConfig": {
-              "type": "object",
-              "properties": {
-                "EnableInterContainerTrafficEncryption": {
-                  "$ref": "#/definitions/BooleanArgumentValue"
-                },
-                "EnableNetworkIsolation": {
-                  "$ref": "#/definitions/BooleanArgumentValue"
-                },
-                "VpcConfig": {
-                  "type": "object",
-                  "properties": {
-                    "SecurityGroupIds": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/definitions/StringArgumentValue"
-                      }
-                    },
-                    "Subnets": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/definitions/StringArgumentValue"
-                      }
-                    }
-                  },
-                  "additionalProperties": false
-                }
-              },
-              "additionalProperties": false
-            },
-            "ProcessingInputs": {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "properties": {
-                  "InputName": {
-                    "$ref": "#/definitions/StringArgumentValue"
-                  },
-                  "S3Input": {
-                    "type": "object",
-                    "properties": {
-                      "LocalPath": {
-                        "$ref": "#/definitions/StringArgumentValue"
-                      },
-                      "S3CompressionType": {
-                        "$ref": "#/definitions/StringArgumentValue"
-                      },
-                      "S3DataDistributionType": {
-                        "$ref": "#/definitions/StringArgumentValue"
-                      },
-                      "S3DataType": {
-                        "$ref": "#/definitions/StringArgumentValue"
-                      },
-                      "S3InputMode": {
-                        "$ref": "#/definitions/StringArgumentValue"
-                      },
-                      "S3Uri": {
-                        "$ref": "#/definitions/StringArgumentValue"
-                      }
-                    },
-                    "additionalProperties": false
-                  }
-                },
-                "additionalProperties": false
-              }
-            },
-            "ProcessingOutputConfig": {
-              "type": "object",
-              "properties": {
-                "KmsKeyId": {
-                  "$ref": "#/definitions/StringArgumentValue"
-                },
-                "Outputs": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "properties": {
-                      "OutputName": {
-                        "$ref": "#/definitions/StringArgumentValue"
-                      },
-                      "S3Output": {
-                        "type": "object",
-                        "properties": {
-                          "LocalPath": {
-                            "$ref": "#/definitions/StringArgumentValue"
-                          },
-                          "S3UploadMode": {
-                            "$ref": "#/definitions/StringArgumentValue"
-                          },
-                          "S3Uri": {
-                            "$ref": "#/definitions/StringArgumentValue"
-                          }
-                        },
-                        "additionalProperties": false
-                      }
-                    },
-                    "additionalProperties": false
-                  }
-                }
-              },
-              "additionalProperties": false
-            },
-            "ProcessingResources": {
-              "type": "object",
-              "properties": {
-                "ClusterConfig": {
-                  "type": "object",
-                  "properties": {
-                    "InstanceCount": {
-                      "$ref": "#/definitions/IntegerArgumentValue"
-                    },
-                    "InstanceType": {
-                      "$ref": "#/definitions/StringArgumentValue"
-                    },
-                    "VolumeKmsKeyId": {
-                      "$ref": "#/definitions/StringArgumentValue"
-                    },
-                    "VolumeSizeInGB": {
-                      "$ref": "#/definitions/IntegerArgumentValue"
-                    }
-                  },
-                  "additionalProperties": false
-                }
-              },
-              "additionalProperties": false
-            },
-            "RoleArn": {
-              "$ref": "#/definitions/StringArgumentValue"
-            },
-            "StoppingCondition": {
-              "type": "object",
-              "properties": {
-                "MaxRuntimeInSeconds": {
-                  "$ref": "#/definitions/IntegerArgumentValue"
-                }
-              },
-              "additionalProperties": false
-            },
-            "Tags": {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "properties": {
-                  "Key": {
-                    "$ref": "#/definitions/StringArgumentValue"
-                  },
-                  "Value": {
-                    "$ref": "#/definitions/StringArgumentValue"
-                  }
-                },
-                "additionalProperties": false
-              }
-            }
-          },
-          "additionalProperties": false
-        }
-      },
-      "required": ["Type", "Name"],
-      "additionalProperties": false
-    },
-    "TransformStep": {
-      "type": "object",
-      "properties": {
-        "Name": {
-          "$ref": "#/definitions/StepName"
-        },
-        "Type": {
-          "type": "string",
-          "enum": ["Transform"]
-        },
-        "Arguments": {
-          "type": "object",
-          "properties": {
-            "BatchStrategy": {
-              "$ref": "#/definitions/StringArgumentValue"
-            },
-            "DataProcessing": {
-              "type": "object",
-              "properties": {
-                "InputFilter": {
-                  "$ref": "#/definitions/StringArgumentValue"
-                } ,
-                "JoinSource": {
-                  "$ref": "#/definitions/StringArgumentValue"
-                },
-                "OutputFilter": {
-                  "$ref": "#/definitions/StringArgumentValue"
-                }
-              },
-              "additionalProperties": false
-            },
-            "Environment": {
-              "type": "object",
-              "patternProperties": {
-                ".*": {
-                  "$ref": "#/definitions/StringArgumentValue"
-                }
-              }
-            },
-            "ExperimentConfig": {
-              "type": "object",
-              "properties": {
-                "ExperimentName": {
-                  "$ref": "#/definitions/StringArgumentValue"
-                },
-                "TrialComponentDisplayName": {
-                  "$ref": "#/definitions/StringArgumentValue"
-                },
-                "TrialName": {
-                  "$ref": "#/definitions/StringArgumentValue"
-                }
-              },
-              "additionalProperties": false
-            },
-            "MaxConcurrentTransforms": {
-              "$ref": "#/definitions/IntegerArgumentValue"
-            },
-            "MaxPayloadInMB": {
-              "$ref": "#/definitions/IntegerArgumentValue"
-            },
-            "ModelClientConfig": {
-              "type": "object",
-              "properties": {
-                "InvocationsMaxRetries": {
-                  "$ref": "#/definitions/IntegerArgumentValue"
-                },
-                "InvocationsTimeoutInSeconds": {
-                  "$ref": "#/definitions/IntegerArgumentValue"
-                }
-              },
-              "additionalProperties": false
-            },
-            "Tags": {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "properties": {
-                  "Key": {
-                    "$ref": "#/definitions/StringArgumentValue"
-                  },
-                  "Value": {
-                    "$ref": "#/definitions/StringArgumentValue"
-                  }
-                },
-                "additionalProperties": false
-              }
-            },
-            "ModelName": {
-              "$ref": "#/definitions/StringArgumentValue"
-            },
-            "TransformInput": {
-              "type": "object",
-              "properties": {
-                "CompressionType": {
-                  "$ref": "#/definitions/StringArgumentValue"
-                },
-                "ContentType": {
-                  "$ref": "#/definitions/StringArgumentValue"
-                },
-                "DataSource": {
-                  "type": "object",
-                  "properties": {
-                    "S3DataSource": {
-                      "type": "object",
-                      "properties": {
-                        "S3DataType": {
-                          "$ref": "#/definitions/StringArgumentValue"
-                        },
-                        "S3Uri": {
-                          "$ref": "#/definitions/StringArgumentValue"
-                        }
-                      },
-                      "additionalProperties": false
-                    }
-                  },
-                  "additionalProperties": false
-                },
-                "SplitType": {
-                  "$ref": "#/definitions/StringArgumentValue"
-                }
-              },
-              "additionalProperties": false
-            },
-            "TransformJobName": {
-              "$ref": "#/definitions/StringArgumentValue"
-            },
-            "TransformOutput": {
-              "type": "object",
-              "properties": {
-                "Accept": {
-                  "$ref": "#/definitions/StringArgumentValue"
-                },
-                "AssembleWith": {
-                  "$ref": "#/definitions/StringArgumentValue"
-                },
-                "KmsKeyId": {
-                  "$ref": "#/definitions/StringArgumentValue"
-                },
-                "S3OutputPath": {
-                  "$ref": "#/definitions/StringArgumentValue"
-                }
-              },
-              "additionalProperties": false
-            },
-            "TransformResources": {
-              "type": "object",
-              "properties": {
-                "InstanceCount": {
-                  "$ref": "#/definitions/IntegerArgumentValue"
-                },
-                "InstanceType": {
-                  "$ref": "#/definitions/StringArgumentValue"
-                },
-                "VolumeKmsKeyId": {
-                  "$ref": "#/definitions/StringArgumentValue"
-                }
-              },
-              "additionalProperties": false
-            }
-          },
-          "additionalProperties": false
-        }
-      },
-      "required": ["Type", "Name"],
-      "additionalProperties": false
-    },
-    "RegisterModelStep": {
-      "type": "object",
-      "properties": {
-        "Name": {
-          "$ref": "#/definitions/StepName"
-        },
-        "Type": {
-          "type": "string",
-          "enum": ["RegisterModel"]
-        },
-        "Arguments": {
-          "type": "object",
-          "properties": {
-            "CertifyForMarketplace": {
-              "$ref": "#/definitions/BooleanArgumentValue"
-            },
-            "InferenceSpecification": {
-              "type": "object",
-              "properties": {
-                "Containers": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "properties": {
-                      "ContainerHostname": {
-                        "$ref": "#/definitions/StringArgumentValue"
-                      },
-                      "Image": {
-                        "$ref": "#/definitions/StringArgumentValue"
-                      },
-                      "ImageDigest": {
-                        "$ref": "#/definitions/StringArgumentValue"
-                      },
-                      "ModelDataUrl": {
-                        "$ref": "#/definitions/StringArgumentValue"
-                      },
-                      "ProductId": {
-                        "$ref": "#/definitions/StringArgumentValue"
-                      }
-                    },
-                    "additionalProperties": false
-                  }
-                },
-                "SupportedContentTypes": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/definitions/StringArgumentValue"
-                  }
-                },
-                "SupportedRealtimeInferenceInstanceTypes": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/definitions/StringArgumentValue"
-                  }
-                },
-                "SupportedResponseMIMETypes": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/definitions/StringArgumentValue"
-                  }
-                },
-                "SupportedTransformInstanceTypes": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/definitions/StringArgumentValue"
-                  }
-                }
-              },
-              "additionalProperties": false
-            },
-            "ModelPackageDescription": {
-              "$ref": "#/definitions/StringArgumentValue"
-            },
-            "ModelPackageGroupName": {
-              "$ref": "#/definitions/StringArgumentValue"
-            },
-            "ModelMetrics": {
-              "type": "object",
-              "properties": {
-                "ModelQuality": {
-                  "type": "object",
-                  "properties": {
-                    "Statistics": {
-                      "type": "object",
-                      "properties": {
-                        "ContentType": {
-                          "$ref": "#/definitions/StringArgumentValue"
-                        },
-                        "ContentDigest": {
-                          "$ref": "#/definitions/StringArgumentValue"
-                        },
-                        "S3Uri" : {
-                          "$ref": "#/definitions/StringArgumentValue"
-                        }
-                      },
-                      "additionalProperties": false
-                    },
-                    "Constraints": {
-                      "type": "object",
-                      "properties": {
-                        "ContentType": {
-                          "$ref": "#/definitions/StringArgumentValue"
-                        },
-                        "ContentDigest": {
-                          "$ref": "#/definitions/StringArgumentValue"
-                        },
-                        "S3Uri" : {
-                          "$ref": "#/definitions/StringArgumentValue"
-                        }
-                      },
-                      "additionalProperties": false
-                    }
-                  },
-                  "additionalProperties": false
-                },
-                "ModelDataQuality": {
-                  "type": "object",
-                  "properties": {
-                    "Statistics": {
-                      "type": "object",
-                      "properties": {
-                        "ContentType": {
-                          "$ref": "#/definitions/StringArgumentValue"
-                        },
-                        "ContentDigest": {
-                          "$ref": "#/definitions/StringArgumentValue"
-                        },
-                        "S3Uri" : {
-                          "$ref": "#/definitions/StringArgumentValue"
-                        }
-                      },
-                      "additionalProperties": false
-                    },
-                    "Constraints": {
-                      "type": "object",
-                      "properties": {
-                        "ContentType": {
-                          "$ref": "#/definitions/StringArgumentValue"
-                        },
-                        "ContentDigest": {
-                          "$ref": "#/definitions/StringArgumentValue"
-                        },
-                        "S3Uri" : {
-                          "$ref": "#/definitions/StringArgumentValue"
-                        }
-                      },
-                      "additionalProperties": false
-                    }
-                  },
-                  "additionalProperties": false
-                },
-                "Bias": {
-                  "type": "object",
-                  "properties": {
-                    "Report": {
-                      "type": "object",
-                      "properties": {
-                        "ContentType": {
-                          "$ref": "#/definitions/StringArgumentValue"
-                        },
-                        "ContentDigest": {
-                          "$ref": "#/definitions/StringArgumentValue"
-                        },
-                        "S3Uri" : {
-                          "$ref": "#/definitions/StringArgumentValue"
-                        }
-                      },
-                      "additionalProperties": false
-                    }
-                  },
-                  "additionalProperties": false
-                },
-                "Explainability": {
-                  "type": "object",
-                  "properties": {
-                    "Report": {
-                      "type": "object",
-                      "properties": {
-                        "ContentType": {
-                          "$ref": "#/definitions/StringArgumentValue"
-                        },
-                        "ContentDigest": {
-                          "$ref": "#/definitions/StringArgumentValue"
-                        },
-                        "S3Uri" : {
-                          "$ref": "#/definitions/StringArgumentValue"
-                        }
-                      },
-                      "additionalProperties": false
-                    }
-                  },
-                  "additionalProperties": false
-                },
-                "DeploymentSpecification": {
-                  "type": "object",
-                  "properties": {
-                    "TestInput": {
-                      "type": "object",
-                      "properties": {
-                        "CompressionType": {
-                          "$ref": "#/definitions/StringArgumentValue"
-                        },
-                        "ContentType": {
-                          "$ref": "#/definitions/StringArgumentValue"
-                        },
-                        "DataSource" : {
-                          "type": "object",
-                          "properties": {
-                            "S3DataSource": {
-                              "type": "object",
-                              "properties": {
-                                "S3DataType": {
-                                  "$ref": "#/definitions/StringArgumentValue"
-                                },
-                                "S3Uri": {
-                                  "$ref": "#/definitions/StringArgumentValue"
-                                }
-                              },
-                              "additionalProperties": false
-                            }
-                          },
-                          "additionalProperties": false
-                        },
-                        "SplitType": {
-                          "$ref": "#/definitions/StringArgumentValue"
-                        }
-                      },
-                      "additionalProperties": false
-                    },
-                    "HealthCheckConfig" : {
-                      "type": "object",
-                      "properties": {
-                        "NumPayloads" : {
-                          "$ref": "#/definitions/IntegerArgumentValue"
-                        },
-                        "NumFailuresAllowed": {
-                          "$ref": "#/definitions/IntegerArgumentValue"
-                        }
-                      },
-                      "additionalProperties": false
-                    }
-                  },
-                  "additionalProperties": false
-                }
-              },
-              "additionalProperties": false
-            }
-          },
-          "additionalProperties": false
-        }
-      },
-      "required": ["Type", "Name"],
-      "additionalProperties": false
-    },
-    "FailStep": {
-      "properties": {
-        "Type": {
-          "type": "string",
-          "enum": ["Fail"]
-        }
-      },
-      "required": ["Type"],
-      "additionalProperties": false
-    }
-  },
-  "properties": {
-    "Version": {
-      "type": "string",
-      "enum": ["2020-12-01"]
-    },
-    "Metadata": {
-      "type": "object",
-      "patternProperties": {
-        "^[A-Za-z0-9\\-_]{1,128}$": {
-          "type": "string",
-          "minLength": 0,
-          "maxLength": 1024
-        }
-      }
-    },
-    "Parameters": {
-      "type": "array",
-      "items": {
-        "oneOf": [
-          {"$ref": "#/definitions/StringParameter"},
-          {"$ref": "#/definitions/IntegerParameter"},
-          {"$ref": "#/definitions/FloatParameter"},
-          {"$ref": "#/definitions/BooleanParameter"}
-        ]
-      }
-    },
-    "Steps": {
-      "type": "array",
-      "items": {
-        "oneOf": [
-          {"$ref": "#/definitions/ConditionStep"},
-          {"$ref": "#/definitions/TrainingStep"},
-          {"$ref":  "#/definitions/ProcessingStep"},
-          {"$ref": "#/definitions/TransformStep"},
-          {"$ref":  "#/definitions/RegisterModelStep"}
-        ]
-      }
-    }
-  },
-  "required": ["Steps"],
-  "additionalProperties": false
+		},
+		"BinaryCondition": {
+			"type": "object",
+			"properties": {
+				"LeftValue": {
+					"anyOf": [{
+							"$ref": "#/definitions/StringArgumentValue"
+						},
+						{
+							"$ref": "#/definitions/BooleanArgumentValue"
+						},
+						{
+							"$ref": "#/definitions/IntegerArgumentValue"
+						},
+						{
+							"$ref": "#/definitions/FloatArgumentValue"
+						}
+					]
+				},
+				"RightValue": {
+					"anyOf": [{
+							"$ref": "#/definitions/StringArgumentValue"
+						},
+						{
+							"$ref": "#/definitions/BooleanArgumentValue"
+						},
+						{
+							"$ref": "#/definitions/IntegerArgumentValue"
+						},
+						{
+							"$ref": "#/definitions/FloatArgumentValue"
+						}
+					]
+				},
+				"Type": {
+					"type": "string",
+					"enum": ["GreaterThan", "LessThan", "LessThanOrEqualTo", "GreaterThanOrEqualTo", "Equals", "NotEquals"]
+				}
+			},
+			"required": ["Type", "LeftValue", "RightValue"],
+			"additionalProperties": false
+		},
+		"InCondition": {
+			"type": "object",
+			"properties": {
+				"Type": {
+					"type": "string",
+					"enum": ["In", "NotIn"]
+				},
+				"Value": {
+					"oneOf": [{
+							"$ref": "#/definitions/StringArgumentValue"
+						},
+						{
+							"$ref": "#/definitions/BooleanArgumentValue"
+						},
+						{
+							"$ref": "#/definitions/IntegerArgumentValue"
+						},
+						{
+							"$ref": "#/definitions/FloatArgumentValue"
+						}
+					]
+				},
+				"In": {
+					"type": "array",
+					"items": {
+						"oneOf": [{
+								"$ref": "#/definitions/StringArgumentValue"
+							},
+							{
+								"$ref": "#/definitions/BooleanArgumentValue"
+							},
+							{
+								"$ref": "#/definitions/IntegerArgumentValue"
+							},
+							{
+								"$ref": "#/definitions/FloatArgumentValue"
+							}
+						]
+					}
+				}
+			},
+			"required": ["Type", "Value", "In"],
+			"additionalProperties": false
+		},
+		"OrCondition": {
+			"type": "object",
+			"properties": {
+				"Type": {
+					"type": "string",
+					"enum": ["Or"]
+				},
+				"Conditions": {
+					"type": "array",
+					"items": {
+						"anyOf": [{
+								"$ref": "#/definitions/BinaryCondition"
+							},
+							{
+								"$ref": "#/definitions/InCondition"
+							}
+						]
+					}
+				}
+			},
+			"required": ["Type", "Conditions"],
+			"additionalProperties": false
+		},
+		"RetryPolicy": {
+			"type": "object",
+			"properties": {
+				"ExceptionType": {
+					"type": "string",
+					"enum": ["Step.SERVICE_FAULT", "Step.THROTTLING", "SageMaker.JOB_INTERNAL_ERROR", "SageMaker.CAPACITY_ERROR", "SageMaker.RESOURCE_LIMIT", "Emr.RESOURCE_LIMIT"]
+				},
+				"IntervalSeconds": {
+					"type": "integer"
+				},
+				"BackoffRate": {
+					"type": "number"
+				},
+				"ExpireAfterMin": {
+					"type": "integer"
+				},
+				"MaxAttempts": {
+					"type": "integer"
+				}
+			}
+		},
+		"ConditionStep": {
+			"properties": {
+				"Name": {
+					"$ref": "#/definitions/StepName"
+				},
+				"Type": {
+					"type": "string",
+					"enum": ["Condition"]
+				},
+				"DependsOn": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/StepName"
+					}
+				},
+				"DisplayName": {
+					"$ref": "#/definitions/StepName"
+				},
+				"Description": {
+					"$ref": "#/definitions/ParameterDescription"
+				},
+				"Arguments": {
+					"type": "object",
+					"properties": {
+						"Conditions": {
+							"type": "array",
+							"items": {
+								"oneOf": [{
+										"$ref": "#/definitions/BinaryCondition"
+									},
+									{
+										"$ref": "#/definitions/InCondition"
+									},
+									{
+										"$ref": "#/definitions/OrCondition"
+									}
+								]
+							}
+						},
+						"IfSteps": {
+							"type": "array",
+							"items": {
+								"oneOf": [{
+										"$ref": "#/definitions/TrainingStep"
+									},
+									{
+										"$ref": "#/definitions/FailStep"
+									},
+									{
+										"$ref": "#/definitions/ProcessingStep"
+									},
+									{
+										"$ref": "#/definitions/TransformStep"
+									},
+									{
+										"$ref": "#/definitions/RegisterModelStep"
+									}
+								]
+							}
+						},
+						"ElseSteps": {
+							"type": "array",
+							"items": {
+								"oneOf": [{
+										"$ref": "#/definitions/TrainingStep"
+									},
+									{
+										"$ref": "#/definitions/FailStep"
+									},
+									{
+										"$ref": "#/definitions/ProcessingStep"
+									},
+									{
+										"$ref": "#/definitions/TransformStep"
+									},
+									{
+										"$ref": "#/definitions/RegisterModelStep"
+									}
+								]
+							}
+						}
+					},
+					"required": ["Conditions"],
+					"additionalProperties": false
+				}
+			},
+			"required": ["Type", "Name", "Arguments"],
+			"additionalProperties": false
+		},
+		"TrainingStep": {
+			"type": "object",
+			"properties": {
+				"Name": {
+					"$ref": "#/definitions/StepName"
+				},
+				"Type": {
+					"type": "string",
+					"enum": ["Training"]
+				},
+				"DependsOn": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/StepName"
+					}
+				},
+				"DisplayName": {
+					"$ref": "#/definitions/StepName"
+				},
+				"Description": {
+					"$ref": "#/definitions/ParameterDescription"
+				},
+				"RetryPolicies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/RetryPolicy"
+					}
+				},
+				"Arguments": {
+					"type": "object",
+					"properties": {
+						"AlgorithmSpecification": {
+							"type": "object",
+							"properties": {
+								"AlgorithmName": {
+									"$ref": "#/definitions/StringArgumentValue"
+								},
+								"EnableSageMakerMetricsTimeSeries": {
+									"$ref": "#/definitions/BooleanArgumentValue"
+								},
+								"MetricDefinitions": {
+									"type": "array",
+									"items": {
+										"type": "object",
+										"properties": {
+											"Name": {
+												"$ref": "#/definitions/StringArgumentValue"
+											},
+											"Regex": {
+												"$ref": "#/definitions/StringArgumentValue"
+											}
+										},
+										"additionalProperties": false
+									}
+								},
+								"TrainingImage": {
+									"$ref": "#/definitions/StringArgumentValue"
+								},
+								"TrainingInputMode": {
+									"$ref": "#/definitions/StringArgumentValue"
+								}
+							},
+							"additionalProperties": false
+						},
+						"CheckpointConfig": {
+							"type": "object",
+							"properties": {
+								"LocalPath": {
+									"$ref": "#/definitions/StringArgumentValue"
+								},
+								"S3Uri": {
+									"$ref": "#/definitions/StringArgumentValue"
+								}
+							},
+							"additionalProperties": false
+						},
+						"DebugHookConfig": {
+							"type": "object",
+							"properties": {
+								"CollectionConfigurations": {
+									"type": "array",
+									"items": {
+										"type": "object",
+										"properties": {
+											"CollectionName": {
+												"$ref": "#/definitions/StringArgumentValue"
+											},
+											"CollectionParameters": {
+												"type": "object",
+												"patternProperties": {
+													".*": {
+														"$ref": "#/definitions/StringArgumentValue"
+													}
+												}
+											}
+										},
+										"additionalProperties": false
+									}
+								},
+								"HookParameters": {
+									"type": "object",
+									"patternProperties": {
+										".*": {
+											"$ref": "#/definitions/StringArgumentValue"
+										}
+									}
+								},
+								"LocalPath": {
+									"$ref": "#/definitions/StringArgumentValue"
+								},
+								"S3OutputPath": {
+									"$ref": "#/definitions/StringArgumentValue"
+								}
+							},
+							"additionalProperties": false
+						},
+						"DebugRuleConfigurations": {
+							"type": "array",
+							"items": {
+								"type": "object",
+								"properties": {
+									"InstanceType": {
+										"$ref": "#/definitions/StringArgumentValue"
+									},
+									"LocalPath": {
+										"$ref": "#/definitions/StringArgumentValue"
+									},
+									"RuleConfigurationName": {
+										"$ref": "#/definitions/StringArgumentValue"
+									},
+									"RuleEvaluatorImage": {
+										"$ref": "#/definitions/StringArgumentValue"
+									},
+									"RuleParameters": {
+										"type": "object",
+										"patternProperties": {
+											".*": {
+												"$ref": "#/definitions/StringArgumentValue"
+											}
+										}
+									},
+									"S3OutputPath": {
+										"$ref": "#/definitions/StringArgumentValue"
+									},
+									"VolumeSizeInGB": {
+										"$ref": "#/definitions/IntegerArgumentValue"
+									}
+								},
+								"additionalProperties": false
+							}
+						},
+						"EnableInterContainerTrafficEncryption": {
+							"$ref": "#/definitions/BooleanArgumentValue"
+						},
+						"EnableManagedSpotTraining": {
+							"$ref": "#/definitions/BooleanArgumentValue"
+						},
+						"EnableNetworkIsolation": {
+							"$ref": "#/definitions/BooleanArgumentValue"
+						},
+						"HyperParameters": {
+							"type": "object",
+							"patternProperties": {
+								".*": {
+									"$ref": "#/definitions/StringArgumentValue"
+								}
+							}
+						},
+						"InputDataConfig": {
+							"type": "array",
+							"items": {
+								"type": "object",
+								"properties": {
+									"ChannelName": {
+										"$ref": "#/definitions/StringArgumentValue"
+									},
+									"CompressionType": {
+										"$ref": "#/definitions/StringArgumentValue"
+									},
+									"ContentType": {
+										"$ref": "#/definitions/StringArgumentValue"
+									},
+									"DataSource": {
+										"type": "object",
+										"properties": {
+											"FileSystemDataSource": {
+												"type": "object",
+												"properties": {
+													"DirectoryPath": {
+														"$ref": "#/definitions/StringArgumentValue"
+													},
+													"FileSystemAccessMode": {
+														"$ref": "#/definitions/StringArgumentValue"
+													},
+													"FileSystemId": {
+														"$ref": "#/definitions/StringArgumentValue"
+													},
+													"FileSystemType": {
+														"$ref": "#/definitions/StringArgumentValue"
+													}
+												},
+												"additionalProperties": false
+											},
+											"S3DataSource": {
+												"type": "object",
+												"properties": {
+													"AttributeNames": {
+														"type": "array",
+														"items": {
+															"$ref": "#/definitions/StringArgumentValue"
+														}
+													},
+													"S3DataDistributionType": {
+														"$ref": "#/definitions/StringArgumentValue"
+													},
+													"S3DataType": {
+														"$ref": "#/definitions/StringArgumentValue"
+													},
+													"S3Uri": {
+														"$ref": "#/definitions/StringArgumentValue"
+													}
+												},
+												"additionalProperties": false
+											}
+										}
+									},
+									"InputMode": {
+										"$ref": "#/definitions/StringArgumentValue"
+									},
+									"RecordWrapperType": {
+										"$ref": "#/definitions/StringArgumentValue"
+									},
+									"ShuffleConfig": {
+										"type": "object",
+										"properties": {
+											"Seed": {
+												"$ref": "#/definitions/IntegerArgumentValue"
+											}
+										},
+										"additionalProperties": false
+									}
+								}
+							}
+						},
+						"OutputDataConfig": {
+							"type": "object",
+							"properties": {
+								"KmsKeyId": {
+									"$ref": "#/definitions/StringArgumentValue"
+								},
+								"S3OutputPath": {
+									"$ref": "#/definitions/StringArgumentValue"
+								}
+							},
+							"additionalProperties": false
+						},
+						"ResourceConfig": {
+							"type": "object",
+							"properties": {
+								"InstanceCount": {
+									"$ref": "#/definitions/IntegerArgumentValue"
+								},
+								"InstanceType": {
+									"$ref": "#/definitions/StringArgumentValue"
+								},
+								"VolumeKmsKeyId": {
+									"$ref": "#/definitions/StringArgumentValue"
+								},
+								"VolumeSizeInGB": {
+									"$ref": "#/definitions/IntegerArgumentValue"
+								}
+							},
+							"additionalProperties": false
+						},
+						"RoleArn": {
+							"$ref": "#/definitions/StringArgumentValue"
+						},
+						"StoppingCondition": {
+							"type": "object",
+							"properties": {
+								"MaxRuntimeInSeconds": {
+									"$ref": "#/definitions/IntegerArgumentValue"
+								},
+								"MaxWaitTimeInSeconds": {
+									"$ref": "#/definitions/IntegerArgumentValue"
+								}
+							},
+							"additionalProperties": false
+						},
+						"Tags": {
+							"type": "array",
+							"items": {
+								"type": "object",
+								"properties": {
+									"Key": {
+										"$ref": "#/definitions/StringArgumentValue"
+									},
+									"Value": {
+										"$ref": "#/definitions/StringArgumentValue"
+									}
+								},
+								"additionalProperties": false
+							}
+						},
+						"TensorBoardOutputConfig": {
+							"type": "object",
+							"properties": {
+								"LocalPath": {
+									"$ref": "#/definitions/StringArgumentValue"
+								},
+								"S3OutputPath": {
+									"$ref": "#/definitions/StringArgumentValue"
+								}
+							},
+							"additionalProperties": false
+						},
+						"VpcConfig": {
+							"type": "object",
+							"properties": {
+								"SecurityGroupIds": {
+									"type": "array",
+									"items": {
+										"$ref": "#/definitions/StringArgumentValue"
+									}
+								},
+								"Subnets": {
+									"type": "array",
+									"items": {
+										"$ref": "#/definitions/StringArgumentValue"
+									}
+								}
+							},
+							"additionalProperties": false
+						}
+					},
+					"additionalProperties": false
+				}
+			},
+			"required": ["Type", "Name"],
+			"additionalProperties": false
+		},
+		"ProcessingStep": {
+			"type": "object",
+			"properties": {
+				"Name": {
+					"$ref": "#/definitions/StepName"
+				},
+				"Type": {
+					"type": "string",
+					"enum": ["Processing"]
+				},
+				"DependsOn": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/StepName"
+					}
+				},
+				"DisplayName": {
+					"$ref": "#/definitions/StepName"
+				},
+				"Description": {
+					"$ref": "#/definitions/ParameterDescription"
+				},
+				"RetryPolicies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/RetryPolicy"
+					}
+				},
+				"Arguments": {
+					"type": "object",
+					"properties": {
+						"AppSpecification": {
+							"type": "object",
+							"properties": {
+								"ContainerArguments": {
+									"type": "array",
+									"items": {
+										"$ref": "#/definitions/StringArgumentValue"
+									}
+								},
+								"ContainerEntrypoint": {
+									"type": "array",
+									"items": {
+										"$ref": "#/definitions/StringArgumentValue"
+									}
+								},
+								"ImageUri": {
+									"$ref": "#/definitions/StringArgumentValue"
+								}
+							},
+							"additionalProperties": false
+						},
+						"Environment": {
+							"type": "object",
+							"patternProperties": {
+								".*": {
+									"$ref": "#/definitions/StringArgumentValue"
+								}
+							}
+						},
+						"ExperimentConfig": {
+							"type": "object",
+							"properties": {
+								"ExperimentName": {
+									"$ref": "#/definitions/StringArgumentValue"
+								},
+								"TrialComponentDisplayName": {
+									"$ref": "#/definitions/StringArgumentValue"
+								},
+								"TrialName": {
+									"$ref": "#/definitions/StringArgumentValue"
+								}
+							},
+							"additionalProperties": false
+						},
+						"NetworkConfig": {
+							"type": "object",
+							"properties": {
+								"EnableInterContainerTrafficEncryption": {
+									"$ref": "#/definitions/BooleanArgumentValue"
+								},
+								"EnableNetworkIsolation": {
+									"$ref": "#/definitions/BooleanArgumentValue"
+								},
+								"VpcConfig": {
+									"type": "object",
+									"properties": {
+										"SecurityGroupIds": {
+											"type": "array",
+											"items": {
+												"$ref": "#/definitions/StringArgumentValue"
+											}
+										},
+										"Subnets": {
+											"type": "array",
+											"items": {
+												"$ref": "#/definitions/StringArgumentValue"
+											}
+										}
+									},
+									"additionalProperties": false
+								}
+							},
+							"additionalProperties": false
+						},
+						"ProcessingInputs": {
+							"type": "array",
+							"items": {
+								"type": "object",
+								"properties": {
+									"InputName": {
+										"$ref": "#/definitions/StringArgumentValue"
+									},
+									"S3Input": {
+										"type": "object",
+										"properties": {
+											"LocalPath": {
+												"$ref": "#/definitions/StringArgumentValue"
+											},
+											"S3CompressionType": {
+												"$ref": "#/definitions/StringArgumentValue"
+											},
+											"S3DataDistributionType": {
+												"$ref": "#/definitions/StringArgumentValue"
+											},
+											"S3DataType": {
+												"$ref": "#/definitions/StringArgumentValue"
+											},
+											"S3InputMode": {
+												"$ref": "#/definitions/StringArgumentValue"
+											},
+											"S3Uri": {
+												"$ref": "#/definitions/StringArgumentValue"
+											}
+										},
+										"additionalProperties": false
+									}
+								},
+								"additionalProperties": false
+							}
+						},
+						"ProcessingOutputConfig": {
+							"type": "object",
+							"properties": {
+								"KmsKeyId": {
+									"$ref": "#/definitions/StringArgumentValue"
+								},
+								"Outputs": {
+									"type": "array",
+									"items": {
+										"type": "object",
+										"properties": {
+											"OutputName": {
+												"$ref": "#/definitions/StringArgumentValue"
+											},
+											"S3Output": {
+												"type": "object",
+												"properties": {
+													"LocalPath": {
+														"$ref": "#/definitions/StringArgumentValue"
+													},
+													"S3UploadMode": {
+														"$ref": "#/definitions/StringArgumentValue"
+													},
+													"S3Uri": {
+														"$ref": "#/definitions/StringArgumentValue"
+													}
+												},
+												"additionalProperties": false
+											}
+										},
+										"additionalProperties": false
+									}
+								}
+							},
+							"additionalProperties": false
+						},
+						"ProcessingResources": {
+							"type": "object",
+							"properties": {
+								"ClusterConfig": {
+									"type": "object",
+									"properties": {
+										"InstanceCount": {
+											"$ref": "#/definitions/IntegerArgumentValue"
+										},
+										"InstanceType": {
+											"$ref": "#/definitions/StringArgumentValue"
+										},
+										"VolumeKmsKeyId": {
+											"$ref": "#/definitions/StringArgumentValue"
+										},
+										"VolumeSizeInGB": {
+											"$ref": "#/definitions/IntegerArgumentValue"
+										}
+									},
+									"additionalProperties": false
+								}
+							},
+							"additionalProperties": false
+						},
+						"RoleArn": {
+							"$ref": "#/definitions/StringArgumentValue"
+						},
+						"StoppingCondition": {
+							"type": "object",
+							"properties": {
+								"MaxRuntimeInSeconds": {
+									"$ref": "#/definitions/IntegerArgumentValue"
+								}
+							},
+							"additionalProperties": false
+						},
+						"Tags": {
+							"type": "array",
+							"items": {
+								"type": "object",
+								"properties": {
+									"Key": {
+										"$ref": "#/definitions/StringArgumentValue"
+									},
+									"Value": {
+										"$ref": "#/definitions/StringArgumentValue"
+									}
+								},
+								"additionalProperties": false
+							}
+						}
+					},
+					"additionalProperties": false
+				}
+			},
+			"required": ["Type", "Name"],
+			"additionalProperties": false
+		},
+		"TransformStep": {
+			"type": "object",
+			"properties": {
+				"Name": {
+					"$ref": "#/definitions/StepName"
+				},
+				"Type": {
+					"type": "string",
+					"enum": ["Transform"]
+				},
+				"DependsOn": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/StepName"
+					}
+				},
+				"DisplayName": {
+					"$ref": "#/definitions/StepName"
+				},
+				"Description": {
+					"$ref": "#/definitions/ParameterDescription"
+				},
+				"RetryPolicies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/RetryPolicy"
+					}
+				},
+				"Arguments": {
+					"type": "object",
+					"properties": {
+						"BatchStrategy": {
+							"$ref": "#/definitions/StringArgumentValue"
+						},
+						"DataProcessing": {
+							"type": "object",
+							"properties": {
+								"InputFilter": {
+									"$ref": "#/definitions/StringArgumentValue"
+								},
+								"JoinSource": {
+									"$ref": "#/definitions/StringArgumentValue"
+								},
+								"OutputFilter": {
+									"$ref": "#/definitions/StringArgumentValue"
+								}
+							},
+							"additionalProperties": false
+						},
+						"Environment": {
+							"type": "object",
+							"patternProperties": {
+								".*": {
+									"$ref": "#/definitions/StringArgumentValue"
+								}
+							}
+						},
+						"ExperimentConfig": {
+							"type": "object",
+							"properties": {
+								"ExperimentName": {
+									"$ref": "#/definitions/StringArgumentValue"
+								},
+								"TrialComponentDisplayName": {
+									"$ref": "#/definitions/StringArgumentValue"
+								},
+								"TrialName": {
+									"$ref": "#/definitions/StringArgumentValue"
+								}
+							},
+							"additionalProperties": false
+						},
+						"MaxConcurrentTransforms": {
+							"$ref": "#/definitions/IntegerArgumentValue"
+						},
+						"MaxPayloadInMB": {
+							"$ref": "#/definitions/IntegerArgumentValue"
+						},
+						"ModelClientConfig": {
+							"type": "object",
+							"properties": {
+								"InvocationsMaxRetries": {
+									"$ref": "#/definitions/IntegerArgumentValue"
+								},
+								"InvocationsTimeoutInSeconds": {
+									"$ref": "#/definitions/IntegerArgumentValue"
+								}
+							},
+							"additionalProperties": false
+						},
+						"Tags": {
+							"type": "array",
+							"items": {
+								"type": "object",
+								"properties": {
+									"Key": {
+										"$ref": "#/definitions/StringArgumentValue"
+									},
+									"Value": {
+										"$ref": "#/definitions/StringArgumentValue"
+									}
+								},
+								"additionalProperties": false
+							}
+						},
+						"ModelName": {
+							"$ref": "#/definitions/StringArgumentValue"
+						},
+						"TransformInput": {
+							"type": "object",
+							"properties": {
+								"CompressionType": {
+									"$ref": "#/definitions/StringArgumentValue"
+								},
+								"ContentType": {
+									"$ref": "#/definitions/StringArgumentValue"
+								},
+								"DataSource": {
+									"type": "object",
+									"properties": {
+										"S3DataSource": {
+											"type": "object",
+											"properties": {
+												"S3DataType": {
+													"$ref": "#/definitions/StringArgumentValue"
+												},
+												"S3Uri": {
+													"$ref": "#/definitions/StringArgumentValue"
+												}
+											},
+											"additionalProperties": false
+										}
+									},
+									"additionalProperties": false
+								},
+								"SplitType": {
+									"$ref": "#/definitions/StringArgumentValue"
+								}
+							},
+							"additionalProperties": false
+						},
+						"TransformJobName": {
+							"$ref": "#/definitions/StringArgumentValue"
+						},
+						"TransformOutput": {
+							"type": "object",
+							"properties": {
+								"Accept": {
+									"$ref": "#/definitions/StringArgumentValue"
+								},
+								"AssembleWith": {
+									"$ref": "#/definitions/StringArgumentValue"
+								},
+								"KmsKeyId": {
+									"$ref": "#/definitions/StringArgumentValue"
+								},
+								"S3OutputPath": {
+									"$ref": "#/definitions/StringArgumentValue"
+								}
+							},
+							"additionalProperties": false
+						},
+						"TransformResources": {
+							"type": "object",
+							"properties": {
+								"InstanceCount": {
+									"$ref": "#/definitions/IntegerArgumentValue"
+								},
+								"InstanceType": {
+									"$ref": "#/definitions/StringArgumentValue"
+								},
+								"VolumeKmsKeyId": {
+									"$ref": "#/definitions/StringArgumentValue"
+								}
+							},
+							"additionalProperties": false
+						}
+					},
+					"additionalProperties": false
+				}
+			},
+			"required": ["Type", "Name"],
+			"additionalProperties": false
+		},
+		"CreateModelStep": {
+			"type": "object",
+			"properties": {
+				"Name": {
+					"$ref": "#/definitions/StepName"
+				},
+				"Type": {
+					"type": "string",
+					"enum": ["CreateModel"]
+				},
+				"DependsOn": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/StepName"
+					}
+				},
+				"DisplayName": {
+					"$ref": "#/definitions/StepName"
+				},
+				"Description": {
+					"$ref": "#/definitions/ParameterDescription"
+				},
+				"RetryPolicies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/RetryPolicy"
+					}
+				},
+				"Arguments": {
+					"type": "object",
+					"properties": {
+						"Containers": {
+							"type": "array",
+							"items": {
+								"type": "object",
+								"properties": {
+									"ContainerHostname": {
+										"$ref": "#/definitions/StringArgumentValue"
+									},
+									"Environment": {
+										"type": "object",
+										"patternProperties": {
+											".*": {
+												"$ref": "#/definitions/StringArgumentValue"
+											}
+										}
+									},
+									"Image": {
+										"$ref": "#/definitions/StringArgumentValue"
+									},
+									"ImageConfig": {
+										"type": "object",
+										"properties": {
+											"RepositoryAccessMode": {
+												"type": "string",
+												"enum": ["Platform", "Vpc"]
+											},
+											"RepositoryAuthConfig": {
+												"type": "object",
+												"properties": {
+													"RepositoryCredentialsProviderArn": {
+														"$ref": "#/definitions/StringArgumentValue"
+													}
+												},
+												"required": ["RepositoryCredentialsProviderArn"],
+												"additionalProperties": false
+											}
+										},
+										"required": ["RepositoryAccessMode"],
+										"additionalProperties": false
+									},
+									"InferenceSpecificationName": {
+										"$ref": "#/definitions/StringArgumentValue"
+									},
+									"Mode": {
+										"type": "string",
+										"enum": ["SingleModel", "MultiModel"]
+									},
+									"ModelDataUrl": {
+										"type": "string",
+										"minLength": 0,
+										"maxLength": 1024,
+										"pattern": "^(https|s3)://([^/]+)/?(.*)$"
+									},
+									"ModelPackageName": {
+										"$ref": "#/definitions/StringArgumentValue"
+									},
+									"MultiModelConfig": {
+										"type": "object",
+										"properties": {
+											"ModelCacheSetting": {
+												"type": "string",
+												"enum": ["Enabled", "Disabled"]
+											}
+										},
+										"additionalProperties": false
+									}
+								},
+								"additionalProperties": false
+							}
+						}
+					},
+					"additionalProperties": false
+				}
+			},
+			"required": ["Type", "Name"],
+			"additionalProperties": false
+		},
+		"RegisterModelStep": {
+			"type": "object",
+			"properties": {
+				"Name": {
+					"$ref": "#/definitions/StepName"
+				},
+				"Type": {
+					"type": "string",
+					"enum": ["RegisterModel"]
+				},
+				"DependsOn": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/StepName"
+					}
+				},
+				"DisplayName": {
+					"$ref": "#/definitions/StepName"
+				},
+				"Description": {
+					"$ref": "#/definitions/ParameterDescription"
+				},
+				"RetryPolicies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/RetryPolicy"
+					}
+				},
+				"Arguments": {
+					"type": "object",
+					"properties": {
+						"CertifyForMarketplace": {
+							"$ref": "#/definitions/BooleanArgumentValue"
+						},
+						"InferenceSpecification": {
+							"type": "object",
+							"properties": {
+								"Containers": {
+									"type": "array",
+									"items": {
+										"type": "object",
+										"properties": {
+											"ContainerHostname": {
+												"$ref": "#/definitions/StringArgumentValue"
+											},
+											"Image": {
+												"$ref": "#/definitions/StringArgumentValue"
+											},
+											"ImageDigest": {
+												"$ref": "#/definitions/StringArgumentValue"
+											},
+											"ModelDataUrl": {
+												"$ref": "#/definitions/StringArgumentValue"
+											},
+											"ProductId": {
+												"$ref": "#/definitions/StringArgumentValue"
+											}
+										},
+										"additionalProperties": false
+									}
+								},
+								"SupportedContentTypes": {
+									"type": "array",
+									"items": {
+										"$ref": "#/definitions/StringArgumentValue"
+									}
+								},
+								"SupportedRealtimeInferenceInstanceTypes": {
+									"type": "array",
+									"items": {
+										"$ref": "#/definitions/StringArgumentValue"
+									}
+								},
+								"SupportedResponseMIMETypes": {
+									"type": "array",
+									"items": {
+										"$ref": "#/definitions/StringArgumentValue"
+									}
+								},
+								"SupportedTransformInstanceTypes": {
+									"type": "array",
+									"items": {
+										"$ref": "#/definitions/StringArgumentValue"
+									}
+								}
+							},
+							"additionalProperties": false
+						},
+						"ModelPackageDescription": {
+							"$ref": "#/definitions/StringArgumentValue"
+						},
+						"ModelPackageGroupName": {
+							"$ref": "#/definitions/StringArgumentValue"
+						},
+						"ModelMetrics": {
+							"type": "object",
+							"properties": {
+								"ModelQuality": {
+									"type": "object",
+									"properties": {
+										"Statistics": {
+											"type": "object",
+											"properties": {
+												"ContentType": {
+													"$ref": "#/definitions/StringArgumentValue"
+												},
+												"ContentDigest": {
+													"$ref": "#/definitions/StringArgumentValue"
+												},
+												"S3Uri": {
+													"$ref": "#/definitions/StringArgumentValue"
+												}
+											},
+											"additionalProperties": false
+										},
+										"Constraints": {
+											"type": "object",
+											"properties": {
+												"ContentType": {
+													"$ref": "#/definitions/StringArgumentValue"
+												},
+												"ContentDigest": {
+													"$ref": "#/definitions/StringArgumentValue"
+												},
+												"S3Uri": {
+													"$ref": "#/definitions/StringArgumentValue"
+												}
+											},
+											"additionalProperties": false
+										}
+									},
+									"additionalProperties": false
+								},
+								"ModelDataQuality": {
+									"type": "object",
+									"properties": {
+										"Statistics": {
+											"type": "object",
+											"properties": {
+												"ContentType": {
+													"$ref": "#/definitions/StringArgumentValue"
+												},
+												"ContentDigest": {
+													"$ref": "#/definitions/StringArgumentValue"
+												},
+												"S3Uri": {
+													"$ref": "#/definitions/StringArgumentValue"
+												}
+											},
+											"additionalProperties": false
+										},
+										"Constraints": {
+											"type": "object",
+											"properties": {
+												"ContentType": {
+													"$ref": "#/definitions/StringArgumentValue"
+												},
+												"ContentDigest": {
+													"$ref": "#/definitions/StringArgumentValue"
+												},
+												"S3Uri": {
+													"$ref": "#/definitions/StringArgumentValue"
+												}
+											},
+											"additionalProperties": false
+										}
+									},
+									"additionalProperties": false
+								},
+								"Bias": {
+									"type": "object",
+									"properties": {
+										"Report": {
+											"type": "object",
+											"properties": {
+												"ContentType": {
+													"$ref": "#/definitions/StringArgumentValue"
+												},
+												"ContentDigest": {
+													"$ref": "#/definitions/StringArgumentValue"
+												},
+												"S3Uri": {
+													"$ref": "#/definitions/StringArgumentValue"
+												}
+											},
+											"additionalProperties": false
+										}
+									},
+									"additionalProperties": false
+								},
+								"Explainability": {
+									"type": "object",
+									"properties": {
+										"Report": {
+											"type": "object",
+											"properties": {
+												"ContentType": {
+													"$ref": "#/definitions/StringArgumentValue"
+												},
+												"ContentDigest": {
+													"$ref": "#/definitions/StringArgumentValue"
+												},
+												"S3Uri": {
+													"$ref": "#/definitions/StringArgumentValue"
+												}
+											},
+											"additionalProperties": false
+										}
+									},
+									"additionalProperties": false
+								},
+								"DeploymentSpecification": {
+									"type": "object",
+									"properties": {
+										"TestInput": {
+											"type": "object",
+											"properties": {
+												"CompressionType": {
+													"$ref": "#/definitions/StringArgumentValue"
+												},
+												"ContentType": {
+													"$ref": "#/definitions/StringArgumentValue"
+												},
+												"DataSource": {
+													"type": "object",
+													"properties": {
+														"S3DataSource": {
+															"type": "object",
+															"properties": {
+																"S3DataType": {
+																	"$ref": "#/definitions/StringArgumentValue"
+																},
+																"S3Uri": {
+																	"$ref": "#/definitions/StringArgumentValue"
+																}
+															},
+															"additionalProperties": false
+														}
+													},
+													"additionalProperties": false
+												},
+												"SplitType": {
+													"$ref": "#/definitions/StringArgumentValue"
+												}
+											},
+											"additionalProperties": false
+										},
+										"HealthCheckConfig": {
+											"type": "object",
+											"properties": {
+												"NumPayloads": {
+													"$ref": "#/definitions/IntegerArgumentValue"
+												},
+												"NumFailuresAllowed": {
+													"$ref": "#/definitions/IntegerArgumentValue"
+												}
+											},
+											"additionalProperties": false
+										}
+									},
+									"additionalProperties": false
+								}
+							},
+							"additionalProperties": false
+						}
+					},
+					"additionalProperties": false
+				}
+			},
+			"required": ["Type", "Name"],
+			"additionalProperties": false
+		},
+		"LambdaStep": {},
+		"CallbackStep": {},
+		"TuningStep": {},
+		"ClarifyCheckStep": {},
+		"QualityCheckStep": {},
+		"EMRStep": {},
+		"FailStep": {
+			"properties": {
+				"Name": {
+					"$ref": "#/definitions/StepName"
+				},
+				"Type": {
+					"type": "string",
+					"enum": ["Fail"]
+				},
+				"DependsOn": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/StepName"
+					}
+				},
+				"DisplayName": {
+					"$ref": "#/definitions/StepName"
+				},
+				"Description": {
+					"$ref": "#/definitions/ParameterDescription"
+				},
+				"Arguments": {
+					"type": "object",
+					"properties": {
+						"ErrorMessage": {
+							"$ref": "#/definitions/StringArgumentValue"
+						}
+					}
+				}
+			},
+			"required": ["Type"],
+			"additionalProperties": false
+		}
+	},
+	"properties": {
+		"Version": {
+			"type": "string",
+			"enum": ["2020-12-01"]
+		},
+		"Metadata": {
+			"type": "object",
+			"patternProperties": {
+				"^[A-Za-z0-9\\-_]{1,128}$": {
+					"type": "string",
+					"minLength": 0,
+					"maxLength": 1024
+				}
+			}
+		},
+		"Parameters": {
+			"type": "array",
+			"items": {
+				"oneOf": [{
+						"$ref": "#/definitions/StringParameter"
+					},
+					{
+						"$ref": "#/definitions/IntegerParameter"
+					},
+					{
+						"$ref": "#/definitions/FloatParameter"
+					},
+					{
+						"$ref": "#/definitions/BooleanParameter"
+					}
+				]
+			}
+		},
+		"Steps": {
+			"type": "array",
+			"items": {
+				"oneOf": [{
+						"$ref": "#/definitions/ConditionStep"
+					},
+					{
+						"$ref": "#/definitions/TrainingStep"
+					},
+					{
+						"$ref": "#/definitions/ProcessingStep"
+					},
+					{
+						"$ref": "#/definitions/TransformStep"
+					},
+					{
+						"$ref": "#/definitions/CreateModelStep"
+					},
+					{
+						"$ref": "#/definitions/RegisterModelStep"
+					}
+				]
+			}
+		}
+	},
+	"required": ["Steps"],
+	"additionalProperties": false
 }
