@@ -1181,12 +1181,8 @@
 								"properties": {
 									"ContainerHostname": {
 										"$ref": "#/definitions/StringArgumentValue"
-									}
-								},
-								"additionalProperties": false
-							}
-						},
-						"Environment": {
+									},
+									"Environment": {
 										"type": "object",
 										"patternProperties": {
 											".*": {
@@ -1194,55 +1190,62 @@
 											}
 										}
 									},
-						"Image": {
-							"$ref": "#/definitions/StringArgumentValue"
-						},
-						"ImageConfig": {
-							"type": "object",
-							"properties": {
-								"RepositoryAccessMode": {
-									"type": "string",
-									"enum": ["Platform", "Vpc"]
-								},
-								"RepositoryAuthConfig": {
-									"type": "object",
-									"properties": {
-										"RepositoryCredentialsProviderArn": {
-											"$ref": "#/definitions/StringArgumentValue"
-										}
+									"Image": {
+										"$ref": "#/definitions/StringArgumentValue"
 									},
-									"required": ["RepositoryCredentialsProviderArn"],
-									"additionalProperties": false
-								}
-							},
-							"required": ["RepositoryAccessMode"],
-							"additionalProperties": false
+									"ImageConfig": {
+										"type": "object",
+										"properties": {
+											"RepositoryAccessMode": {
+												"type": "string",
+												"enum": ["Platform", "Vpc"]
+											},
+											"RepositoryAuthConfig": {
+												"type": "object",
+												"properties": {
+													"RepositoryCredentialsProviderArn": {
+														"$ref": "#/definitions/StringArgumentValue"
+													}
+												},
+												"required": ["RepositoryCredentialsProviderArn"],
+												"additionalProperties": false
+											}
+										},
+										"required": ["RepositoryAccessMode"],
+										"additionalProperties": false
+									},
+									"InferenceSpecificationName": {
+										"$ref": "#/definitions/StringArgumentValue"
+									},
+									"Mode": {
+										"type": "string",
+										"enum": ["SingleModel", "MultiModel"]
+									},
+									"ModelDataUrl": {
+										"type": "string",
+										"minLength": 0,
+										"maxLength": 1024,
+										"pattern": "^(https|s3)://([^/]+)/?(.*)$"
+									},
+									"ModelPackageName": {
+										"$ref": "#/definitions/StringArgumentValue"
+									},
+									"MultiModelConfig": {
+										"type": "object",
+										"properties": {
+											"ModelCacheSetting": {
+												"type": "string",
+												"enum": ["Enabled", "Disabled"]
+											}
+										},
+										"additionalProperties": false
+									}
+								},
+								"additionalProperties": false
+							}
 						},
-						"InferenceSpecificationName": {
-							"$ref": "#/definitions/StringArgumentValue"
-						},
-						"Mode": {
-							"type": "string",
-							"enum": ["SingleModel", "MultiModel"]
-						},
-						"ModelDataUrl": {
-							"type": "string",
-							"minLength": 0,
-							"maxLength": 1024,
-							"pattern": "^(https|s3)://([^/]+)/?(.*)$"
-						},
-						"ModelPackageName": {
-							"$ref": "#/definitions/StringArgumentValue"
-						},
-						"MultiModelConfig": {
-							"type": "object",
-							"properties": {
-								"ModelCacheSetting": {
-									"type": "string",
-									"enum": ["Enabled", "Disabled"]
-								}
-							},
-							"additionalProperties": false
+						"EnableNetworkIsolation":  {
+							"$ref": "#/definitions/BooleanArgumentValue"
 						}
 					},
 					"additionalProperties": false
