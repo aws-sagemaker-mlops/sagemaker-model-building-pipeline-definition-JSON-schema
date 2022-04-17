@@ -1,0 +1,3 @@
+## SqsQueueUrl Type
+
+`string`

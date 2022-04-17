@@ -1034,6 +1034,98 @@
 
 *   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-callbackstep-properties-outputparameters-items.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/CallbackStep/properties/OutputParameters/items`
 
+*   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-tuningstep-properties-arguments.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/Arguments`
+
+*   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-tuningstep-properties-arguments-properties-hyperparametertuningjobconfig.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/Arguments/properties/HyperParameterTuningJobConfig`
+
+*   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-tuningstep-properties-arguments-properties-hyperparametertuningjobconfig-properties-hyperparametertuningjobobjective.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/Arguments/properties/HyperParameterTuningJobConfig/properties/HyperParameterTuningJobObjective`
+
+*   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-parameterranges-properties-categoricalparameterranges-items.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ParameterRanges/properties/CategoricalParameterRanges/items`
+
+*   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-parameterranges-properties-integerparameterranges-items.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ParameterRanges/properties/IntegerParameterRanges/items`
+
+*   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-parameterranges-properties-continuousparameterranges-items.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ParameterRanges/properties/ContinuousParameterRanges/items`
+
+*   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-tuningstep-properties-arguments-properties-hyperparametertuningjobconfig-properties-resourcelimits.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/Arguments/properties/HyperParameterTuningJobConfig/properties/ResourceLimits`
+
+*   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-tuningstep-properties-arguments-properties-hyperparametertuningjobconfig-properties-tuningjobcompletioncriteria.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/Arguments/properties/HyperParameterTuningJobConfig/properties/TuningJobCompletionCriteria`
+
+*   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-algorithmspecification.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/AlgorithmSpecification`
+
+*   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-algorithmspecification-properties-metricdefinitions-items.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/AlgorithmSpecification/properties/MetricDefinitions/items`
+
+*   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-checkpointconfig.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/CheckpointConfig`
+
+*   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-parameterranges-properties-categoricalparameterranges-items.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ParameterRanges/properties/CategoricalParameterRanges/items`
+
+*   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-parameterranges-properties-integerparameterranges-items.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ParameterRanges/properties/IntegerParameterRanges/items`
+
+*   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-parameterranges-properties-continuousparameterranges-items.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ParameterRanges/properties/ContinuousParameterRanges/items`
+
+*   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-inputdataconfig-items.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/InputDataConfig/items`
+
+*   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-inputdataconfig-items-properties-datasource.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/InputDataConfig/items/properties/DataSource`
+
+*   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-inputdataconfig-items-properties-datasource-properties-filesystemdatasource.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/InputDataConfig/items/properties/DataSource/properties/FileSystemDataSource`
+
+*   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-inputdataconfig-items-properties-datasource-properties-s3datasource.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/InputDataConfig/items/properties/DataSource/properties/S3DataSource`
+
+*   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-inputdataconfig-items-properties-shuffleconfig.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/InputDataConfig/items/properties/ShuffleConfig`
+
+*   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-outputdataconfig.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/OutputDataConfig`
+
+*   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-resourceconfig.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/ResourceConfig`
+
+*   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-retrystrategy.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/RetryStrategy`
+
+*   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-statichyperparameters.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/StaticHyperParameters`
+
+*   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-stoppingcondition.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/StoppingCondition`
+
+*   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-tuningobjective.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/TuningObjective`
+
+*   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-vpcconfig.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/VpcConfig`
+
+*   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-algorithmspecification.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/AlgorithmSpecification`
+
+*   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-algorithmspecification-properties-metricdefinitions-items.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/AlgorithmSpecification/properties/MetricDefinitions/items`
+
+*   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-checkpointconfig.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/CheckpointConfig`
+
+*   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-parameterranges-properties-categoricalparameterranges-items.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ParameterRanges/properties/CategoricalParameterRanges/items`
+
+*   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-parameterranges-properties-integerparameterranges-items.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ParameterRanges/properties/IntegerParameterRanges/items`
+
+*   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-parameterranges-properties-continuousparameterranges-items.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ParameterRanges/properties/ContinuousParameterRanges/items`
+
+*   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-inputdataconfig-items.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/InputDataConfig/items`
+
+*   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-inputdataconfig-items-properties-datasource.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/InputDataConfig/items/properties/DataSource`
+
+*   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-inputdataconfig-items-properties-datasource-properties-filesystemdatasource.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/InputDataConfig/items/properties/DataSource/properties/FileSystemDataSource`
+
+*   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-inputdataconfig-items-properties-datasource-properties-s3datasource.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/InputDataConfig/items/properties/DataSource/properties/S3DataSource`
+
+*   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-inputdataconfig-items-properties-shuffleconfig.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/InputDataConfig/items/properties/ShuffleConfig`
+
+*   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-outputdataconfig.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/OutputDataConfig`
+
+*   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-resourceconfig.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/ResourceConfig`
+
+*   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-retrystrategy.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/RetryStrategy`
+
+*   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-statichyperparameters.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/StaticHyperParameters`
+
+*   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-stoppingcondition.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/StoppingCondition`
+
+*   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-tuningobjective.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/TuningObjective`
+
+*   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-vpcconfig.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/VpcConfig`
+
+*   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-tuningstep-properties-arguments-properties-warmstartconfig.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/Arguments/properties/WarmStartConfig`
+
+*   [Untitled object in SageMaker Pipeline Definition](./pipeline-definition-definitions-tuningstep-properties-arguments-properties-warmstartconfig-properties-parenthyperparametertuningjobs-items.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/Arguments/properties/WarmStartConfig/properties/ParentHyperParameterTuningJobs/items`
+
 ### Arrays
 
 *   [Untitled array in SageMaker Pipeline Definition](./pipeline-definition-definitions-joinfunction-properties-stdjoin-values.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/JoinFunction/properties/Std:Join/Values`
@@ -1553,6 +1645,60 @@
 *   [Untitled array in SageMaker Pipeline Definition](./pipeline-definition-definitions-callbackstep-properties-dependson.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/CallbackStep/properties/DependsOn`
 
 *   [Untitled array in SageMaker Pipeline Definition](./pipeline-definition-definitions-callbackstep-properties-outputparameters.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/CallbackStep/properties/OutputParameters`
+
+*   [Untitled array in SageMaker Pipeline Definition](./pipeline-definition-definitions-tuningstep-properties-dependson.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/DependsOn`
+
+*   [Untitled array in SageMaker Pipeline Definition](./pipeline-definition-definitions-tuningstep-properties-retrypolicies.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/RetryPolicies`
+
+*   [Untitled array in SageMaker Pipeline Definition](./pipeline-definition-definitions-parameterranges-properties-categoricalparameterranges.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ParameterRanges/properties/CategoricalParameterRanges`
+
+*   [Untitled array in SageMaker Pipeline Definition](./pipeline-definition-definitions-parameterranges-properties-categoricalparameterranges-items-properties-values.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ParameterRanges/properties/CategoricalParameterRanges/items/properties/Values`
+
+*   [Untitled array in SageMaker Pipeline Definition](./pipeline-definition-definitions-parameterranges-properties-integerparameterranges.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ParameterRanges/properties/IntegerParameterRanges`
+
+*   [Untitled array in SageMaker Pipeline Definition](./pipeline-definition-definitions-parameterranges-properties-continuousparameterranges.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ParameterRanges/properties/ContinuousParameterRanges`
+
+*   [Untitled array in SageMaker Pipeline Definition](./pipeline-definition-definitions-tuningstep-properties-arguments-properties-tags.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/Arguments/properties/Tags`
+
+*   [Untitled array in SageMaker Pipeline Definition](./pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-algorithmspecification-properties-metricdefinitions.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/AlgorithmSpecification/properties/MetricDefinitions`
+
+*   [Untitled array in SageMaker Pipeline Definition](./pipeline-definition-definitions-parameterranges-properties-categoricalparameterranges.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ParameterRanges/properties/CategoricalParameterRanges`
+
+*   [Untitled array in SageMaker Pipeline Definition](./pipeline-definition-definitions-parameterranges-properties-categoricalparameterranges-items-properties-values.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ParameterRanges/properties/CategoricalParameterRanges/items/properties/Values`
+
+*   [Untitled array in SageMaker Pipeline Definition](./pipeline-definition-definitions-parameterranges-properties-integerparameterranges.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ParameterRanges/properties/IntegerParameterRanges`
+
+*   [Untitled array in SageMaker Pipeline Definition](./pipeline-definition-definitions-parameterranges-properties-continuousparameterranges.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ParameterRanges/properties/ContinuousParameterRanges`
+
+*   [Untitled array in SageMaker Pipeline Definition](./pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-inputdataconfig.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/InputDataConfig`
+
+*   [Untitled array in SageMaker Pipeline Definition](./pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-inputdataconfig-items-properties-datasource-properties-s3datasource-properties-attributenames.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/InputDataConfig/items/properties/DataSource/properties/S3DataSource/properties/AttributeNames`
+
+*   [Untitled array in SageMaker Pipeline Definition](./pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-vpcconfig-properties-securitygroupids.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/VpcConfig/properties/SecurityGroupIds`
+
+*   [Untitled array in SageMaker Pipeline Definition](./pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-vpcconfig-properties-subnets.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/VpcConfig/properties/Subnets`
+
+*   [Untitled array in SageMaker Pipeline Definition](./pipeline-definition-definitions-tuningstep-properties-arguments-properties-trainingjobdefinitions.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/Arguments/properties/TrainingJobDefinitions`
+
+*   [Untitled array in SageMaker Pipeline Definition](./pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-algorithmspecification-properties-metricdefinitions.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/AlgorithmSpecification/properties/MetricDefinitions`
+
+*   [Untitled array in SageMaker Pipeline Definition](./pipeline-definition-definitions-parameterranges-properties-categoricalparameterranges.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ParameterRanges/properties/CategoricalParameterRanges`
+
+*   [Untitled array in SageMaker Pipeline Definition](./pipeline-definition-definitions-parameterranges-properties-categoricalparameterranges-items-properties-values.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ParameterRanges/properties/CategoricalParameterRanges/items/properties/Values`
+
+*   [Untitled array in SageMaker Pipeline Definition](./pipeline-definition-definitions-parameterranges-properties-integerparameterranges.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ParameterRanges/properties/IntegerParameterRanges`
+
+*   [Untitled array in SageMaker Pipeline Definition](./pipeline-definition-definitions-parameterranges-properties-continuousparameterranges.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ParameterRanges/properties/ContinuousParameterRanges`
+
+*   [Untitled array in SageMaker Pipeline Definition](./pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-inputdataconfig.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/InputDataConfig`
+
+*   [Untitled array in SageMaker Pipeline Definition](./pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-inputdataconfig-items-properties-datasource-properties-s3datasource-properties-attributenames.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/InputDataConfig/items/properties/DataSource/properties/S3DataSource/properties/AttributeNames`
+
+*   [Untitled array in SageMaker Pipeline Definition](./pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-vpcconfig-properties-securitygroupids.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/VpcConfig/properties/SecurityGroupIds`
+
+*   [Untitled array in SageMaker Pipeline Definition](./pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-vpcconfig-properties-subnets.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/VpcConfig/properties/Subnets`
+
+*   [Untitled array in SageMaker Pipeline Definition](./pipeline-definition-definitions-tuningstep-properties-arguments-properties-warmstartconfig-properties-parenthyperparametertuningjobs.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/Arguments/properties/WarmStartConfig/properties/ParentHyperParameterTuningJobs`
 
 ## Version Note
 

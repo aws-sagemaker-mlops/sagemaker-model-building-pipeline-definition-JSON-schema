@@ -1,4 +1,4 @@
-## OutputName Type
+## HyperParameterTuningJobName Type
 
 merged type ([Details](pipeline-definition-definitions-stringargumentvalue.md))
 

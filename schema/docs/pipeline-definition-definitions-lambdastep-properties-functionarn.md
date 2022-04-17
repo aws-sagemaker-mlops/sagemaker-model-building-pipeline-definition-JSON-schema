@@ -1,0 +1,3 @@
+## FunctionArn Type
+
+`string`

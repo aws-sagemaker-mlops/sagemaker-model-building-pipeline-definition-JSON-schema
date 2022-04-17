@@ -1,4 +1,4 @@
-## 3 Type
+## TargetObjectiveMetricValue Type
 
 merged type ([Details](pipeline-definition-definitions-floatargumentvalue.md))
 

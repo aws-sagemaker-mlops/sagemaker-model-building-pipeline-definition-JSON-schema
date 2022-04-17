@@ -1,4 +1,4 @@
-## CertifyForMarketplace Type
+## EnableNetworkIsolation Type
 
 merged type ([Details](pipeline-definition-definitions-booleanargumentvalue.md))
 

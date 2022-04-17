@@ -1,4 +1,4 @@
-## NumFailuresAllowed Type
+## MaxWaitTimeInSeconds Type
 
 merged type ([Details](pipeline-definition-definitions-integerargumentvalue.md))
 
