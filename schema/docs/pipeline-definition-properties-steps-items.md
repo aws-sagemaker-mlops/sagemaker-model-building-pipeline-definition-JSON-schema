@@ -15,3 +15,7 @@ one (and only one) of
 *   [Untitled object in SageMaker Pipeline Definition](pipeline-definition-definitions-createmodelstep.md "check type definition")
 
 *   [Untitled object in SageMaker Pipeline Definition](pipeline-definition-definitions-registermodelstep.md "check type definition")
+
+*   [Untitled object in SageMaker Pipeline Definition](pipeline-definition-definitions-lambdastep.md "check type definition")
+
+*   [Untitled object in SageMaker Pipeline Definition](pipeline-definition-definitions-callbackstep.md "check type definition")

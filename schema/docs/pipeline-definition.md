@@ -1151,6 +1151,437 @@ one (and only one) of
 
 *   [Untitled object in SageMaker Pipeline Definition](pipeline-definition-definitions-getfunction.md "check type definition")
 
+## Definitions group ParameterRanges
+
+Reference this group by using
+
+```json
+{"$ref":"https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ParameterRanges"}
+```
+
+| Property                                                  | Type    | Required | Nullable       | Defined by                                                                                                                                                                                                                                                                                       |
+| :-------------------------------------------------------- | :------ | :------- | :------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [CategoricalParameterRanges](#categoricalparameterranges) | `array` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-parameterranges-properties-categoricalparameterranges.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ParameterRanges/properties/CategoricalParameterRanges") |
+| [IntegerParameterRanges](#integerparameterranges)         | `array` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-parameterranges-properties-integerparameterranges.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ParameterRanges/properties/IntegerParameterRanges")         |
+| [ContinuousParameterRanges](#continuousparameterranges)   | `array` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-parameterranges-properties-continuousparameterranges.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ParameterRanges/properties/ContinuousParameterRanges")   |
+
+### CategoricalParameterRanges
+
+
+
+`CategoricalParameterRanges`
+
+*   is optional
+
+*   Type: `object[]` ([Details](pipeline-definition-definitions-parameterranges-properties-categoricalparameterranges-items.md))
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-parameterranges-properties-categoricalparameterranges.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ParameterRanges/properties/CategoricalParameterRanges")
+
+#### CategoricalParameterRanges Type
+
+`object[]` ([Details](pipeline-definition-definitions-parameterranges-properties-categoricalparameterranges-items.md))
+
+#### CategoricalParameterRanges Constraints
+
+**maximum number of items**: the maximum number of items for this array is: `20`
+
+**minimum number of items**: the minimum number of items for this array is: `0`
+
+### IntegerParameterRanges
+
+
+
+`IntegerParameterRanges`
+
+*   is optional
+
+*   Type: `object[]` ([Details](pipeline-definition-definitions-parameterranges-properties-integerparameterranges-items.md))
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-parameterranges-properties-integerparameterranges.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ParameterRanges/properties/IntegerParameterRanges")
+
+#### IntegerParameterRanges Type
+
+`object[]` ([Details](pipeline-definition-definitions-parameterranges-properties-integerparameterranges-items.md))
+
+#### IntegerParameterRanges Constraints
+
+**maximum number of items**: the maximum number of items for this array is: `20`
+
+**minimum number of items**: the minimum number of items for this array is: `0`
+
+### ContinuousParameterRanges
+
+
+
+`ContinuousParameterRanges`
+
+*   is optional
+
+*   Type: `object[]` ([Details](pipeline-definition-definitions-parameterranges-properties-continuousparameterranges-items.md))
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-parameterranges-properties-continuousparameterranges.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ParameterRanges/properties/ContinuousParameterRanges")
+
+#### ContinuousParameterRanges Type
+
+`object[]` ([Details](pipeline-definition-definitions-parameterranges-properties-continuousparameterranges-items.md))
+
+#### ContinuousParameterRanges Constraints
+
+**maximum number of items**: the maximum number of items for this array is: `20`
+
+**minimum number of items**: the minimum number of items for this array is: `0`
+
+## Definitions group HyperParameterTrainingJobDefinition
+
+Reference this group by using
+
+```json
+{"$ref":"https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition"}
+```
+
+| Property                                                                        | Type     | Required | Nullable       | Defined by                                                                                                                                                                                                                                                                                                                       |
+| :------------------------------------------------------------------------------ | :------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [DefinitionName](#definitionname)                                               | Merged   | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-stringargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/DefinitionName")                                                           |
+| [AlgorithmSpecification](#algorithmspecification)                               | `object` | Required | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-algorithmspecification.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/AlgorithmSpecification") |
+| [CheckpointConfig](#checkpointconfig)                                           | `object` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-checkpointconfig.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/CheckpointConfig")             |
+| [EnableInterContainerTrafficEncryption](#enableintercontainertrafficencryption) | Merged   | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-booleanargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/EnableInterContainerTrafficEncryption")                                   |
+| [EnableManagedSpotTraining](#enablemanagedspottraining)                         | Merged   | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-booleanargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/EnableManagedSpotTraining")                                               |
+| [EnableNetworkIsolation](#enablenetworkisolation)                               | Merged   | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-booleanargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/EnableNetworkIsolation")                                                  |
+| [HyperParameterRanges](#hyperparameterranges)                                   | `object` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-parameterranges.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/HyperParameterRanges")                                                         |
+| [InputDataConfig](#inputdataconfig)                                             | `array`  | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-inputdataconfig.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/InputDataConfig")               |
+| [OutputDataConfig](#outputdataconfig)                                           | `object` | Required | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-outputdataconfig.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/OutputDataConfig")             |
+| [ResourceConfig](#resourceconfig)                                               | `object` | Required | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-resourceconfig.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/ResourceConfig")                 |
+| [RetryStrategy](#retrystrategy)                                                 | `object` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-retrystrategy.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/RetryStrategy")                   |
+| [RoleArn](#rolearn)                                                             | Merged   | Required | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-stringargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/RoleArn")                                                                  |
+| [StaticHyperParameters](#statichyperparameters)                                 | `object` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-statichyperparameters.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/StaticHyperParameters")   |
+| [StoppingCondition](#stoppingcondition)                                         | `object` | Required | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-stoppingcondition.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/StoppingCondition")           |
+| [TuningObjective](#tuningobjective)                                             | `object` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-tuningobjective.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/TuningObjective")               |
+| [VpcConfig](#vpcconfig)                                                         | `object` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-vpcconfig.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/VpcConfig")                           |
+
+### DefinitionName
+
+
+
+`DefinitionName`
+
+*   is optional
+
+*   Type: merged type ([Details](pipeline-definition-definitions-stringargumentvalue.md))
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-stringargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/DefinitionName")
+
+#### DefinitionName Type
+
+merged type ([Details](pipeline-definition-definitions-stringargumentvalue.md))
+
+one (and only one) of
+
+*   [Untitled string in SageMaker Pipeline Definition](pipeline-definition-definitions-stringargumentvalue-oneof-0.md "check type definition")
+
+*   [Untitled object in SageMaker Pipeline Definition](pipeline-definition-definitions-getfunction.md "check type definition")
+
+### AlgorithmSpecification
+
+
+
+`AlgorithmSpecification`
+
+*   is required
+
+*   Type: `object` ([Details](pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-algorithmspecification.md))
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-algorithmspecification.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/AlgorithmSpecification")
+
+#### AlgorithmSpecification Type
+
+`object` ([Details](pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-algorithmspecification.md))
+
+### CheckpointConfig
+
+
+
+`CheckpointConfig`
+
+*   is optional
+
+*   Type: `object` ([Details](pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-checkpointconfig.md))
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-checkpointconfig.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/CheckpointConfig")
+
+#### CheckpointConfig Type
+
+`object` ([Details](pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-checkpointconfig.md))
+
+### EnableInterContainerTrafficEncryption
+
+
+
+`EnableInterContainerTrafficEncryption`
+
+*   is optional
+
+*   Type: merged type ([Details](pipeline-definition-definitions-booleanargumentvalue.md))
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-booleanargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/EnableInterContainerTrafficEncryption")
+
+#### EnableInterContainerTrafficEncryption Type
+
+merged type ([Details](pipeline-definition-definitions-booleanargumentvalue.md))
+
+one (and only one) of
+
+*   [Untitled boolean in SageMaker Pipeline Definition](pipeline-definition-definitions-booleanargumentvalue-oneof-0.md "check type definition")
+
+*   [Untitled object in SageMaker Pipeline Definition](pipeline-definition-definitions-getfunction.md "check type definition")
+
+### EnableManagedSpotTraining
+
+
+
+`EnableManagedSpotTraining`
+
+*   is optional
+
+*   Type: merged type ([Details](pipeline-definition-definitions-booleanargumentvalue.md))
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-booleanargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/EnableManagedSpotTraining")
+
+#### EnableManagedSpotTraining Type
+
+merged type ([Details](pipeline-definition-definitions-booleanargumentvalue.md))
+
+one (and only one) of
+
+*   [Untitled boolean in SageMaker Pipeline Definition](pipeline-definition-definitions-booleanargumentvalue-oneof-0.md "check type definition")
+
+*   [Untitled object in SageMaker Pipeline Definition](pipeline-definition-definitions-getfunction.md "check type definition")
+
+### EnableNetworkIsolation
+
+
+
+`EnableNetworkIsolation`
+
+*   is optional
+
+*   Type: merged type ([Details](pipeline-definition-definitions-booleanargumentvalue.md))
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-booleanargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/EnableNetworkIsolation")
+
+#### EnableNetworkIsolation Type
+
+merged type ([Details](pipeline-definition-definitions-booleanargumentvalue.md))
+
+one (and only one) of
+
+*   [Untitled boolean in SageMaker Pipeline Definition](pipeline-definition-definitions-booleanargumentvalue-oneof-0.md "check type definition")
+
+*   [Untitled object in SageMaker Pipeline Definition](pipeline-definition-definitions-getfunction.md "check type definition")
+
+### HyperParameterRanges
+
+
+
+`HyperParameterRanges`
+
+*   is optional
+
+*   Type: `object` ([Details](pipeline-definition-definitions-parameterranges.md))
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-parameterranges.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/HyperParameterRanges")
+
+#### HyperParameterRanges Type
+
+`object` ([Details](pipeline-definition-definitions-parameterranges.md))
+
+### InputDataConfig
+
+
+
+`InputDataConfig`
+
+*   is optional
+
+*   Type: `object[]` ([Details](pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-inputdataconfig-items.md))
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-inputdataconfig.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/InputDataConfig")
+
+#### InputDataConfig Type
+
+`object[]` ([Details](pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-inputdataconfig-items.md))
+
+### OutputDataConfig
+
+
+
+`OutputDataConfig`
+
+*   is required
+
+*   Type: `object` ([Details](pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-outputdataconfig.md))
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-outputdataconfig.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/OutputDataConfig")
+
+#### OutputDataConfig Type
+
+`object` ([Details](pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-outputdataconfig.md))
+
+### ResourceConfig
+
+
+
+`ResourceConfig`
+
+*   is required
+
+*   Type: `object` ([Details](pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-resourceconfig.md))
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-resourceconfig.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/ResourceConfig")
+
+#### ResourceConfig Type
+
+`object` ([Details](pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-resourceconfig.md))
+
+### RetryStrategy
+
+
+
+`RetryStrategy`
+
+*   is optional
+
+*   Type: `object` ([Details](pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-retrystrategy.md))
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-retrystrategy.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/RetryStrategy")
+
+#### RetryStrategy Type
+
+`object` ([Details](pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-retrystrategy.md))
+
+### RoleArn
+
+
+
+`RoleArn`
+
+*   is required
+
+*   Type: merged type ([Details](pipeline-definition-definitions-stringargumentvalue.md))
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-stringargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/RoleArn")
+
+#### RoleArn Type
+
+merged type ([Details](pipeline-definition-definitions-stringargumentvalue.md))
+
+one (and only one) of
+
+*   [Untitled string in SageMaker Pipeline Definition](pipeline-definition-definitions-stringargumentvalue-oneof-0.md "check type definition")
+
+*   [Untitled object in SageMaker Pipeline Definition](pipeline-definition-definitions-getfunction.md "check type definition")
+
+### StaticHyperParameters
+
+
+
+`StaticHyperParameters`
+
+*   is optional
+
+*   Type: `object` ([Details](pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-statichyperparameters.md))
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-statichyperparameters.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/StaticHyperParameters")
+
+#### StaticHyperParameters Type
+
+`object` ([Details](pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-statichyperparameters.md))
+
+### StoppingCondition
+
+
+
+`StoppingCondition`
+
+*   is required
+
+*   Type: `object` ([Details](pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-stoppingcondition.md))
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-stoppingcondition.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/StoppingCondition")
+
+#### StoppingCondition Type
+
+`object` ([Details](pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-stoppingcondition.md))
+
+### TuningObjective
+
+
+
+`TuningObjective`
+
+*   is optional
+
+*   Type: `object` ([Details](pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-tuningobjective.md))
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-tuningobjective.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/TuningObjective")
+
+#### TuningObjective Type
+
+`object` ([Details](pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-tuningobjective.md))
+
+### VpcConfig
+
+
+
+`VpcConfig`
+
+*   is optional
+
+*   Type: `object` ([Details](pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-vpcconfig.md))
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-vpcconfig.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/VpcConfig")
+
+#### VpcConfig Type
+
+`object` ([Details](pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-vpcconfig.md))
+
 ## Definitions group ConditionStep
 
 Reference this group by using
@@ -2843,8 +3274,175 @@ Reference this group by using
 {"$ref":"https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep"}
 ```
 
-| Property | Type | Required | Nullable | Defined by |
-| :------- | :--- | :------- | :------- | :--------- |
+| Property                          | Type     | Required | Nullable       | Defined by                                                                                                                                                                                                                                                   |
+| :-------------------------------- | :------- | :------- | :------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Name](#name-12)                  | `string` | Required | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-tuningstep-properties-name.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/Name")                   |
+| [Type](#type-15)                  | `string` | Required | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-tuningstep-properties-type.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/Type")                   |
+| [DependsOn](#dependson-8)         | `array`  | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-tuningstep-properties-dependson.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/DependsOn")         |
+| [DisplayName](#displayname-8)     | `string` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-tuningstep-properties-displayname.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/DisplayName")     |
+| [Description](#description-12)    | `string` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-tuningstep-properties-description.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/Description")     |
+| [RetryPolicies](#retrypolicies-5) | `array`  | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-tuningstep-properties-retrypolicies.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/RetryPolicies") |
+| [Arguments](#arguments-8)         | `object` | Required | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-tuningstep-properties-arguments.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/Arguments")         |
+
+### Name
+
+
+
+`Name`
+
+*   is required
+
+*   Type: `string`
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-tuningstep-properties-name.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/Name")
+
+#### Name Type
+
+`string`
+
+#### Name Constraints
+
+**pattern**: the string must match the following regular expression:&#x20;
+
+```regexp
+^[A-Za-z0-9\-_]{1,64}$
+```
+
+[try pattern](https://regexr.com/?expression=%5E%5BA-Za-z0-9%5C-_%5D%7B1%2C64%7D%24 "try regular expression with regexr.com")
+
+### Type
+
+
+
+`Type`
+
+*   is required
+
+*   Type: `string`
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-tuningstep-properties-type.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/Type")
+
+#### Type Type
+
+`string`
+
+#### Type Constraints
+
+**enum**: the value of this property must be equal to one of the following values:
+
+| Value      | Explanation |
+| :--------- | :---------- |
+| `"Tuning"` |             |
+
+### DependsOn
+
+
+
+`DependsOn`
+
+*   is optional
+
+*   Type: `string[]`
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-tuningstep-properties-dependson.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/DependsOn")
+
+#### DependsOn Type
+
+`string[]`
+
+### DisplayName
+
+
+
+`DisplayName`
+
+*   is optional
+
+*   Type: `string`
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-tuningstep-properties-displayname.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/DisplayName")
+
+#### DisplayName Type
+
+`string`
+
+#### DisplayName Constraints
+
+**pattern**: the string must match the following regular expression:&#x20;
+
+```regexp
+^[A-Za-z0-9\-_]{1,64}$
+```
+
+[try pattern](https://regexr.com/?expression=%5E%5BA-Za-z0-9%5C-_%5D%7B1%2C64%7D%24 "try regular expression with regexr.com")
+
+### Description
+
+
+
+`Description`
+
+*   is optional
+
+*   Type: `string`
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-tuningstep-properties-description.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/Description")
+
+#### Description Type
+
+`string`
+
+#### Description Constraints
+
+**maximum length**: the maximum number of characters for this string is: `4096`
+
+**minimum length**: the minimum number of characters for this string is: `0`
+
+### RetryPolicies
+
+
+
+`RetryPolicies`
+
+*   is optional
+
+*   Type: `object[]` ([Details](pipeline-definition-definitions-retrypolicy.md))
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-tuningstep-properties-retrypolicies.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/RetryPolicies")
+
+#### RetryPolicies Type
+
+`object[]` ([Details](pipeline-definition-definitions-retrypolicy.md))
+
+### Arguments
+
+
+
+`Arguments`
+
+*   is required
+
+*   Type: `object` ([Details](pipeline-definition-definitions-tuningstep-properties-arguments.md))
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-tuningstep-properties-arguments.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/Arguments")
+
+#### Arguments Type
+
+`object` ([Details](pipeline-definition-definitions-tuningstep-properties-arguments.md))
 
 ## Definitions group ClarifyCheckStep
 
@@ -2889,12 +3487,12 @@ Reference this group by using
 
 | Property                       | Type     | Required | Nullable       | Defined by                                                                                                                                                                                                                                           |
 | :----------------------------- | :------- | :------- | :------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Name](#name-12)               | `string` | Required | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-failstep-properties-name.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/FailStep/properties/Name")               |
-| [Type](#type-15)               | `string` | Required | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-failstep-properties-type.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/FailStep/properties/Type")               |
-| [DependsOn](#dependson-8)      | `array`  | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-failstep-properties-dependson.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/FailStep/properties/DependsOn")     |
-| [DisplayName](#displayname-8)  | `string` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-failstep-properties-displayname.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/FailStep/properties/DisplayName") |
-| [Description](#description-12) | `string` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-failstep-properties-description.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/FailStep/properties/Description") |
-| [Arguments](#arguments-8)      | `object` | Required | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-failstep-properties-arguments.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/FailStep/properties/Arguments")     |
+| [Name](#name-13)               | `string` | Required | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-failstep-properties-name.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/FailStep/properties/Name")               |
+| [Type](#type-16)               | `string` | Required | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-failstep-properties-type.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/FailStep/properties/Type")               |
+| [DependsOn](#dependson-9)      | `array`  | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-failstep-properties-dependson.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/FailStep/properties/DependsOn")     |
+| [DisplayName](#displayname-9)  | `string` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-failstep-properties-displayname.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/FailStep/properties/DisplayName") |
+| [Description](#description-13) | `string` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-failstep-properties-description.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/FailStep/properties/Description") |
+| [Arguments](#arguments-9)      | `object` | Required | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-failstep-properties-arguments.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/FailStep/properties/Arguments")     |
 
 ### Name
 

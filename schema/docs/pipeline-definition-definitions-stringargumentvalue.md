@@ -1,4 +1,4 @@
-## SplitType Type
+## OutputName Type
 
 merged type ([Details](pipeline-definition-definitions-stringargumentvalue.md))
 
