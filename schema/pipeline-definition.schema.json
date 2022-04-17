@@ -293,6 +293,18 @@
 				}
 			}
 		},
+		"Tag": {
+			"type": "object",
+			"properties": {
+				"Key": {
+					"$ref": "#/definitions/StringArgumentValue"
+				},
+				"Value": {
+					"$ref": "#/definitions/StringArgumentValue"
+				}
+			},
+			"additionalProperties": false
+		},
 		"ConditionStep": {
 			"type": "object",
 			"properties": {
@@ -675,16 +687,7 @@
 						"Tags": {
 							"type": "array",
 							"items": {
-								"type": "object",
-								"properties": {
-									"Key": {
-										"$ref": "#/definitions/StringArgumentValue"
-									},
-									"Value": {
-										"$ref": "#/definitions/StringArgumentValue"
-									}
-								},
-								"additionalProperties": false
+								"$ref": "#/definitions/Tag"
 							}
 						},
 						"TensorBoardOutputConfig": {
@@ -940,16 +943,7 @@
 						"Tags": {
 							"type": "array",
 							"items": {
-								"type": "object",
-								"properties": {
-									"Key": {
-										"$ref": "#/definitions/StringArgumentValue"
-									},
-									"Value": {
-										"$ref": "#/definitions/StringArgumentValue"
-									}
-								},
-								"additionalProperties": false
+								"$ref": "#/definitions/Tag"
 							}
 						}
 					},
@@ -1052,16 +1046,7 @@
 						"Tags": {
 							"type": "array",
 							"items": {
-								"type": "object",
-								"properties": {
-									"Key": {
-										"$ref": "#/definitions/StringArgumentValue"
-									},
-									"Value": {
-										"$ref": "#/definitions/StringArgumentValue"
-									}
-								},
-								"additionalProperties": false
+								"$ref": "#/definitions/Tag"
 							}
 						},
 						"ModelName": {
@@ -1143,6 +1128,73 @@
 			"required": ["Type", "Name", "Arguments"],
 			"additionalProperties": false
 		},
+		"ContainerDefinition": {
+			"type": "object",
+			"properties": {
+				"ContainerHostname": {
+					"$ref": "#/definitions/StringArgumentValue"
+				},
+				"Environment": {
+					"type": "object",
+					"patternProperties": {
+						".*": {
+							"$ref": "#/definitions/StringArgumentValue"
+						}
+					}
+				},
+				"Image": {
+					"$ref": "#/definitions/StringArgumentValue"
+				},
+				"ImageConfig": {
+					"type": "object",
+					"properties": {
+						"RepositoryAccessMode": {
+							"type": "string",
+							"enum": ["Platform", "Vpc"]
+						},
+						"RepositoryAuthConfig": {
+							"type": "object",
+							"properties": {
+								"RepositoryCredentialsProviderArn": {
+									"$ref": "#/definitions/StringArgumentValue"
+								}
+							},
+							"required": ["RepositoryCredentialsProviderArn"],
+							"additionalProperties": false
+						}
+					},
+					"required": ["RepositoryAccessMode"],
+					"additionalProperties": false
+				},
+				"InferenceSpecificationName": {
+					"$ref": "#/definitions/StringArgumentValue"
+				},
+				"Mode": {
+					"type": "string",
+					"enum": ["SingleModel", "MultiModel"]
+				},
+				"ModelDataUrl": {
+					"type": "string",
+					"minLength": 0,
+					"maxLength": 1024,
+					"pattern": "^(https|s3)://([^/]+)/?(.*)$"
+				},
+				"ModelPackageName": {
+					"$ref": "#/definitions/StringArgumentValue"
+				},
+				"MultiModelConfig": {
+					"type": "object",
+					"properties": {
+						"ModelCacheSetting": {
+							"type": "string",
+							"enum": ["Enabled", "Disabled"]
+						}
+					},
+					"additionalProperties": false
+				}
+			},
+			"additionalProperties": false
+		},
 		"CreateModelStep": {
 			"type": "object",
 			"properties": {
@@ -1151,7 +1203,7 @@
 				},
 				"Type": {
 					"type": "string",
-					"enum": ["CreateModel"]
+					"enum": ["Model"]
 				},
 				"DependsOn": {
 					"type": "array",
@@ -1177,77 +1229,54 @@
 						"Containers": {
 							"type": "array",
 							"items": {
-								"type": "object",
-								"properties": {
-									"ContainerHostname": {
-										"$ref": "#/definitions/StringArgumentValue"
-									},
-									"Environment": {
-										"type": "object",
-										"patternProperties": {
-											".*": {
-												"$ref": "#/definitions/StringArgumentValue"
-											}
-										}
-									},
-									"Image": {
-										"$ref": "#/definitions/StringArgumentValue"
-									},
-									"ImageConfig": {
-										"type": "object",
-										"properties": {
-											"RepositoryAccessMode": {
-												"type": "string",
-												"enum": ["Platform", "Vpc"]
-											},
-											"RepositoryAuthConfig": {
-												"type": "object",
-												"properties": {
-													"RepositoryCredentialsProviderArn": {
-														"$ref": "#/definitions/StringArgumentValue"
-													}
-												},
-												"required": ["RepositoryCredentialsProviderArn"],
-												"additionalProperties": false
-											}
-										},
-										"required": ["RepositoryAccessMode"],
-										"additionalProperties": false
-									},
-									"InferenceSpecificationName": {
-										"$ref": "#/definitions/StringArgumentValue"
-									},
-									"Mode": {
-										"type": "string",
-										"enum": ["SingleModel", "MultiModel"]
-									},
-									"ModelDataUrl": {
-										"type": "string",
-										"minLength": 0,
-										"maxLength": 1024,
-										"pattern": "^(https|s3)://([^/]+)/?(.*)$"
-									},
-									"ModelPackageName": {
-										"$ref": "#/definitions/StringArgumentValue"
-									},
-									"MultiModelConfig": {
-										"type": "object",
-										"properties": {
-											"ModelCacheSetting": {
-												"type": "string",
-												"enum": ["Enabled", "Disabled"]
-											}
-										},
-										"additionalProperties": false
-									}
-								},
-								"additionalProperties": false
+								"$ref": "#/definitions/ContainerDefinition"
 							}
 						},
 						"EnableNetworkIsolation":  {
 							"$ref": "#/definitions/BooleanArgumentValue"
+						},
+						"ExecutionRoleArn": {
+							"$ref": "#/definitions/StringArgumentValue"
+						},
+						"InferenceExecutionConfig": {
+							"type": "object",
+							"properties": {
+								"Mode": {
+									"type": "string",
+									"enum": ["Serial", "Direct"]
+								}
+							},
+							"additionalProperties": false
+						},
+						"PrimaryContainer": {
+							"$ref": "#/definitions/ContainerDefinition"
+						},
+						"Tags": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/Tag"
+							}
+						},
+						"VpcConfig": {
+							"type": "object",
+							"properties": {
+								"SecurityGroupIds": {
+									"type": "array",
+									"items": {
+										"$ref": "#/definitions/StringArgumentValue"
+									}
+								},
+								"Subnets": {
+									"type": "array",
+									"items": {
+										"$ref": "#/definitions/StringArgumentValue"
+									}
+								}
+							},
+							"additionalProperties": false
 						}
 					},
+					"required": ["ExecutionRoleArn"],
 					"additionalProperties": false
 				}
 			},
@@ -1526,9 +1555,97 @@
 			"required": ["Type", "Name", "Arguments"],
 			"additionalProperties": false
 		},
-		"LambdaStep": {},
-		"CallbackStep": {},
-		"TuningStep": {},
+		"LambdaStep": {
+			"type": "object",
+			"properties": {
+				"Name": {
+					"$ref": "#/definitions/StepName"
+				},
+				"Type": {
+					"type": "string",
+					"enum": ["Lambda"]
+				},
+				"DependsOn": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/StepName"
+					}
+				},
+				"DisplayName": {
+					"$ref": "#/definitions/StepName"
+				},
+				"Description": {
+					"$ref": "#/definitions/ParameterDescription"
+				},
+				"FunctionArn": {"$ref": "#/definitions/StringArgumentValue"},
+				"Arguments": {
+					"type": "object"
+				},
+				"OutputParameters": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"OutputName": {"$ref": "#/definitions/StringArgumentValue"},
+							"OutputType": {
+								"type": "string",
+								"enum": ["String", "Integer", "Boolean", "Float"]
+							}
+						},
+						"additionalProperties": false
+					}
+				}
+			},
+			"required": ["Type", "Name", "FunctionArn"],
+			"additionalProperties": false
+		},
+		"CallbackStep": {
+			"type": "object",
+			"properties": {
+				"Name": {
+					"$ref": "#/definitions/StepName"
+				},
+				"Type": {
+					"type": "string",
+					"enum": ["Callback"]
+				},
+				"DependsOn": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/StepName"
+					}
+				},
+				"DisplayName": {
+					"$ref": "#/definitions/StepName"
+				},
+				"Description": {
+					"$ref": "#/definitions/ParameterDescription"
+				},
+				"SqsQueueUrl": {"$ref": "#/definitions/StringArgumentValue"},
+				"Arguments": {
+					"type": "object"
+				},
+				"OutputParameters": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"OutputName": {"$ref": "#/definitions/StringArgumentValue"},
+							"OutputType": {
+								"type": "string",
+								"enum": ["String", "Integer", "Boolean", "Float"]
+							}
+						},
+						"additionalProperties": false
+					}
+				}
+			},
+			"required": ["Type", "Name", "SqsQueueUrl"],
+			"additionalProperties": false
+		},
+		"TuningStep": {
+			
+		},
 		"ClarifyCheckStep": {},
 		"QualityCheckStep": {},
 		"EMRStep": {},
