@@ -305,6 +305,307 @@
 			},
 			"additionalProperties": false
 		},
+		"ParameterRanges":  {
+									"type": "object",
+									"properties": {
+										"CategoricalParameterRanges": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"Name": {
+														"$ref": "#/definitions/StringArgumentValue"
+													},
+													"Values": {
+														"type": "array",
+														"items": {
+															"$ref": "#/definitions/StringArgumentValue"
+														}
+													}
+												},
+												"required": ["Name", "Values"],
+												"additionalProperties": false
+											},
+											"minItems": 0,
+											"maxItems": 20
+										},
+										"IntegerParameterRanges": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"Name": {"$ref": "#/definitions/StringArgumentValue"},
+													"MinValue": {"$ref": "#/definitions/StringArgumentValue"},
+													"MaxValue": {"$ref": "#/definitions/StringArgumentValue"},
+													"ScalingType": {
+														"type": "string",
+														"enum": [
+															"Auto", "Linear", "Logarithmic", "ReverseLogarithmic"
+														]
+													}
+												},
+												"required": ["Name", "MinValue", "MaxValue"],
+												"additionalProperties": false
+											},
+											"minItems": 0,
+											"maxItems": 20
+										},
+										"ContinuousParameterRanges": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"Name": {"$ref": "#/definitions/StringArgumentValue"},
+													"MinValue": {"$ref": "#/definitions/StringArgumentValue"},
+													"MaxValue": {"$ref": "#/definitions/StringArgumentValue"},
+													"ScalingType": {
+														"type": "string",
+														"enum": [
+															"Auto", "Linear", "Logarithmic", "ReverseLogarithmic"
+														]
+													}
+												},
+												"required": ["Name", "MinValue", "MaxValue"],
+												"additionalProperties": false
+											},
+											"minItems": 0,
+											"maxItems": 20
+										}
+									},
+									"required": [],
+									"additionalProperties": false
+								},
+		"HyperParameterTrainingJobDefinition": {
+			"type": "object",
+			"properties": {
+				"DefinitionName": {
+							"$ref": "#/definitions/StringArgumentValue"
+						},
+				"AlgorithmSpecification": {
+								"type": "object",
+								"properties": {
+									"AlgorithmName": {
+										"$ref": "#/definitions/StringArgumentValue"
+									},
+									"EnableSageMakerMetricsTimeSeries": {
+										"$ref": "#/definitions/BooleanArgumentValue"
+									},
+									"MetricDefinitions": {
+										"type": "array",
+										"items": {
+											"type": "object",
+											"properties": {
+												"Name": {
+													"$ref": "#/definitions/StringArgumentValue"
+												},
+												"Regex": {
+													"$ref": "#/definitions/StringArgumentValue"
+												}
+											},
+											"additionalProperties": false
+										}
+									},
+									"TrainingImage": {
+										"$ref": "#/definitions/StringArgumentValue"
+									},
+									"TrainingInputMode": {
+										"$ref": "#/definitions/StringArgumentValue"
+									}
+								},
+								"additionalProperties": false
+							},
+				"CheckpointConfig": {
+								"type": "object",
+								"properties": {
+									"LocalPath": {
+										"$ref": "#/definitions/StringArgumentValue"
+									},
+									"S3Uri": {
+										"$ref": "#/definitions/StringArgumentValue"
+									}
+								},
+								"additionalProperties": false
+							},
+				"EnableInterContainerTrafficEncryption": {
+								"$ref": "#/definitions/BooleanArgumentValue"
+							},
+				"EnableManagedSpotTraining": {
+								"$ref": "#/definitions/BooleanArgumentValue"
+							},
+				"EnableNetworkIsolation": {
+								"$ref": "#/definitions/BooleanArgumentValue"
+							},
+				"HyperParameterRanges": {"$ref":  "#/definitions/ParameterRanges"},
+				"InputDataConfig": {
+								"type": "array",
+								"items": {
+									"type": "object",
+									"properties": {
+										"ChannelName": {
+											"$ref": "#/definitions/StringArgumentValue"
+										},
+										"CompressionType": {
+											"$ref": "#/definitions/StringArgumentValue"
+										},
+										"ContentType": {
+											"$ref": "#/definitions/StringArgumentValue"
+										},
+										"DataSource": {
+											"type": "object",
+											"properties": {
+												"FileSystemDataSource": {
+													"type": "object",
+													"properties": {
+														"DirectoryPath": {
+															"$ref": "#/definitions/StringArgumentValue"
+														},
+														"FileSystemAccessMode": {
+															"$ref": "#/definitions/StringArgumentValue"
+														},
+														"FileSystemId": {
+															"$ref": "#/definitions/StringArgumentValue"
+														},
+														"FileSystemType": {
+															"$ref": "#/definitions/StringArgumentValue"
+														}
+													},
+													"additionalProperties": false
+												},
+												"S3DataSource": {
+													"type": "object",
+													"properties": {
+														"AttributeNames": {
+															"type": "array",
+															"items": {
+																"$ref": "#/definitions/StringArgumentValue"
+															}
+														},
+														"S3DataDistributionType": {
+															"$ref": "#/definitions/StringArgumentValue"
+														},
+														"S3DataType": {
+															"$ref": "#/definitions/StringArgumentValue"
+														},
+														"S3Uri": {
+															"$ref": "#/definitions/StringArgumentValue"
+														}
+													},
+													"additionalProperties": false
+												}
+											}
+										},
+										"InputMode": {
+											"$ref": "#/definitions/StringArgumentValue"
+										},
+										"RecordWrapperType": {
+											"$ref": "#/definitions/StringArgumentValue"
+										},
+										"ShuffleConfig": {
+											"type": "object",
+											"properties": {
+												"Seed": {
+													"$ref": "#/definitions/IntegerArgumentValue"
+												}
+											},
+											"additionalProperties": false
+										}
+									}
+								}
+							},
+				"OutputDataConfig": {
+								"type": "object",
+								"properties": {
+									"KmsKeyId": {
+										"$ref": "#/definitions/StringArgumentValue"
+									},
+									"S3OutputPath": {
+										"$ref": "#/definitions/StringArgumentValue"
+									}
+								},
+								"additionalProperties": false
+							},
+				"ResourceConfig": {
+								"type": "object",
+								"properties": {
+									"InstanceCount": {
+										"$ref": "#/definitions/IntegerArgumentValue"
+									},
+									"InstanceType": {
+										"$ref": "#/definitions/StringArgumentValue"
+									},
+									"VolumeKmsKeyId": {
+										"$ref": "#/definitions/StringArgumentValue"
+									},
+									"VolumeSizeInGB": {
+										"$ref": "#/definitions/IntegerArgumentValue"
+									}
+								},
+								"additionalProperties": false
+							},
+				"RetryStrategy": {
+					"type": "object",
+								"properties": {
+									"MaximumRetryAttempts": {
+										"$ref": "#/definitions/IntegerArgumentValue"
+									}
+								},
+								"additionalProperties": false
+				},
+				"RoleArn":  {
+										"$ref": "#/definitions/StringArgumentValue"
+									},
+				"StaticHyperParameters": {
+					"type": "object"
+				},
+
+				"StoppingCondition": {
+								"type": "object",
+								"properties": {
+									"MaxRuntimeInSeconds": {
+										"$ref": "#/definitions/IntegerArgumentValue"
+									},
+									"MaxWaitTimeInSeconds": {
+										"$ref": "#/definitions/IntegerArgumentValue"
+									}
+								},
+								"additionalProperties": false
+							},
+				"TuningObjective": {
+								"type": "object",
+								"properties": {
+									"MetricName": {
+							"$ref": "#/definitions/StringArgumentValue"
+						},
+									"Type": {
+										"type": "string",
+										"enum": ["Maximize", "Minimize"]
+									}
+								},
+									"required": ["MetricName", "Type"],
+									"additionalProperties": false
+								},
+				"VpcConfig": {
+					"type": "object",
+					"properties": {
+									"SecurityGroupIds": {
+										"type": "array",
+										"items": {
+											"$ref": "#/definitions/StringArgumentValue"
+										}
+									},
+									"Subnets": {
+										"type": "array",
+										"items": {
+											"$ref": "#/definitions/StringArgumentValue"
+										}
+									}
+								},
+					"additionalProperties": false
+				}
+			},
+			"required": ["AlgorithmSpecification", "OutputDataConfig", "ResourceConfig", "RoleArn", "StoppingCondition"],
+			"additionalProperties": false
+		},
 		"ConditionStep": {
 			"type": "object",
 			"properties": {
@@ -1644,7 +1945,135 @@
 			"additionalProperties": false
 		},
 		"TuningStep": {
-			
+			"type": "object",
+			"properties": {
+				"Name": {
+					"$ref": "#/definitions/StepName"
+				},
+				"Type": {
+					"type": "string",
+					"enum": ["Tuning"]
+				},
+				"DependsOn": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/StepName"
+					}
+				},
+				"DisplayName": {
+					"$ref": "#/definitions/StepName"
+				},
+				"Description": {
+					"$ref": "#/definitions/ParameterDescription"
+				},
+				"RetryPolicies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/RetryPolicy"
+					}
+				},
+				"Arguments": {
+					"type": "object",
+					"properties": {
+						"HyperParameterTuningJobConfig": {
+							"type": "object",
+							"properties": {
+								"HyperParameterTuningJobObjective": {
+								"type": "object",
+								"properties": {
+									"MetricName": {
+							"$ref": "#/definitions/StringArgumentValue"
+						},
+									"Type": {
+										"type": "string",
+										"enum": ["Maximize", "Minimize"]
+									}
+								},
+									"required": ["MetricName", "Type"],
+									"additionalProperties": false
+								},
+								"ParameterRanges": {"$ref":  "#/definitions/ParameterRanges"},
+								"ResourceLimits": {
+									"type": "object",
+									"properties": {
+										"MaxNumberOfTrainingJobs": {
+											"type": "integer",
+											"minLength": 1
+										},
+										"MaxParallelTrainingJobs": {
+											"type": "integer",
+											"minLength": 1
+										}
+									},
+									"required": ["MaxNumberOfTrainingJobs", "MaxParallelTrainingJobs"],
+									"additionalProperties": false
+								},
+								"Strategy": {
+									"type": "string",
+									"enum": ["Bayesian", "Random"]
+								},
+								"TrainingJobEarlyStoppingType": {
+									"type": "string",
+									"enum": ["Off", "Auto"]
+								},
+								"TuningJobCompletionCriteria": {
+									"type": "object",
+									"properties": {
+										"TargetObjectiveMetricValue": {"$ref":  "#/definitions/FloatArgumentValue"}
+									},
+									"required": ["TargetObjectiveMetricValue"],
+									"additionalProperties": false
+								}
+							},
+							"required": ["ResourceLimits", "Strategy"],
+							"additionalProperties": false
+						},
+						"Tags": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/Tag"
+							}
+						},
+						"TrainingJobDefinition": {
+							"$ref": "#/definitions/HyperParameterTrainingJobDefinition"
+						},
+						"TrainingJobDefinitions": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/HyperParameterTrainingJobDefinition"
+							},
+							"minItems": 0,
+							"maxItems": 10
+						},
+						"WarmStartConfig": {
+							"type": "object",
+							"properties": {
+								"ParentHyperParameterTuningJobs": {
+									"type": "array",
+									"items": {
+										"type": "object",
+										"properties": {
+											"HyperParameterTuningJobName": {"$ref":  "#/definitions/StringArgumentValue"}
+										},
+										"required": ["HyperParameterTuningJobName"],
+										"additionalProperties": false
+									}
+								},
+								"WarmStartType": {
+									"type": "string",
+									"enum": ["IdenticalDataAndAlgorithm", "TransferLearning"]
+								}
+							},
+							"required": ["TargetObjectiveMetricValue"],
+							"additionalProperties": false
+						}
+					},
+					"required": ["HyperParameterTuningJobConfig"],
+					"additionalProperties": false
+				}
+			},
+			"required": ["Type", "Name", "Arguments"],
+			"additionalProperties": false
 		},
 		"ClarifyCheckStep": {},
 		"QualityCheckStep": {},
@@ -1737,6 +2166,12 @@
 					},
 					{
 						"$ref": "#/definitions/RegisterModelStep"
+					},
+					{
+						"$ref": "#/definitions/LambdaStep"
+					},
+					{
+						"$ref": "#/definitions/CallbackStep"
 					}
 				]
 			}
