@@ -1,0 +1,16 @@
+## Type Type
+
+`string`
+
+## Type Constraints
+
+**enum**: the value of this property must be equal to one of the following values:
+
+| Value                    | Explanation |
+| :----------------------- | :---------- |
+| `"GreaterThan"`          |             |
+| `"LessThan"`             |             |
+| `"LessThanOrEqualTo"`    |             |
+| `"GreaterThanOrEqualTo"` |             |
+| `"Equals"`               |             |
+| `"NotEquals"`            |             |

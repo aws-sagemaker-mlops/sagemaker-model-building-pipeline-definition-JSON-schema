@@ -1,0 +1,3 @@
+## ExpireAfterMin Type
+
+`integer`

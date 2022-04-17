@@ -1,0 +1,3 @@
+## DefaultValue Type
+
+`integer`

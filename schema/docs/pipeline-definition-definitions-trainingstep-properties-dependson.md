@@ -1,0 +1,3 @@
+## DependsOn Type
+
+`string[]`

@@ -1,0 +1,3 @@
+## MaxAttempts Type
+
+`integer`

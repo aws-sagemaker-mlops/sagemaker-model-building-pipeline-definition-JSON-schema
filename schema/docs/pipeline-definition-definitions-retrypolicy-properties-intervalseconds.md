@@ -1,0 +1,3 @@
+## IntervalSeconds Type
+
+`integer`
