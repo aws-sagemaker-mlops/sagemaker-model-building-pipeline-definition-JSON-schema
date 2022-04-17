@@ -289,7 +289,7 @@ one (and only one) of
 
 *   is optional
 
-*   Type: `object[]` ([Details](pipeline-definition-definitions-trainingstep-properties-arguments-properties-tags-items.md))
+*   Type: `object[]` ([Details](pipeline-definition-definitions-tag.md))
 
 *   cannot be null
 
@@ -297,7 +297,7 @@ one (and only one) of
 
 ### Tags Type
 
-`object[]` ([Details](pipeline-definition-definitions-trainingstep-properties-arguments-properties-tags-items.md))
+`object[]` ([Details](pipeline-definition-definitions-tag.md))
 
 ## TensorBoardOutputConfig
 
