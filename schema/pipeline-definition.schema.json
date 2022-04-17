@@ -1878,7 +1878,7 @@
 				"Description": {
 					"$ref": "#/definitions/ParameterDescription"
 				},
-				"FunctionArn": {"$ref": "#/definitions/StringArgumentValue"},
+				"FunctionArn": {"type": "string"},
 				"Arguments": {
 					"type": "object"
 				},
@@ -1922,7 +1922,7 @@
 				"Description": {
 					"$ref": "#/definitions/ParameterDescription"
 				},
-				"SqsQueueUrl": {"$ref": "#/definitions/StringArgumentValue"},
+				"SqsQueueUrl": {"type": "string"},
 				"Arguments": {
 					"type": "object"
 				},
@@ -2172,6 +2172,9 @@
 					},
 					{
 						"$ref": "#/definitions/CallbackStep"
+					},
+					{
+						"$ref": "#/definitions/TuningStep"
 					}
 				]
 			}
