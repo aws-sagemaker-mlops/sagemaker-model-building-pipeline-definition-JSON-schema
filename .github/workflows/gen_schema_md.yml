@@ -22,16 +22,13 @@ jobs:
       - name: Check out repo
         uses: actions/checkout@v2
 
-      - name: Auto generate json schema markdown
-        run: rm -rf schema/docs && jsonschema2md -d schema -o schema/docs -h false && rm -rf ./out
-
       - name: Auto generate human readbale json schema html
         run: rm -rf html && mkdir html && generate-schema-doc schema/pipeline-definition.schema.json html/index.html --config no_link_to_reused_ref
 
-      - name: Commit auto generated schema markdown
+      - name: Commit auto generated human readbale json schema html
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: "[auto-commit] auto-gen json schema markdown"
+          commit_message: "[auto-commit] auto-gen json schema html"
 
 
 
