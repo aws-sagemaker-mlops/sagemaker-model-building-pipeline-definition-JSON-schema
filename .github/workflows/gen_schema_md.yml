@@ -26,7 +26,7 @@ jobs:
       - name: Check out repo
         uses: actions/checkout@v2
 
-      - name: Auto generate human readbale json schema html
+      - name: Auto-gen human readbale json schema html
         run: |
           rm -rf html
           mkdir html
@@ -35,7 +35,7 @@ jobs:
       - name: Commit auto generated human readbale json schema html
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: "[auto-commit] auto generate json schema html"
+          commit_message: "[auto-commit] auto-gen json schema html"
 
       - name: Set AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
