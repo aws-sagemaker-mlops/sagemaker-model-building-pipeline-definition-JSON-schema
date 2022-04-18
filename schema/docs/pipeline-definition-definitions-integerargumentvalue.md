@@ -1,4 +1,4 @@
-## MaxWaitTimeInSeconds Type
+## MaxRuntimeInSeconds Type
 
 merged type ([Details](pipeline-definition-definitions-integerargumentvalue.md))
 

@@ -1582,6 +1582,213 @@ one (and only one) of
 
 `object` ([Details](pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-vpcconfig.md))
 
+## Definitions group ProcessingArgs
+
+Reference this group by using
+
+```json
+{"$ref":"https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingArgs"}
+```
+
+| Property                                          | Type     | Required | Nullable       | Defined by                                                                                                                                                                                                                                                                             |
+| :------------------------------------------------ | :------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [AppSpecification](#appspecification)             | `object` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-processingargs-properties-appspecification.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingArgs/properties/AppSpecification")             |
+| [Environment](#environment)                       | `object` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-processingargs-properties-environment.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingArgs/properties/Environment")                       |
+| [ExperimentConfig](#experimentconfig)             | `object` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-processingargs-properties-experimentconfig.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingArgs/properties/ExperimentConfig")             |
+| [NetworkConfig](#networkconfig)                   | `object` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-processingargs-properties-networkconfig.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingArgs/properties/NetworkConfig")                   |
+| [ProcessingInputs](#processinginputs)             | `array`  | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-processingargs-properties-processinginputs.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingArgs/properties/ProcessingInputs")             |
+| [ProcessingOutputConfig](#processingoutputconfig) | `object` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-processingargs-properties-processingoutputconfig.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingArgs/properties/ProcessingOutputConfig") |
+| [ProcessingResources](#processingresources)       | `object` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-processingargs-properties-processingresources.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingArgs/properties/ProcessingResources")       |
+| [RoleArn](#rolearn-1)                             | Merged   | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-stringargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingArgs/properties/RoleArn")                                             |
+| [StoppingCondition](#stoppingcondition-1)         | `object` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-processingargs-properties-stoppingcondition.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingArgs/properties/StoppingCondition")           |
+| [Tags](#tags)                                     | `array`  | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-processingargs-properties-tags.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingArgs/properties/Tags")                                     |
+
+### AppSpecification
+
+
+
+`AppSpecification`
+
+*   is optional
+
+*   Type: `object` ([Details](pipeline-definition-definitions-processingargs-properties-appspecification.md))
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-processingargs-properties-appspecification.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingArgs/properties/AppSpecification")
+
+#### AppSpecification Type
+
+`object` ([Details](pipeline-definition-definitions-processingargs-properties-appspecification.md))
+
+### Environment
+
+
+
+`Environment`
+
+*   is optional
+
+*   Type: `object` ([Details](pipeline-definition-definitions-processingargs-properties-environment.md))
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-processingargs-properties-environment.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingArgs/properties/Environment")
+
+#### Environment Type
+
+`object` ([Details](pipeline-definition-definitions-processingargs-properties-environment.md))
+
+### ExperimentConfig
+
+
+
+`ExperimentConfig`
+
+*   is optional
+
+*   Type: `object` ([Details](pipeline-definition-definitions-processingargs-properties-experimentconfig.md))
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-processingargs-properties-experimentconfig.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingArgs/properties/ExperimentConfig")
+
+#### ExperimentConfig Type
+
+`object` ([Details](pipeline-definition-definitions-processingargs-properties-experimentconfig.md))
+
+### NetworkConfig
+
+
+
+`NetworkConfig`
+
+*   is optional
+
+*   Type: `object` ([Details](pipeline-definition-definitions-processingargs-properties-networkconfig.md))
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-processingargs-properties-networkconfig.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingArgs/properties/NetworkConfig")
+
+#### NetworkConfig Type
+
+`object` ([Details](pipeline-definition-definitions-processingargs-properties-networkconfig.md))
+
+### ProcessingInputs
+
+
+
+`ProcessingInputs`
+
+*   is optional
+
+*   Type: `object[]` ([Details](pipeline-definition-definitions-processingargs-properties-processinginputs-items.md))
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-processingargs-properties-processinginputs.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingArgs/properties/ProcessingInputs")
+
+#### ProcessingInputs Type
+
+`object[]` ([Details](pipeline-definition-definitions-processingargs-properties-processinginputs-items.md))
+
+### ProcessingOutputConfig
+
+
+
+`ProcessingOutputConfig`
+
+*   is optional
+
+*   Type: `object` ([Details](pipeline-definition-definitions-processingargs-properties-processingoutputconfig.md))
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-processingargs-properties-processingoutputconfig.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingArgs/properties/ProcessingOutputConfig")
+
+#### ProcessingOutputConfig Type
+
+`object` ([Details](pipeline-definition-definitions-processingargs-properties-processingoutputconfig.md))
+
+### ProcessingResources
+
+
+
+`ProcessingResources`
+
+*   is optional
+
+*   Type: `object` ([Details](pipeline-definition-definitions-processingargs-properties-processingresources.md))
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-processingargs-properties-processingresources.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingArgs/properties/ProcessingResources")
+
+#### ProcessingResources Type
+
+`object` ([Details](pipeline-definition-definitions-processingargs-properties-processingresources.md))
+
+### RoleArn
+
+
+
+`RoleArn`
+
+*   is optional
+
+*   Type: merged type ([Details](pipeline-definition-definitions-stringargumentvalue.md))
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-stringargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingArgs/properties/RoleArn")
+
+#### RoleArn Type
+
+merged type ([Details](pipeline-definition-definitions-stringargumentvalue.md))
+
+one (and only one) of
+
+*   [Untitled string in SageMaker Pipeline Definition](pipeline-definition-definitions-stringargumentvalue-oneof-0.md "check type definition")
+
+*   [Untitled object in SageMaker Pipeline Definition](pipeline-definition-definitions-getfunction.md "check type definition")
+
+### StoppingCondition
+
+
+
+`StoppingCondition`
+
+*   is optional
+
+*   Type: `object` ([Details](pipeline-definition-definitions-processingargs-properties-stoppingcondition.md))
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-processingargs-properties-stoppingcondition.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingArgs/properties/StoppingCondition")
+
+#### StoppingCondition Type
+
+`object` ([Details](pipeline-definition-definitions-processingargs-properties-stoppingcondition.md))
+
+### Tags
+
+
+
+`Tags`
+
+*   is optional
+
+*   Type: `object[]` ([Details](pipeline-definition-definitions-tag.md))
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-processingargs-properties-tags.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingArgs/properties/Tags")
+
+#### Tags Type
+
+`object[]` ([Details](pipeline-definition-definitions-tag.md))
+
 ## Definitions group ConditionStep
 
 Reference this group by using
@@ -1935,7 +2142,7 @@ Reference this group by using
 | [DisplayName](#displayname-2)     | `string` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-processingstep-properties-displayname.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingStep/properties/DisplayName")     |
 | [Description](#description-6)     | `string` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-processingstep-properties-description.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingStep/properties/Description")     |
 | [RetryPolicies](#retrypolicies-1) | `array`  | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-processingstep-properties-retrypolicies.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingStep/properties/RetryPolicies") |
-| [Arguments](#arguments-2)         | `object` | Required | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-processingstep-properties-arguments.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingStep/properties/Arguments")         |
+| [Arguments](#arguments-2)         | `object` | Required | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-processingargs.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingStep/properties/Arguments")                              |
 
 ### Name
 
@@ -2087,15 +2294,15 @@ Reference this group by using
 
 *   is required
 
-*   Type: `object` ([Details](pipeline-definition-definitions-processingstep-properties-arguments.md))
+*   Type: `object` ([Details](pipeline-definition-definitions-processingargs.md))
 
 *   cannot be null
 
-*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-processingstep-properties-arguments.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingStep/properties/Arguments")
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-processingargs.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingStep/properties/Arguments")
 
 #### Arguments Type
 
-`object` ([Details](pipeline-definition-definitions-processingstep-properties-arguments.md))
+`object` ([Details](pipeline-definition-definitions-processingargs.md))
 
 ## Definitions group TransformStep
 
@@ -2286,7 +2493,7 @@ Reference this group by using
 | Property                                                  | Type     | Required | Nullable       | Defined by                                                                                                                                                                                                                                                                           |
 | :-------------------------------------------------------- | :------- | :------- | :------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [ContainerHostname](#containerhostname)                   | Merged   | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-stringargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ContainerDefinition/properties/ContainerHostname")                            |
-| [Environment](#environment)                               | `object` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-containerdefinition-properties-environment.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ContainerDefinition/properties/Environment")           |
+| [Environment](#environment-1)                             | `object` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-containerdefinition-properties-environment.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ContainerDefinition/properties/Environment")           |
 | [Image](#image)                                           | Merged   | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-stringargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ContainerDefinition/properties/Image")                                        |
 | [ImageConfig](#imageconfig)                               | `object` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-containerdefinition-properties-imageconfig.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ContainerDefinition/properties/ImageConfig")           |
 | [InferenceSpecificationName](#inferencespecificationname) | Merged   | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-stringargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ContainerDefinition/properties/InferenceSpecificationName")                   |
@@ -3440,8 +3647,329 @@ Reference this group by using
 {"$ref":"https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ClarifyCheckStep"}
 ```
 
-| Property | Type | Required | Nullable | Defined by |
-| :------- | :--- | :------- | :------- | :--------- |
+| Property                                                    | Type     | Required | Nullable       | Defined by                                                                                                                                                                                                                                                               |
+| :---------------------------------------------------------- | :------- | :------- | :------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Name](#name-13)                                            | `string` | Required | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-clarifycheckstep-properties-name.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ClarifyCheckStep/properties/Name")                   |
+| [Type](#type-16)                                            | `string` | Required | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-clarifycheckstep-properties-type.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ClarifyCheckStep/properties/Type")                   |
+| [DependsOn](#dependson-9)                                   | `array`  | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-clarifycheckstep-properties-dependson.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ClarifyCheckStep/properties/DependsOn")         |
+| [DisplayName](#displayname-9)                               | `string` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-clarifycheckstep-properties-displayname.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ClarifyCheckStep/properties/DisplayName")     |
+| [Description](#description-13)                              | `string` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-clarifycheckstep-properties-description.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ClarifyCheckStep/properties/Description")     |
+| [RetryPolicies](#retrypolicies-6)                           | `array`  | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-clarifycheckstep-properties-retrypolicies.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ClarifyCheckStep/properties/RetryPolicies") |
+| [CheckType](#checktype)                                     | `string` | Required | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-clarifycheckstep-properties-checktype.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ClarifyCheckStep/properties/CheckType")         |
+| [ModelPackageGroupName](#modelpackagegroupname)             | Merged   | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-stringargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ClarifyCheckStep/properties/ModelPackageGroupName")               |
+| [SuppliedBaselineConstraints](#suppliedbaselineconstraints) | Merged   | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-stringargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ClarifyCheckStep/properties/SuppliedBaselineConstraints")         |
+| [SkipCheck](#skipcheck)                                     | Merged   | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-booleanargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ClarifyCheckStep/properties/SkipCheck")                          |
+| [RegisterNewBaseline](#registernewbaseline)                 | Merged   | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-booleanargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ClarifyCheckStep/properties/RegisterNewBaseline")                |
+| [ModelName](#modelname)                                     | Merged   | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-stringargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ClarifyCheckStep/properties/ModelName")                           |
+| [Arguments](#arguments-9)                                   | `object` | Required | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-processingargs.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ClarifyCheckStep/properties/Arguments")                                |
+
+### Name
+
+
+
+`Name`
+
+*   is required
+
+*   Type: `string`
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-clarifycheckstep-properties-name.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ClarifyCheckStep/properties/Name")
+
+#### Name Type
+
+`string`
+
+#### Name Constraints
+
+**pattern**: the string must match the following regular expression:&#x20;
+
+```regexp
+^[A-Za-z0-9\-_]{1,64}$
+```
+
+[try pattern](https://regexr.com/?expression=%5E%5BA-Za-z0-9%5C-_%5D%7B1%2C64%7D%24 "try regular expression with regexr.com")
+
+### Type
+
+
+
+`Type`
+
+*   is required
+
+*   Type: `string`
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-clarifycheckstep-properties-type.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ClarifyCheckStep/properties/Type")
+
+#### Type Type
+
+`string`
+
+#### Type Constraints
+
+**enum**: the value of this property must be equal to one of the following values:
+
+| Value            | Explanation |
+| :--------------- | :---------- |
+| `"ClarifyCheck"` |             |
+
+### DependsOn
+
+
+
+`DependsOn`
+
+*   is optional
+
+*   Type: `string[]`
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-clarifycheckstep-properties-dependson.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ClarifyCheckStep/properties/DependsOn")
+
+#### DependsOn Type
+
+`string[]`
+
+### DisplayName
+
+
+
+`DisplayName`
+
+*   is optional
+
+*   Type: `string`
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-clarifycheckstep-properties-displayname.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ClarifyCheckStep/properties/DisplayName")
+
+#### DisplayName Type
+
+`string`
+
+#### DisplayName Constraints
+
+**pattern**: the string must match the following regular expression:&#x20;
+
+```regexp
+^[A-Za-z0-9\-_]{1,64}$
+```
+
+[try pattern](https://regexr.com/?expression=%5E%5BA-Za-z0-9%5C-_%5D%7B1%2C64%7D%24 "try regular expression with regexr.com")
+
+### Description
+
+
+
+`Description`
+
+*   is optional
+
+*   Type: `string`
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-clarifycheckstep-properties-description.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ClarifyCheckStep/properties/Description")
+
+#### Description Type
+
+`string`
+
+#### Description Constraints
+
+**maximum length**: the maximum number of characters for this string is: `4096`
+
+**minimum length**: the minimum number of characters for this string is: `0`
+
+### RetryPolicies
+
+
+
+`RetryPolicies`
+
+*   is optional
+
+*   Type: `object[]` ([Details](pipeline-definition-definitions-retrypolicy.md))
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-clarifycheckstep-properties-retrypolicies.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ClarifyCheckStep/properties/RetryPolicies")
+
+#### RetryPolicies Type
+
+`object[]` ([Details](pipeline-definition-definitions-retrypolicy.md))
+
+### CheckType
+
+
+
+`CheckType`
+
+*   is required
+
+*   Type: `string`
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-clarifycheckstep-properties-checktype.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ClarifyCheckStep/properties/CheckType")
+
+#### CheckType Type
+
+`string`
+
+#### CheckType Constraints
+
+**enum**: the value of this property must be equal to one of the following values:
+
+| Value                    | Explanation |
+| :----------------------- | :---------- |
+| `"DATA_BIAS"`            |             |
+| `"MODEL_BIAS"`           |             |
+| `"MODEL_EXPLAINABILITY"` |             |
+
+### ModelPackageGroupName
+
+
+
+`ModelPackageGroupName`
+
+*   is optional
+
+*   Type: merged type ([Details](pipeline-definition-definitions-stringargumentvalue.md))
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-stringargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ClarifyCheckStep/properties/ModelPackageGroupName")
+
+#### ModelPackageGroupName Type
+
+merged type ([Details](pipeline-definition-definitions-stringargumentvalue.md))
+
+one (and only one) of
+
+*   [Untitled string in SageMaker Pipeline Definition](pipeline-definition-definitions-stringargumentvalue-oneof-0.md "check type definition")
+
+*   [Untitled object in SageMaker Pipeline Definition](pipeline-definition-definitions-getfunction.md "check type definition")
+
+### SuppliedBaselineConstraints
+
+
+
+`SuppliedBaselineConstraints`
+
+*   is optional
+
+*   Type: merged type ([Details](pipeline-definition-definitions-stringargumentvalue.md))
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-stringargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ClarifyCheckStep/properties/SuppliedBaselineConstraints")
+
+#### SuppliedBaselineConstraints Type
+
+merged type ([Details](pipeline-definition-definitions-stringargumentvalue.md))
+
+one (and only one) of
+
+*   [Untitled string in SageMaker Pipeline Definition](pipeline-definition-definitions-stringargumentvalue-oneof-0.md "check type definition")
+
+*   [Untitled object in SageMaker Pipeline Definition](pipeline-definition-definitions-getfunction.md "check type definition")
+
+### SkipCheck
+
+
+
+`SkipCheck`
+
+*   is optional
+
+*   Type: merged type ([Details](pipeline-definition-definitions-booleanargumentvalue.md))
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-booleanargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ClarifyCheckStep/properties/SkipCheck")
+
+#### SkipCheck Type
+
+merged type ([Details](pipeline-definition-definitions-booleanargumentvalue.md))
+
+one (and only one) of
+
+*   [Untitled boolean in SageMaker Pipeline Definition](pipeline-definition-definitions-booleanargumentvalue-oneof-0.md "check type definition")
+
+*   [Untitled object in SageMaker Pipeline Definition](pipeline-definition-definitions-getfunction.md "check type definition")
+
+### RegisterNewBaseline
+
+
+
+`RegisterNewBaseline`
+
+*   is optional
+
+*   Type: merged type ([Details](pipeline-definition-definitions-booleanargumentvalue.md))
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-booleanargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ClarifyCheckStep/properties/RegisterNewBaseline")
+
+#### RegisterNewBaseline Type
+
+merged type ([Details](pipeline-definition-definitions-booleanargumentvalue.md))
+
+one (and only one) of
+
+*   [Untitled boolean in SageMaker Pipeline Definition](pipeline-definition-definitions-booleanargumentvalue-oneof-0.md "check type definition")
+
+*   [Untitled object in SageMaker Pipeline Definition](pipeline-definition-definitions-getfunction.md "check type definition")
+
+### ModelName
+
+
+
+`ModelName`
+
+*   is optional
+
+*   Type: merged type ([Details](pipeline-definition-definitions-stringargumentvalue.md))
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-stringargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ClarifyCheckStep/properties/ModelName")
+
+#### ModelName Type
+
+merged type ([Details](pipeline-definition-definitions-stringargumentvalue.md))
+
+one (and only one) of
+
+*   [Untitled string in SageMaker Pipeline Definition](pipeline-definition-definitions-stringargumentvalue-oneof-0.md "check type definition")
+
+*   [Untitled object in SageMaker Pipeline Definition](pipeline-definition-definitions-getfunction.md "check type definition")
+
+### Arguments
+
+
+
+`Arguments`
+
+*   is required
+
+*   Type: `object` ([Details](pipeline-definition-definitions-processingargs.md))
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-processingargs.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ClarifyCheckStep/properties/Arguments")
+
+#### Arguments Type
+
+`object` ([Details](pipeline-definition-definitions-processingargs.md))
 
 ## Definitions group QualityCheckStep
 
@@ -3451,8 +3979,329 @@ Reference this group by using
 {"$ref":"https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/QualityCheckStep"}
 ```
 
-| Property | Type | Required | Nullable | Defined by |
-| :------- | :--- | :------- | :------- | :--------- |
+| Property                                                      | Type     | Required | Nullable       | Defined by                                                                                                                                                                                                                                                               |
+| :------------------------------------------------------------ | :------- | :------- | :------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Name](#name-14)                                              | `string` | Required | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-qualitycheckstep-properties-name.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/QualityCheckStep/properties/Name")                   |
+| [Type](#type-17)                                              | `string` | Required | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-qualitycheckstep-properties-type.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/QualityCheckStep/properties/Type")                   |
+| [DependsOn](#dependson-10)                                    | `array`  | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-qualitycheckstep-properties-dependson.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/QualityCheckStep/properties/DependsOn")         |
+| [DisplayName](#displayname-10)                                | `string` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-qualitycheckstep-properties-displayname.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/QualityCheckStep/properties/DisplayName")     |
+| [Description](#description-14)                                | `string` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-qualitycheckstep-properties-description.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/QualityCheckStep/properties/Description")     |
+| [RetryPolicies](#retrypolicies-7)                             | `array`  | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-qualitycheckstep-properties-retrypolicies.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/QualityCheckStep/properties/RetryPolicies") |
+| [CheckType](#checktype-1)                                     | `string` | Required | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-qualitycheckstep-properties-checktype.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/QualityCheckStep/properties/CheckType")         |
+| [ModelPackageGroupName](#modelpackagegroupname-1)             | Merged   | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-stringargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/QualityCheckStep/properties/ModelPackageGroupName")               |
+| [SuppliedBaselineConstraints](#suppliedbaselineconstraints-1) | Merged   | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-stringargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/QualityCheckStep/properties/SuppliedBaselineConstraints")         |
+| [SuppliedBaselineStatistics](#suppliedbaselinestatistics)     | Merged   | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-stringargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/QualityCheckStep/properties/SuppliedBaselineStatistics")          |
+| [SkipCheck](#skipcheck-1)                                     | Merged   | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-booleanargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/QualityCheckStep/properties/SkipCheck")                          |
+| [RegisterNewBaseline](#registernewbaseline-1)                 | Merged   | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-booleanargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/QualityCheckStep/properties/RegisterNewBaseline")                |
+| [Arguments](#arguments-10)                                    | `object` | Required | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-processingargs.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/QualityCheckStep/properties/Arguments")                                |
+
+### Name
+
+
+
+`Name`
+
+*   is required
+
+*   Type: `string`
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-qualitycheckstep-properties-name.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/QualityCheckStep/properties/Name")
+
+#### Name Type
+
+`string`
+
+#### Name Constraints
+
+**pattern**: the string must match the following regular expression:&#x20;
+
+```regexp
+^[A-Za-z0-9\-_]{1,64}$
+```
+
+[try pattern](https://regexr.com/?expression=%5E%5BA-Za-z0-9%5C-_%5D%7B1%2C64%7D%24 "try regular expression with regexr.com")
+
+### Type
+
+
+
+`Type`
+
+*   is required
+
+*   Type: `string`
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-qualitycheckstep-properties-type.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/QualityCheckStep/properties/Type")
+
+#### Type Type
+
+`string`
+
+#### Type Constraints
+
+**enum**: the value of this property must be equal to one of the following values:
+
+| Value            | Explanation |
+| :--------------- | :---------- |
+| `"QualityCheck"` |             |
+
+### DependsOn
+
+
+
+`DependsOn`
+
+*   is optional
+
+*   Type: `string[]`
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-qualitycheckstep-properties-dependson.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/QualityCheckStep/properties/DependsOn")
+
+#### DependsOn Type
+
+`string[]`
+
+### DisplayName
+
+
+
+`DisplayName`
+
+*   is optional
+
+*   Type: `string`
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-qualitycheckstep-properties-displayname.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/QualityCheckStep/properties/DisplayName")
+
+#### DisplayName Type
+
+`string`
+
+#### DisplayName Constraints
+
+**pattern**: the string must match the following regular expression:&#x20;
+
+```regexp
+^[A-Za-z0-9\-_]{1,64}$
+```
+
+[try pattern](https://regexr.com/?expression=%5E%5BA-Za-z0-9%5C-_%5D%7B1%2C64%7D%24 "try regular expression with regexr.com")
+
+### Description
+
+
+
+`Description`
+
+*   is optional
+
+*   Type: `string`
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-qualitycheckstep-properties-description.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/QualityCheckStep/properties/Description")
+
+#### Description Type
+
+`string`
+
+#### Description Constraints
+
+**maximum length**: the maximum number of characters for this string is: `4096`
+
+**minimum length**: the minimum number of characters for this string is: `0`
+
+### RetryPolicies
+
+
+
+`RetryPolicies`
+
+*   is optional
+
+*   Type: `object[]` ([Details](pipeline-definition-definitions-retrypolicy.md))
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-qualitycheckstep-properties-retrypolicies.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/QualityCheckStep/properties/RetryPolicies")
+
+#### RetryPolicies Type
+
+`object[]` ([Details](pipeline-definition-definitions-retrypolicy.md))
+
+### CheckType
+
+
+
+`CheckType`
+
+*   is required
+
+*   Type: `string`
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-qualitycheckstep-properties-checktype.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/QualityCheckStep/properties/CheckType")
+
+#### CheckType Type
+
+`string`
+
+#### CheckType Constraints
+
+**enum**: the value of this property must be equal to one of the following values:
+
+| Value                    | Explanation |
+| :----------------------- | :---------- |
+| `"DATA_BIAS"`            |             |
+| `"MODEL_BIAS"`           |             |
+| `"MODEL_EXPLAINABILITY"` |             |
+
+### ModelPackageGroupName
+
+
+
+`ModelPackageGroupName`
+
+*   is optional
+
+*   Type: merged type ([Details](pipeline-definition-definitions-stringargumentvalue.md))
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-stringargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/QualityCheckStep/properties/ModelPackageGroupName")
+
+#### ModelPackageGroupName Type
+
+merged type ([Details](pipeline-definition-definitions-stringargumentvalue.md))
+
+one (and only one) of
+
+*   [Untitled string in SageMaker Pipeline Definition](pipeline-definition-definitions-stringargumentvalue-oneof-0.md "check type definition")
+
+*   [Untitled object in SageMaker Pipeline Definition](pipeline-definition-definitions-getfunction.md "check type definition")
+
+### SuppliedBaselineConstraints
+
+
+
+`SuppliedBaselineConstraints`
+
+*   is optional
+
+*   Type: merged type ([Details](pipeline-definition-definitions-stringargumentvalue.md))
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-stringargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/QualityCheckStep/properties/SuppliedBaselineConstraints")
+
+#### SuppliedBaselineConstraints Type
+
+merged type ([Details](pipeline-definition-definitions-stringargumentvalue.md))
+
+one (and only one) of
+
+*   [Untitled string in SageMaker Pipeline Definition](pipeline-definition-definitions-stringargumentvalue-oneof-0.md "check type definition")
+
+*   [Untitled object in SageMaker Pipeline Definition](pipeline-definition-definitions-getfunction.md "check type definition")
+
+### SuppliedBaselineStatistics
+
+
+
+`SuppliedBaselineStatistics`
+
+*   is optional
+
+*   Type: merged type ([Details](pipeline-definition-definitions-stringargumentvalue.md))
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-stringargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/QualityCheckStep/properties/SuppliedBaselineStatistics")
+
+#### SuppliedBaselineStatistics Type
+
+merged type ([Details](pipeline-definition-definitions-stringargumentvalue.md))
+
+one (and only one) of
+
+*   [Untitled string in SageMaker Pipeline Definition](pipeline-definition-definitions-stringargumentvalue-oneof-0.md "check type definition")
+
+*   [Untitled object in SageMaker Pipeline Definition](pipeline-definition-definitions-getfunction.md "check type definition")
+
+### SkipCheck
+
+
+
+`SkipCheck`
+
+*   is optional
+
+*   Type: merged type ([Details](pipeline-definition-definitions-booleanargumentvalue.md))
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-booleanargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/QualityCheckStep/properties/SkipCheck")
+
+#### SkipCheck Type
+
+merged type ([Details](pipeline-definition-definitions-booleanargumentvalue.md))
+
+one (and only one) of
+
+*   [Untitled boolean in SageMaker Pipeline Definition](pipeline-definition-definitions-booleanargumentvalue-oneof-0.md "check type definition")
+
+*   [Untitled object in SageMaker Pipeline Definition](pipeline-definition-definitions-getfunction.md "check type definition")
+
+### RegisterNewBaseline
+
+
+
+`RegisterNewBaseline`
+
+*   is optional
+
+*   Type: merged type ([Details](pipeline-definition-definitions-booleanargumentvalue.md))
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-booleanargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/QualityCheckStep/properties/RegisterNewBaseline")
+
+#### RegisterNewBaseline Type
+
+merged type ([Details](pipeline-definition-definitions-booleanargumentvalue.md))
+
+one (and only one) of
+
+*   [Untitled boolean in SageMaker Pipeline Definition](pipeline-definition-definitions-booleanargumentvalue-oneof-0.md "check type definition")
+
+*   [Untitled object in SageMaker Pipeline Definition](pipeline-definition-definitions-getfunction.md "check type definition")
+
+### Arguments
+
+
+
+`Arguments`
+
+*   is required
+
+*   Type: `object` ([Details](pipeline-definition-definitions-processingargs.md))
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-processingargs.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/QualityCheckStep/properties/Arguments")
+
+#### Arguments Type
+
+`object` ([Details](pipeline-definition-definitions-processingargs.md))
 
 ## Definitions group EMRStep
 
@@ -3462,8 +4311,156 @@ Reference this group by using
 {"$ref":"https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/EMRStep"}
 ```
 
-| Property | Type | Required | Nullable | Defined by |
-| :------- | :--- | :------- | :------- | :--------- |
+| Property                       | Type     | Required | Nullable       | Defined by                                                                                                                                                                                                                                         |
+| :----------------------------- | :------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Name](#name-15)               | `string` | Required | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-emrstep-properties-name.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/EMRStep/properties/Name")               |
+| [Type](#type-18)               | `string` | Required | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-emrstep-properties-type.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/EMRStep/properties/Type")               |
+| [DependsOn](#dependson-11)     | `array`  | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-emrstep-properties-dependson.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/EMRStep/properties/DependsOn")     |
+| [DisplayName](#displayname-11) | `string` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-emrstep-properties-displayname.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/EMRStep/properties/DisplayName") |
+| [Description](#description-15) | `string` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-emrstep-properties-description.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/EMRStep/properties/Description") |
+| [Arguments](#arguments-11)     | `object` | Required | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-emrstep-properties-arguments.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/EMRStep/properties/Arguments")     |
+
+### Name
+
+
+
+`Name`
+
+*   is required
+
+*   Type: `string`
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-emrstep-properties-name.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/EMRStep/properties/Name")
+
+#### Name Type
+
+`string`
+
+#### Name Constraints
+
+**pattern**: the string must match the following regular expression:&#x20;
+
+```regexp
+^[A-Za-z0-9\-_]{1,64}$
+```
+
+[try pattern](https://regexr.com/?expression=%5E%5BA-Za-z0-9%5C-_%5D%7B1%2C64%7D%24 "try regular expression with regexr.com")
+
+### Type
+
+
+
+`Type`
+
+*   is required
+
+*   Type: `string`
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-emrstep-properties-type.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/EMRStep/properties/Type")
+
+#### Type Type
+
+`string`
+
+#### Type Constraints
+
+**enum**: the value of this property must be equal to one of the following values:
+
+| Value   | Explanation |
+| :------ | :---------- |
+| `"EMR"` |             |
+
+### DependsOn
+
+
+
+`DependsOn`
+
+*   is optional
+
+*   Type: `string[]`
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-emrstep-properties-dependson.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/EMRStep/properties/DependsOn")
+
+#### DependsOn Type
+
+`string[]`
+
+### DisplayName
+
+
+
+`DisplayName`
+
+*   is optional
+
+*   Type: `string`
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-emrstep-properties-displayname.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/EMRStep/properties/DisplayName")
+
+#### DisplayName Type
+
+`string`
+
+#### DisplayName Constraints
+
+**pattern**: the string must match the following regular expression:&#x20;
+
+```regexp
+^[A-Za-z0-9\-_]{1,64}$
+```
+
+[try pattern](https://regexr.com/?expression=%5E%5BA-Za-z0-9%5C-_%5D%7B1%2C64%7D%24 "try regular expression with regexr.com")
+
+### Description
+
+
+
+`Description`
+
+*   is optional
+
+*   Type: `string`
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-emrstep-properties-description.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/EMRStep/properties/Description")
+
+#### Description Type
+
+`string`
+
+#### Description Constraints
+
+**maximum length**: the maximum number of characters for this string is: `4096`
+
+**minimum length**: the minimum number of characters for this string is: `0`
+
+### Arguments
+
+
+
+`Arguments`
+
+*   is required
+
+*   Type: `object` ([Details](pipeline-definition-definitions-emrstep-properties-arguments.md))
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-emrstep-properties-arguments.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/EMRStep/properties/Arguments")
+
+#### Arguments Type
+
+`object` ([Details](pipeline-definition-definitions-emrstep-properties-arguments.md))
 
 ## Definitions group FailStep
 
@@ -3475,12 +4472,12 @@ Reference this group by using
 
 | Property                       | Type     | Required | Nullable       | Defined by                                                                                                                                                                                                                                           |
 | :----------------------------- | :------- | :------- | :------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Name](#name-13)               | `string` | Required | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-failstep-properties-name.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/FailStep/properties/Name")               |
-| [Type](#type-16)               | `string` | Required | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-failstep-properties-type.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/FailStep/properties/Type")               |
-| [DependsOn](#dependson-9)      | `array`  | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-failstep-properties-dependson.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/FailStep/properties/DependsOn")     |
-| [DisplayName](#displayname-9)  | `string` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-failstep-properties-displayname.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/FailStep/properties/DisplayName") |
-| [Description](#description-13) | `string` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-failstep-properties-description.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/FailStep/properties/Description") |
-| [Arguments](#arguments-9)      | `object` | Required | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-failstep-properties-arguments.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/FailStep/properties/Arguments")     |
+| [Name](#name-16)               | `string` | Required | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-failstep-properties-name.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/FailStep/properties/Name")               |
+| [Type](#type-19)               | `string` | Required | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-failstep-properties-type.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/FailStep/properties/Type")               |
+| [DependsOn](#dependson-12)     | `array`  | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-failstep-properties-dependson.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/FailStep/properties/DependsOn")     |
+| [DisplayName](#displayname-12) | `string` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-failstep-properties-displayname.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/FailStep/properties/DisplayName") |
+| [Description](#description-16) | `string` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-failstep-properties-description.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/FailStep/properties/Description") |
+| [Arguments](#arguments-12)     | `object` | Required | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-failstep-properties-arguments.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/FailStep/properties/Arguments")     |
 
 ### Name
 
