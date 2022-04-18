@@ -2190,7 +2190,7 @@
 				},
 				"CheckType": {
 					"type": "string",
-					"enum": ["DATA_BIAS", "MODEL_BIAS", "MODEL_EXPLAINABILITY"]
+					"enum": ["DATA_QUALITY", "MODEL_QUALITY"]
 				},
 				"ModelPackageGroupName": {
 					"$ref": "#/definitions/StringArgumentValue"
