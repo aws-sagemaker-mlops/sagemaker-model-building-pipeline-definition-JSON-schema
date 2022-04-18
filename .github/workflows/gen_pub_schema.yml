@@ -16,6 +16,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           python -m pip install json-schema-for-humans
+          apt-get update && apt-get install -y rsync
 
       - name: Check out repo
         uses: actions/checkout@v2
