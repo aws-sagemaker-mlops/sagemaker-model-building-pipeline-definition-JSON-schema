@@ -1,0 +1,3 @@
+## ExpireAfter Type
+
+`string`

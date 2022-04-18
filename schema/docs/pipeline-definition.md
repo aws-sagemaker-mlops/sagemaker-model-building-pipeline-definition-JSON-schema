@@ -981,7 +981,7 @@ Reference this group by using
 
 | Property                            | Type      | Required | Nullable       | Defined by                                                                                                                                                                                                                                                                |
 | :---------------------------------- | :-------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [ExceptionType](#exceptiontype)     | `string`  | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-retrypolicy-properties-exceptiontype.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/RetryPolicy/properties/ExceptionType")     |
+| [ExceptionType](#exceptiontype)     | `string`  | Required | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-retrypolicy-properties-exceptiontype.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/RetryPolicy/properties/ExceptionType")     |
 | [IntervalSeconds](#intervalseconds) | `integer` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-retrypolicy-properties-intervalseconds.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/RetryPolicy/properties/IntervalSeconds") |
 | [BackoffRate](#backoffrate)         | `number`  | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-retrypolicy-properties-backoffrate.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/RetryPolicy/properties/BackoffRate")         |
 | [ExpireAfterMin](#expireaftermin)   | `integer` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-retrypolicy-properties-expireaftermin.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/RetryPolicy/properties/ExpireAfterMin")   |
@@ -993,7 +993,7 @@ Reference this group by using
 
 `ExceptionType`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
@@ -1089,6 +1089,55 @@ Reference this group by using
 #### MaxAttempts Type
 
 `integer`
+
+## Definitions group CacheConfig
+
+Reference this group by using
+
+```json
+{"$ref":"https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/CacheConfig"}
+```
+
+| Property                    | Type      | Required | Nullable       | Defined by                                                                                                                                                                                                                                                        |
+| :-------------------------- | :-------- | :------- | :------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Enabled](#enabled)         | `boolean` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-cacheconfig-properties-enabled.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/CacheConfig/properties/Enabled")         |
+| [ExpireAfter](#expireafter) | `string`  | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-cacheconfig-properties-expireafter.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/CacheConfig/properties/ExpireAfter") |
+
+### Enabled
+
+
+
+`Enabled`
+
+*   is optional
+
+*   Type: `boolean`
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-cacheconfig-properties-enabled.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/CacheConfig/properties/Enabled")
+
+#### Enabled Type
+
+`boolean`
+
+### ExpireAfter
+
+ISO 8601 duration string
+
+`ExpireAfter`
+
+*   is optional
+
+*   Type: `string`
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-cacheconfig-properties-expireafter.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/CacheConfig/properties/ExpireAfter")
+
+#### ExpireAfter Type
+
+`string`
 
 ## Definitions group Tag
 
@@ -1945,6 +1994,7 @@ Reference this group by using
 | [DisplayName](#displayname-1)   | `string` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-trainingstep-properties-displayname.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TrainingStep/properties/DisplayName")     |
 | [Description](#description-5)   | `string` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-trainingstep-properties-description.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TrainingStep/properties/Description")     |
 | [RetryPolicies](#retrypolicies) | `array`  | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-trainingstep-properties-retrypolicies.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TrainingStep/properties/RetryPolicies") |
+| [CacheConfig](#cacheconfig)     | `object` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-cacheconfig.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TrainingStep/properties/CacheConfig")                             |
 | [Arguments](#arguments-1)       | `object` | Required | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-trainingstep-properties-arguments.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TrainingStep/properties/Arguments")         |
 
 ### Name
@@ -2089,6 +2139,24 @@ Reference this group by using
 
 `object[]` ([Details](pipeline-definition-definitions-retrypolicy.md))
 
+### CacheConfig
+
+
+
+`CacheConfig`
+
+*   is optional
+
+*   Type: `object` ([Details](pipeline-definition-definitions-cacheconfig.md))
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-cacheconfig.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TrainingStep/properties/CacheConfig")
+
+#### CacheConfig Type
+
+`object` ([Details](pipeline-definition-definitions-cacheconfig.md))
+
 ### Arguments
 
 
@@ -2123,6 +2191,7 @@ Reference this group by using
 | [DisplayName](#displayname-2)     | `string` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-processingstep-properties-displayname.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingStep/properties/DisplayName")     |
 | [Description](#description-6)     | `string` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-processingstep-properties-description.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingStep/properties/Description")     |
 | [RetryPolicies](#retrypolicies-1) | `array`  | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-processingstep-properties-retrypolicies.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingStep/properties/RetryPolicies") |
+| [CacheConfig](#cacheconfig-1)     | `object` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-cacheconfig.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingStep/properties/CacheConfig")                               |
 | [Arguments](#arguments-2)         | `object` | Required | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-processingargs.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingStep/properties/Arguments")                              |
 
 ### Name
@@ -2267,6 +2336,24 @@ Reference this group by using
 
 `object[]` ([Details](pipeline-definition-definitions-retrypolicy.md))
 
+### CacheConfig
+
+
+
+`CacheConfig`
+
+*   is optional
+
+*   Type: `object` ([Details](pipeline-definition-definitions-cacheconfig.md))
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-cacheconfig.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingStep/properties/CacheConfig")
+
+#### CacheConfig Type
+
+`object` ([Details](pipeline-definition-definitions-cacheconfig.md))
+
 ### Arguments
 
 
@@ -2301,6 +2388,7 @@ Reference this group by using
 | [DisplayName](#displayname-3)     | `string` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-transformstep-properties-displayname.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TransformStep/properties/DisplayName")     |
 | [Description](#description-7)     | `string` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-transformstep-properties-description.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TransformStep/properties/Description")     |
 | [RetryPolicies](#retrypolicies-2) | `array`  | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-transformstep-properties-retrypolicies.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TransformStep/properties/RetryPolicies") |
+| [CacheConfig](#cacheconfig-2)     | `object` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-cacheconfig.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TransformStep/properties/CacheConfig")                              |
 | [Arguments](#arguments-3)         | `object` | Required | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-transformstep-properties-arguments.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TransformStep/properties/Arguments")         |
 
 ### Name
@@ -2444,6 +2532,24 @@ Reference this group by using
 #### RetryPolicies Type
 
 `object[]` ([Details](pipeline-definition-definitions-retrypolicy.md))
+
+### CacheConfig
+
+
+
+`CacheConfig`
+
+*   is optional
+
+*   Type: `object` ([Details](pipeline-definition-definitions-cacheconfig.md))
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-cacheconfig.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TransformStep/properties/CacheConfig")
+
+#### CacheConfig Type
+
+`object` ([Details](pipeline-definition-definitions-cacheconfig.md))
 
 ### Arguments
 
@@ -3064,6 +3170,7 @@ Reference this group by using
 | [DisplayName](#displayname-6)         | `string` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-lambdastep-properties-displayname.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/LambdaStep/properties/DisplayName")           |
 | [Description](#description-10)        | `string` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-lambdastep-properties-description.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/LambdaStep/properties/Description")           |
 | [FunctionArn](#functionarn)           | `string` | Required | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-lambdastep-properties-functionarn.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/LambdaStep/properties/FunctionArn")           |
+| [CacheConfig](#cacheconfig-3)         | `object` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-cacheconfig.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/LambdaStep/properties/CacheConfig")                                 |
 | [Arguments](#arguments-6)             | `object` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-lambdastep-properties-arguments.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/LambdaStep/properties/Arguments")               |
 | [OutputParameters](#outputparameters) | `array`  | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-lambdastep-properties-outputparameters.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/LambdaStep/properties/OutputParameters") |
 
@@ -3209,6 +3316,24 @@ Reference this group by using
 
 `string`
 
+### CacheConfig
+
+
+
+`CacheConfig`
+
+*   is optional
+
+*   Type: `object` ([Details](pipeline-definition-definitions-cacheconfig.md))
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-cacheconfig.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/LambdaStep/properties/CacheConfig")
+
+#### CacheConfig Type
+
+`object` ([Details](pipeline-definition-definitions-cacheconfig.md))
+
 ### Arguments
 
 
@@ -3261,6 +3386,7 @@ Reference this group by using
 | [DisplayName](#displayname-7)           | `string` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-callbackstep-properties-displayname.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/CallbackStep/properties/DisplayName")           |
 | [Description](#description-11)          | `string` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-callbackstep-properties-description.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/CallbackStep/properties/Description")           |
 | [SqsQueueUrl](#sqsqueueurl)             | `string` | Required | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-callbackstep-properties-sqsqueueurl.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/CallbackStep/properties/SqsQueueUrl")           |
+| [CacheConfig](#cacheconfig-4)           | `object` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-cacheconfig.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/CallbackStep/properties/CacheConfig")                                   |
 | [Arguments](#arguments-7)               | `object` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-callbackstep-properties-arguments.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/CallbackStep/properties/Arguments")               |
 | [OutputParameters](#outputparameters-1) | `array`  | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-callbackstep-properties-outputparameters.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/CallbackStep/properties/OutputParameters") |
 
@@ -3406,6 +3532,24 @@ Reference this group by using
 
 `string`
 
+### CacheConfig
+
+
+
+`CacheConfig`
+
+*   is optional
+
+*   Type: `object` ([Details](pipeline-definition-definitions-cacheconfig.md))
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-cacheconfig.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/CallbackStep/properties/CacheConfig")
+
+#### CacheConfig Type
+
+`object` ([Details](pipeline-definition-definitions-cacheconfig.md))
+
 ### Arguments
 
 
@@ -3458,6 +3602,7 @@ Reference this group by using
 | [DisplayName](#displayname-8)     | `string` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-tuningstep-properties-displayname.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/DisplayName")     |
 | [Description](#description-12)    | `string` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-tuningstep-properties-description.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/Description")     |
 | [RetryPolicies](#retrypolicies-5) | `array`  | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-tuningstep-properties-retrypolicies.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/RetryPolicies") |
+| [CacheConfig](#cacheconfig-5)     | `object` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-cacheconfig.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/CacheConfig")                           |
 | [Arguments](#arguments-8)         | `object` | Required | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-tuningstep-properties-arguments.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/Arguments")         |
 
 ### Name
@@ -3602,6 +3747,24 @@ Reference this group by using
 
 `object[]` ([Details](pipeline-definition-definitions-retrypolicy.md))
 
+### CacheConfig
+
+
+
+`CacheConfig`
+
+*   is optional
+
+*   Type: `object` ([Details](pipeline-definition-definitions-cacheconfig.md))
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-cacheconfig.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/CacheConfig")
+
+#### CacheConfig Type
+
+`object` ([Details](pipeline-definition-definitions-cacheconfig.md))
+
 ### Arguments
 
 
@@ -3636,6 +3799,7 @@ Reference this group by using
 | [DisplayName](#displayname-9)                               | `string` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-clarifycheckstep-properties-displayname.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ClarifyCheckStep/properties/DisplayName")     |
 | [Description](#description-13)                              | `string` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-clarifycheckstep-properties-description.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ClarifyCheckStep/properties/Description")     |
 | [RetryPolicies](#retrypolicies-6)                           | `array`  | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-clarifycheckstep-properties-retrypolicies.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ClarifyCheckStep/properties/RetryPolicies") |
+| [CacheConfig](#cacheconfig-6)                               | `object` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-cacheconfig.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ClarifyCheckStep/properties/CacheConfig")                                 |
 | [CheckType](#checktype)                                     | `string` | Required | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-clarifycheckstep-properties-checktype.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ClarifyCheckStep/properties/CheckType")         |
 | [ModelPackageGroupName](#modelpackagegroupname)             | Merged   | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-stringargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ClarifyCheckStep/properties/ModelPackageGroupName")               |
 | [SuppliedBaselineConstraints](#suppliedbaselineconstraints) | Merged   | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-stringargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ClarifyCheckStep/properties/SuppliedBaselineConstraints")         |
@@ -3785,6 +3949,24 @@ Reference this group by using
 #### RetryPolicies Type
 
 `object[]` ([Details](pipeline-definition-definitions-retrypolicy.md))
+
+### CacheConfig
+
+
+
+`CacheConfig`
+
+*   is optional
+
+*   Type: `object` ([Details](pipeline-definition-definitions-cacheconfig.md))
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-cacheconfig.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ClarifyCheckStep/properties/CacheConfig")
+
+#### CacheConfig Type
+
+`object` ([Details](pipeline-definition-definitions-cacheconfig.md))
 
 ### CheckType
 
@@ -3968,6 +4150,7 @@ Reference this group by using
 | [DisplayName](#displayname-10)                                | `string` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-qualitycheckstep-properties-displayname.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/QualityCheckStep/properties/DisplayName")     |
 | [Description](#description-14)                                | `string` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-qualitycheckstep-properties-description.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/QualityCheckStep/properties/Description")     |
 | [RetryPolicies](#retrypolicies-7)                             | `array`  | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-qualitycheckstep-properties-retrypolicies.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/QualityCheckStep/properties/RetryPolicies") |
+| [CacheConfig](#cacheconfig-7)                                 | `object` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-cacheconfig.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/QualityCheckStep/properties/CacheConfig")                                 |
 | [CheckType](#checktype-1)                                     | `string` | Required | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-qualitycheckstep-properties-checktype.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/QualityCheckStep/properties/CheckType")         |
 | [ModelPackageGroupName](#modelpackagegroupname-1)             | Merged   | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-stringargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/QualityCheckStep/properties/ModelPackageGroupName")               |
 | [SuppliedBaselineConstraints](#suppliedbaselineconstraints-1) | Merged   | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-stringargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/QualityCheckStep/properties/SuppliedBaselineConstraints")         |
@@ -4117,6 +4300,24 @@ Reference this group by using
 #### RetryPolicies Type
 
 `object[]` ([Details](pipeline-definition-definitions-retrypolicy.md))
+
+### CacheConfig
+
+
+
+`CacheConfig`
+
+*   is optional
+
+*   Type: `object` ([Details](pipeline-definition-definitions-cacheconfig.md))
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-cacheconfig.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/QualityCheckStep/properties/CacheConfig")
+
+#### CacheConfig Type
+
+`object` ([Details](pipeline-definition-definitions-cacheconfig.md))
 
 ### CheckType
 
@@ -4298,6 +4499,7 @@ Reference this group by using
 | [DependsOn](#dependson-11)     | `array`  | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-emrstep-properties-dependson.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/EMRStep/properties/DependsOn")     |
 | [DisplayName](#displayname-11) | `string` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-emrstep-properties-displayname.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/EMRStep/properties/DisplayName") |
 | [Description](#description-15) | `string` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-emrstep-properties-description.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/EMRStep/properties/Description") |
+| [CacheConfig](#cacheconfig-8)  | `object` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-cacheconfig.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/EMRStep/properties/CacheConfig")                    |
 | [Arguments](#arguments-11)     | `object` | Required | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-emrstep-properties-arguments.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/EMRStep/properties/Arguments")     |
 
 ### Name
@@ -4423,6 +4625,24 @@ Reference this group by using
 **maximum length**: the maximum number of characters for this string is: `4096`
 
 **minimum length**: the minimum number of characters for this string is: `0`
+
+### CacheConfig
+
+
+
+`CacheConfig`
+
+*   is optional
+
+*   Type: `object` ([Details](pipeline-definition-definitions-cacheconfig.md))
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-cacheconfig.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/EMRStep/properties/CacheConfig")
+
+#### CacheConfig Type
+
+`object` ([Details](pipeline-definition-definitions-cacheconfig.md))
 
 ### Arguments
 

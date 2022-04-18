@@ -12,6 +12,7 @@
 | [DisplayName](#displayname)     | `string` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-stepname.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/DisplayName")                              |
 | [Description](#description)     | `string` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-parameterdescription.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/Description")                  |
 | [RetryPolicies](#retrypolicies) | `array`  | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-tuningstep-properties-retrypolicies.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/RetryPolicies") |
+| [CacheConfig](#cacheconfig)     | `object` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-cacheconfig.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/CacheConfig")                           |
 | [Arguments](#arguments)         | `object` | Required | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-tuningstep-properties-arguments.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/Arguments")         |
 
 ## Name
@@ -155,6 +156,24 @@
 ### RetryPolicies Type
 
 `object[]` ([Details](pipeline-definition-definitions-retrypolicy.md))
+
+## CacheConfig
+
+
+
+`CacheConfig`
+
+*   is optional
+
+*   Type: `object` ([Details](pipeline-definition-definitions-cacheconfig.md))
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-cacheconfig.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/CacheConfig")
+
+### CacheConfig Type
+
+`object` ([Details](pipeline-definition-definitions-cacheconfig.md))
 
 ## Arguments
 

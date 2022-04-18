@@ -12,6 +12,7 @@
 | [DisplayName](#displayname)           | `string` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-stepname.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/CallbackStep/properties/DisplayName")                                      |
 | [Description](#description)           | `string` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-parameterdescription.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/CallbackStep/properties/Description")                          |
 | [SqsQueueUrl](#sqsqueueurl)           | `string` | Required | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-callbackstep-properties-sqsqueueurl.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/CallbackStep/properties/SqsQueueUrl")           |
+| [CacheConfig](#cacheconfig)           | `object` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-cacheconfig.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/CallbackStep/properties/CacheConfig")                                   |
 | [Arguments](#arguments)               | `object` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-callbackstep-properties-arguments.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/CallbackStep/properties/Arguments")               |
 | [OutputParameters](#outputparameters) | `array`  | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-callbackstep-properties-outputparameters.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/CallbackStep/properties/OutputParameters") |
 
@@ -156,6 +157,24 @@
 ### SqsQueueUrl Type
 
 `string`
+
+## CacheConfig
+
+
+
+`CacheConfig`
+
+*   is optional
+
+*   Type: `object` ([Details](pipeline-definition-definitions-cacheconfig.md))
+
+*   cannot be null
+
+*   defined in: [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-cacheconfig.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/CallbackStep/properties/CacheConfig")
+
+### CacheConfig Type
+
+`object` ([Details](pipeline-definition-definitions-cacheconfig.md))
 
 ## Arguments
 

@@ -20,6 +20,8 @@
 
 *   [Untitled object in SageMaker Pipeline Definition Schema](./pipeline-definition-definitions-retrypolicy.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/RetryPolicy`
 
+*   [Untitled object in SageMaker Pipeline Definition Schema](./pipeline-definition-definitions-cacheconfig.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/CacheConfig`
+
 *   [Untitled object in SageMaker Pipeline Definition Schema](./pipeline-definition-definitions-tag.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/Tag`
 
 *   [Untitled object in SageMaker Pipeline Definition Schema](./pipeline-definition-definitions-parameterranges.md) – `https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ParameterRanges`
