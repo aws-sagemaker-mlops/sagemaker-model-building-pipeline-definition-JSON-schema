@@ -4,12 +4,12 @@ unknown
 
 # 1 Properties
 
-| Property                      | Type      | Required | Nullable       | Defined by                                                                                                                                                                                                                                                             |
-| :---------------------------- | :-------- | :------- | :------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Name](#name)                 | `string`  | Required | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-parametername.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/IntegerParameter/properties/Name")                                    |
-| [Description](#description)   | `string`  | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-parameterdescription.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/IntegerParameter/properties/Description")                      |
-| [DefaultValue](#defaultvalue) | `integer` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-integerparameter-properties-defaultvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/IntegerParameter/properties/DefaultValue") |
-| [Type](#type)                 | `string`  | Required | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-integerparameter-properties-type.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/IntegerParameter/properties/Type")                 |
+| Property                      | Type      | Required | Nullable       | Defined by                                                                                                                                                                                                                                                                    |
+| :---------------------------- | :-------- | :------- | :------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Name](#name)                 | `string`  | Required | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-parametername.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/IntegerParameter/properties/Name")                                    |
+| [Description](#description)   | `string`  | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-parameterdescription.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/IntegerParameter/properties/Description")                      |
+| [DefaultValue](#defaultvalue) | `integer` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-integerparameter-properties-defaultvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/IntegerParameter/properties/DefaultValue") |
+| [Type](#type)                 | `string`  | Required | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-integerparameter-properties-type.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/IntegerParameter/properties/Type")                 |
 
 ## Name
 
@@ -23,7 +23,7 @@ unknown
 
 *   cannot be null
 
-*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-parametername.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/IntegerParameter/properties/Name")
+*   defined in: [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-parametername.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/IntegerParameter/properties/Name")
 
 ### Name Type
 
@@ -51,7 +51,7 @@ unknown
 
 *   cannot be null
 
-*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-parameterdescription.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/IntegerParameter/properties/Description")
+*   defined in: [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-parameterdescription.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/IntegerParameter/properties/Description")
 
 ### Description Type
 
@@ -75,7 +75,7 @@ unknown
 
 *   cannot be null
 
-*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-integerparameter-properties-defaultvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/IntegerParameter/properties/DefaultValue")
+*   defined in: [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-integerparameter-properties-defaultvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/IntegerParameter/properties/DefaultValue")
 
 ### DefaultValue Type
 
@@ -93,7 +93,7 @@ unknown
 
 *   cannot be null
 
-*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-integerparameter-properties-type.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/IntegerParameter/properties/Type")
+*   defined in: [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-integerparameter-properties-type.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/IntegerParameter/properties/Type")
 
 ### Type Type
 

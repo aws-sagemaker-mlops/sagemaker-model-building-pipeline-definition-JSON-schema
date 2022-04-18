@@ -4,12 +4,12 @@
 
 # S3DataSource Properties
 
-| Property                                          | Type    | Required | Nullable       | Defined by                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| :------------------------------------------------ | :------ | :------- | :------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [AttributeNames](#attributenames)                 | `array` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-inputdataconfig-items-properties-datasource-properties-s3datasource-properties-attributenames.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/InputDataConfig/items/properties/DataSource/properties/S3DataSource/properties/AttributeNames") |
-| [S3DataDistributionType](#s3datadistributiontype) | Merged  | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-stringargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/InputDataConfig/items/properties/DataSource/properties/S3DataSource/properties/S3DataDistributionType")                                                                                                                  |
-| [S3DataType](#s3datatype)                         | Merged  | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-stringargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/InputDataConfig/items/properties/DataSource/properties/S3DataSource/properties/S3DataType")                                                                                                                              |
-| [S3Uri](#s3uri)                                   | Merged  | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-stringargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/InputDataConfig/items/properties/DataSource/properties/S3DataSource/properties/S3Uri")                                                                                                                                   |
+| Property                                          | Type    | Required | Nullable       | Defined by                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| :------------------------------------------------ | :------ | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [AttributeNames](#attributenames)                 | `array` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-inputdataconfig-items-properties-datasource-properties-s3datasource-properties-attributenames.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/InputDataConfig/items/properties/DataSource/properties/S3DataSource/properties/AttributeNames") |
+| [S3DataDistributionType](#s3datadistributiontype) | Merged  | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-stringargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/InputDataConfig/items/properties/DataSource/properties/S3DataSource/properties/S3DataDistributionType")                                                                                                                  |
+| [S3DataType](#s3datatype)                         | Merged  | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-stringargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/InputDataConfig/items/properties/DataSource/properties/S3DataSource/properties/S3DataType")                                                                                                                              |
+| [S3Uri](#s3uri)                                   | Merged  | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-stringargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/InputDataConfig/items/properties/DataSource/properties/S3DataSource/properties/S3Uri")                                                                                                                                   |
 
 ## AttributeNames
 
@@ -23,7 +23,7 @@
 
 *   cannot be null
 
-*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-inputdataconfig-items-properties-datasource-properties-s3datasource-properties-attributenames.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/InputDataConfig/items/properties/DataSource/properties/S3DataSource/properties/AttributeNames")
+*   defined in: [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-inputdataconfig-items-properties-datasource-properties-s3datasource-properties-attributenames.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/InputDataConfig/items/properties/DataSource/properties/S3DataSource/properties/AttributeNames")
 
 ### AttributeNames Type
 
@@ -41,7 +41,7 @@ an array of merged types ([Details](pipeline-definition-definitions-stringargume
 
 *   cannot be null
 
-*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-stringargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/InputDataConfig/items/properties/DataSource/properties/S3DataSource/properties/S3DataDistributionType")
+*   defined in: [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-stringargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/InputDataConfig/items/properties/DataSource/properties/S3DataSource/properties/S3DataDistributionType")
 
 ### S3DataDistributionType Type
 
@@ -49,9 +49,9 @@ merged type ([Details](pipeline-definition-definitions-stringargumentvalue.md))
 
 one (and only one) of
 
-*   [Untitled string in SageMaker Pipeline Definition](pipeline-definition-definitions-stringargumentvalue-oneof-0.md "check type definition")
+*   [Untitled string in SageMaker Pipeline Definition Schema](pipeline-definition-definitions-stringargumentvalue-oneof-0.md "check type definition")
 
-*   [Untitled object in SageMaker Pipeline Definition](pipeline-definition-definitions-getfunction.md "check type definition")
+*   [Untitled object in SageMaker Pipeline Definition Schema](pipeline-definition-definitions-getfunction.md "check type definition")
 
 ## S3DataType
 
@@ -65,7 +65,7 @@ one (and only one) of
 
 *   cannot be null
 
-*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-stringargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/InputDataConfig/items/properties/DataSource/properties/S3DataSource/properties/S3DataType")
+*   defined in: [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-stringargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/InputDataConfig/items/properties/DataSource/properties/S3DataSource/properties/S3DataType")
 
 ### S3DataType Type
 
@@ -73,9 +73,9 @@ merged type ([Details](pipeline-definition-definitions-stringargumentvalue.md))
 
 one (and only one) of
 
-*   [Untitled string in SageMaker Pipeline Definition](pipeline-definition-definitions-stringargumentvalue-oneof-0.md "check type definition")
+*   [Untitled string in SageMaker Pipeline Definition Schema](pipeline-definition-definitions-stringargumentvalue-oneof-0.md "check type definition")
 
-*   [Untitled object in SageMaker Pipeline Definition](pipeline-definition-definitions-getfunction.md "check type definition")
+*   [Untitled object in SageMaker Pipeline Definition Schema](pipeline-definition-definitions-getfunction.md "check type definition")
 
 ## S3Uri
 
@@ -89,7 +89,7 @@ one (and only one) of
 
 *   cannot be null
 
-*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-stringargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/InputDataConfig/items/properties/DataSource/properties/S3DataSource/properties/S3Uri")
+*   defined in: [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-stringargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/InputDataConfig/items/properties/DataSource/properties/S3DataSource/properties/S3Uri")
 
 ### S3Uri Type
 
@@ -97,6 +97,6 @@ merged type ([Details](pipeline-definition-definitions-stringargumentvalue.md))
 
 one (and only one) of
 
-*   [Untitled string in SageMaker Pipeline Definition](pipeline-definition-definitions-stringargumentvalue-oneof-0.md "check type definition")
+*   [Untitled string in SageMaker Pipeline Definition Schema](pipeline-definition-definitions-stringargumentvalue-oneof-0.md "check type definition")
 
-*   [Untitled object in SageMaker Pipeline Definition](pipeline-definition-definitions-getfunction.md "check type definition")
+*   [Untitled object in SageMaker Pipeline Definition Schema](pipeline-definition-definitions-getfunction.md "check type definition")

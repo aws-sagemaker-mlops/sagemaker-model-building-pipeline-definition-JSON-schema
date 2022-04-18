@@ -4,10 +4,10 @@
 
 # VpcConfig Properties
 
-| Property                              | Type    | Required | Nullable       | Defined by                                                                                                                                                                                                                                                                                                                                                     |
-| :------------------------------------ | :------ | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [SecurityGroupIds](#securitygroupids) | `array` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-vpcconfig-properties-securitygroupids.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/VpcConfig/properties/SecurityGroupIds") |
-| [Subnets](#subnets)                   | `array` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-vpcconfig-properties-subnets.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/VpcConfig/properties/Subnets")                   |
+| Property                              | Type    | Required | Nullable       | Defined by                                                                                                                                                                                                                                                                                                                                                            |
+| :------------------------------------ | :------ | :------- | :------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [SecurityGroupIds](#securitygroupids) | `array` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-vpcconfig-properties-securitygroupids.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/VpcConfig/properties/SecurityGroupIds") |
+| [Subnets](#subnets)                   | `array` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-vpcconfig-properties-subnets.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/VpcConfig/properties/Subnets")                   |
 
 ## SecurityGroupIds
 
@@ -21,7 +21,7 @@
 
 *   cannot be null
 
-*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-vpcconfig-properties-securitygroupids.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/VpcConfig/properties/SecurityGroupIds")
+*   defined in: [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-vpcconfig-properties-securitygroupids.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/VpcConfig/properties/SecurityGroupIds")
 
 ### SecurityGroupIds Type
 
@@ -39,7 +39,7 @@ an array of merged types ([Details](pipeline-definition-definitions-stringargume
 
 *   cannot be null
 
-*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-vpcconfig-properties-subnets.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/VpcConfig/properties/Subnets")
+*   defined in: [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-hyperparametertrainingjobdefinition-properties-vpcconfig-properties-subnets.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/HyperParameterTrainingJobDefinition/properties/VpcConfig/properties/Subnets")
 
 ### Subnets Type
 

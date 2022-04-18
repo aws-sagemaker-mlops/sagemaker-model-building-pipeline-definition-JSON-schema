@@ -4,13 +4,13 @@
 
 # InferenceSpecification Properties
 
-| Property                                                                            | Type    | Required | Nullable       | Defined by                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| :---------------------------------------------------------------------------------- | :------ | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Containers](#containers)                                                           | `array` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-registermodelstep-properties-arguments-properties-inferencespecification-properties-containers.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/RegisterModelStep/properties/Arguments/properties/InferenceSpecification/properties/Containers")                                                           |
-| [SupportedContentTypes](#supportedcontenttypes)                                     | `array` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-registermodelstep-properties-arguments-properties-inferencespecification-properties-supportedcontenttypes.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/RegisterModelStep/properties/Arguments/properties/InferenceSpecification/properties/SupportedContentTypes")                                     |
-| [SupportedRealtimeInferenceInstanceTypes](#supportedrealtimeinferenceinstancetypes) | `array` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-registermodelstep-properties-arguments-properties-inferencespecification-properties-supportedrealtimeinferenceinstancetypes.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/RegisterModelStep/properties/Arguments/properties/InferenceSpecification/properties/SupportedRealtimeInferenceInstanceTypes") |
-| [SupportedResponseMIMETypes](#supportedresponsemimetypes)                           | `array` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-registermodelstep-properties-arguments-properties-inferencespecification-properties-supportedresponsemimetypes.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/RegisterModelStep/properties/Arguments/properties/InferenceSpecification/properties/SupportedResponseMIMETypes")                           |
-| [SupportedTransformInstanceTypes](#supportedtransforminstancetypes)                 | `array` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-registermodelstep-properties-arguments-properties-inferencespecification-properties-supportedtransforminstancetypes.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/RegisterModelStep/properties/Arguments/properties/InferenceSpecification/properties/SupportedTransformInstanceTypes")                 |
+| Property                                                                            | Type    | Required | Nullable       | Defined by                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| :---------------------------------------------------------------------------------- | :------ | :------- | :------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Containers](#containers)                                                           | `array` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-registermodelstep-properties-arguments-properties-inferencespecification-properties-containers.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/RegisterModelStep/properties/Arguments/properties/InferenceSpecification/properties/Containers")                                                           |
+| [SupportedContentTypes](#supportedcontenttypes)                                     | `array` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-registermodelstep-properties-arguments-properties-inferencespecification-properties-supportedcontenttypes.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/RegisterModelStep/properties/Arguments/properties/InferenceSpecification/properties/SupportedContentTypes")                                     |
+| [SupportedRealtimeInferenceInstanceTypes](#supportedrealtimeinferenceinstancetypes) | `array` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-registermodelstep-properties-arguments-properties-inferencespecification-properties-supportedrealtimeinferenceinstancetypes.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/RegisterModelStep/properties/Arguments/properties/InferenceSpecification/properties/SupportedRealtimeInferenceInstanceTypes") |
+| [SupportedResponseMIMETypes](#supportedresponsemimetypes)                           | `array` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-registermodelstep-properties-arguments-properties-inferencespecification-properties-supportedresponsemimetypes.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/RegisterModelStep/properties/Arguments/properties/InferenceSpecification/properties/SupportedResponseMIMETypes")                           |
+| [SupportedTransformInstanceTypes](#supportedtransforminstancetypes)                 | `array` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-registermodelstep-properties-arguments-properties-inferencespecification-properties-supportedtransforminstancetypes.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/RegisterModelStep/properties/Arguments/properties/InferenceSpecification/properties/SupportedTransformInstanceTypes")                 |
 
 ## Containers
 
@@ -24,7 +24,7 @@
 
 *   cannot be null
 
-*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-registermodelstep-properties-arguments-properties-inferencespecification-properties-containers.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/RegisterModelStep/properties/Arguments/properties/InferenceSpecification/properties/Containers")
+*   defined in: [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-registermodelstep-properties-arguments-properties-inferencespecification-properties-containers.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/RegisterModelStep/properties/Arguments/properties/InferenceSpecification/properties/Containers")
 
 ### Containers Type
 
@@ -42,7 +42,7 @@
 
 *   cannot be null
 
-*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-registermodelstep-properties-arguments-properties-inferencespecification-properties-supportedcontenttypes.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/RegisterModelStep/properties/Arguments/properties/InferenceSpecification/properties/SupportedContentTypes")
+*   defined in: [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-registermodelstep-properties-arguments-properties-inferencespecification-properties-supportedcontenttypes.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/RegisterModelStep/properties/Arguments/properties/InferenceSpecification/properties/SupportedContentTypes")
 
 ### SupportedContentTypes Type
 
@@ -60,7 +60,7 @@ an array of merged types ([Details](pipeline-definition-definitions-stringargume
 
 *   cannot be null
 
-*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-registermodelstep-properties-arguments-properties-inferencespecification-properties-supportedrealtimeinferenceinstancetypes.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/RegisterModelStep/properties/Arguments/properties/InferenceSpecification/properties/SupportedRealtimeInferenceInstanceTypes")
+*   defined in: [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-registermodelstep-properties-arguments-properties-inferencespecification-properties-supportedrealtimeinferenceinstancetypes.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/RegisterModelStep/properties/Arguments/properties/InferenceSpecification/properties/SupportedRealtimeInferenceInstanceTypes")
 
 ### SupportedRealtimeInferenceInstanceTypes Type
 
@@ -78,7 +78,7 @@ an array of merged types ([Details](pipeline-definition-definitions-stringargume
 
 *   cannot be null
 
-*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-registermodelstep-properties-arguments-properties-inferencespecification-properties-supportedresponsemimetypes.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/RegisterModelStep/properties/Arguments/properties/InferenceSpecification/properties/SupportedResponseMIMETypes")
+*   defined in: [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-registermodelstep-properties-arguments-properties-inferencespecification-properties-supportedresponsemimetypes.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/RegisterModelStep/properties/Arguments/properties/InferenceSpecification/properties/SupportedResponseMIMETypes")
 
 ### SupportedResponseMIMETypes Type
 
@@ -96,7 +96,7 @@ an array of merged types ([Details](pipeline-definition-definitions-stringargume
 
 *   cannot be null
 
-*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-registermodelstep-properties-arguments-properties-inferencespecification-properties-supportedtransforminstancetypes.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/RegisterModelStep/properties/Arguments/properties/InferenceSpecification/properties/SupportedTransformInstanceTypes")
+*   defined in: [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-registermodelstep-properties-arguments-properties-inferencespecification-properties-supportedtransforminstancetypes.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/RegisterModelStep/properties/Arguments/properties/InferenceSpecification/properties/SupportedTransformInstanceTypes")
 
 ### SupportedTransformInstanceTypes Type
 

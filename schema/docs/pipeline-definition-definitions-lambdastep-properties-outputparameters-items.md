@@ -4,10 +4,10 @@
 
 # items Properties
 
-| Property                  | Type     | Required | Nullable       | Defined by                                                                                                                                                                                                                                                                                                                 |
-| :------------------------ | :------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [OutputName](#outputname) | Merged   | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-stringargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/LambdaStep/properties/OutputParameters/items/properties/OutputName")                                                |
-| [OutputType](#outputtype) | `string` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-lambdastep-properties-outputparameters-items-properties-outputtype.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/LambdaStep/properties/OutputParameters/items/properties/OutputType") |
+| Property                  | Type     | Required | Nullable       | Defined by                                                                                                                                                                                                                                                                                                                        |
+| :------------------------ | :------- | :------- | :------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [OutputName](#outputname) | Merged   | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-stringargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/LambdaStep/properties/OutputParameters/items/properties/OutputName")                                                |
+| [OutputType](#outputtype) | `string` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-lambdastep-properties-outputparameters-items-properties-outputtype.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/LambdaStep/properties/OutputParameters/items/properties/OutputType") |
 
 ## OutputName
 
@@ -21,7 +21,7 @@
 
 *   cannot be null
 
-*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-stringargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/LambdaStep/properties/OutputParameters/items/properties/OutputName")
+*   defined in: [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-stringargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/LambdaStep/properties/OutputParameters/items/properties/OutputName")
 
 ### OutputName Type
 
@@ -29,9 +29,9 @@ merged type ([Details](pipeline-definition-definitions-stringargumentvalue.md))
 
 one (and only one) of
 
-*   [Untitled string in SageMaker Pipeline Definition](pipeline-definition-definitions-stringargumentvalue-oneof-0.md "check type definition")
+*   [Untitled string in SageMaker Pipeline Definition Schema](pipeline-definition-definitions-stringargumentvalue-oneof-0.md "check type definition")
 
-*   [Untitled object in SageMaker Pipeline Definition](pipeline-definition-definitions-getfunction.md "check type definition")
+*   [Untitled object in SageMaker Pipeline Definition Schema](pipeline-definition-definitions-getfunction.md "check type definition")
 
 ## OutputType
 
@@ -45,7 +45,7 @@ one (and only one) of
 
 *   cannot be null
 
-*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-lambdastep-properties-outputparameters-items-properties-outputtype.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/LambdaStep/properties/OutputParameters/items/properties/OutputType")
+*   defined in: [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-lambdastep-properties-outputparameters-items-properties-outputtype.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/LambdaStep/properties/OutputParameters/items/properties/OutputType")
 
 ### OutputType Type
 

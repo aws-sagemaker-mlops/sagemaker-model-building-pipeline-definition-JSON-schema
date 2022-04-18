@@ -4,18 +4,17 @@
 
 # Arguments Properties
 
-| Property                                          | Type     | Required | Nullable       | Defined by                                                                                                                                                                                                                                                                             |
-| :------------------------------------------------ | :------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [AppSpecification](#appspecification)             | `object` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-processingargs-properties-appspecification.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingArgs/properties/AppSpecification")             |
-| [Environment](#environment)                       | `object` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-processingargs-properties-environment.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingArgs/properties/Environment")                       |
-| [ExperimentConfig](#experimentconfig)             | `object` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-processingargs-properties-experimentconfig.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingArgs/properties/ExperimentConfig")             |
-| [NetworkConfig](#networkconfig)                   | `object` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-processingargs-properties-networkconfig.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingArgs/properties/NetworkConfig")                   |
-| [ProcessingInputs](#processinginputs)             | `array`  | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-processingargs-properties-processinginputs.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingArgs/properties/ProcessingInputs")             |
-| [ProcessingOutputConfig](#processingoutputconfig) | `object` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-processingargs-properties-processingoutputconfig.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingArgs/properties/ProcessingOutputConfig") |
-| [ProcessingResources](#processingresources)       | `object` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-processingargs-properties-processingresources.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingArgs/properties/ProcessingResources")       |
-| [RoleArn](#rolearn)                               | Merged   | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-stringargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingArgs/properties/RoleArn")                                             |
-| [StoppingCondition](#stoppingcondition)           | `object` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-processingargs-properties-stoppingcondition.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingArgs/properties/StoppingCondition")           |
-| [Tags](#tags)                                     | `array`  | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-processingargs-properties-tags.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingArgs/properties/Tags")                                     |
+| Property                                          | Type     | Required | Nullable       | Defined by                                                                                                                                                                                                                                                                                    |
+| :------------------------------------------------ | :------- | :------- | :------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [AppSpecification](#appspecification)             | `object` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-processingargs-properties-appspecification.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingArgs/properties/AppSpecification")             |
+| [Environment](#environment)                       | `object` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-processingargs-properties-environment.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingArgs/properties/Environment")                       |
+| [NetworkConfig](#networkconfig)                   | `object` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-processingargs-properties-networkconfig.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingArgs/properties/NetworkConfig")                   |
+| [ProcessingInputs](#processinginputs)             | `array`  | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-processingargs-properties-processinginputs.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingArgs/properties/ProcessingInputs")             |
+| [ProcessingOutputConfig](#processingoutputconfig) | `object` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-processingargs-properties-processingoutputconfig.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingArgs/properties/ProcessingOutputConfig") |
+| [ProcessingResources](#processingresources)       | `object` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-processingargs-properties-processingresources.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingArgs/properties/ProcessingResources")       |
+| [RoleArn](#rolearn)                               | Merged   | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-stringargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingArgs/properties/RoleArn")                                             |
+| [StoppingCondition](#stoppingcondition)           | `object` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-processingargs-properties-stoppingcondition.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingArgs/properties/StoppingCondition")           |
+| [Tags](#tags)                                     | `array`  | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-processingargs-properties-tags.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingArgs/properties/Tags")                                     |
 
 ## AppSpecification
 
@@ -29,7 +28,7 @@
 
 *   cannot be null
 
-*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-processingargs-properties-appspecification.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingArgs/properties/AppSpecification")
+*   defined in: [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-processingargs-properties-appspecification.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingArgs/properties/AppSpecification")
 
 ### AppSpecification Type
 
@@ -47,29 +46,11 @@
 
 *   cannot be null
 
-*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-processingargs-properties-environment.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingArgs/properties/Environment")
+*   defined in: [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-processingargs-properties-environment.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingArgs/properties/Environment")
 
 ### Environment Type
 
 `object` ([Details](pipeline-definition-definitions-processingargs-properties-environment.md))
-
-## ExperimentConfig
-
-
-
-`ExperimentConfig`
-
-*   is optional
-
-*   Type: `object` ([Details](pipeline-definition-definitions-processingargs-properties-experimentconfig.md))
-
-*   cannot be null
-
-*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-processingargs-properties-experimentconfig.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingArgs/properties/ExperimentConfig")
-
-### ExperimentConfig Type
-
-`object` ([Details](pipeline-definition-definitions-processingargs-properties-experimentconfig.md))
 
 ## NetworkConfig
 
@@ -83,7 +64,7 @@
 
 *   cannot be null
 
-*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-processingargs-properties-networkconfig.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingArgs/properties/NetworkConfig")
+*   defined in: [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-processingargs-properties-networkconfig.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingArgs/properties/NetworkConfig")
 
 ### NetworkConfig Type
 
@@ -101,7 +82,7 @@
 
 *   cannot be null
 
-*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-processingargs-properties-processinginputs.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingArgs/properties/ProcessingInputs")
+*   defined in: [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-processingargs-properties-processinginputs.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingArgs/properties/ProcessingInputs")
 
 ### ProcessingInputs Type
 
@@ -119,7 +100,7 @@
 
 *   cannot be null
 
-*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-processingargs-properties-processingoutputconfig.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingArgs/properties/ProcessingOutputConfig")
+*   defined in: [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-processingargs-properties-processingoutputconfig.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingArgs/properties/ProcessingOutputConfig")
 
 ### ProcessingOutputConfig Type
 
@@ -137,7 +118,7 @@
 
 *   cannot be null
 
-*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-processingargs-properties-processingresources.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingArgs/properties/ProcessingResources")
+*   defined in: [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-processingargs-properties-processingresources.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingArgs/properties/ProcessingResources")
 
 ### ProcessingResources Type
 
@@ -155,7 +136,7 @@
 
 *   cannot be null
 
-*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-stringargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingArgs/properties/RoleArn")
+*   defined in: [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-stringargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingArgs/properties/RoleArn")
 
 ### RoleArn Type
 
@@ -163,9 +144,9 @@ merged type ([Details](pipeline-definition-definitions-stringargumentvalue.md))
 
 one (and only one) of
 
-*   [Untitled string in SageMaker Pipeline Definition](pipeline-definition-definitions-stringargumentvalue-oneof-0.md "check type definition")
+*   [Untitled string in SageMaker Pipeline Definition Schema](pipeline-definition-definitions-stringargumentvalue-oneof-0.md "check type definition")
 
-*   [Untitled object in SageMaker Pipeline Definition](pipeline-definition-definitions-getfunction.md "check type definition")
+*   [Untitled object in SageMaker Pipeline Definition Schema](pipeline-definition-definitions-getfunction.md "check type definition")
 
 ## StoppingCondition
 
@@ -179,7 +160,7 @@ one (and only one) of
 
 *   cannot be null
 
-*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-processingargs-properties-stoppingcondition.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingArgs/properties/StoppingCondition")
+*   defined in: [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-processingargs-properties-stoppingcondition.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingArgs/properties/StoppingCondition")
 
 ### StoppingCondition Type
 
@@ -197,7 +178,7 @@ one (and only one) of
 
 *   cannot be null
 
-*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-processingargs-properties-tags.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingArgs/properties/Tags")
+*   defined in: [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-processingargs-properties-tags.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ProcessingArgs/properties/Tags")
 
 ### Tags Type
 

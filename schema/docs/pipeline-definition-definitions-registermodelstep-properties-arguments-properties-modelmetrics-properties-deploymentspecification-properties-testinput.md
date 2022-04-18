@@ -4,12 +4,12 @@
 
 # TestInput Properties
 
-| Property                            | Type     | Required | Nullable       | Defined by                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| :---------------------------------- | :------- | :------- | :------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [CompressionType](#compressiontype) | Merged   | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-stringargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/RegisterModelStep/properties/Arguments/properties/ModelMetrics/properties/DeploymentSpecification/properties/TestInput/properties/CompressionType")                                                                                                                     |
-| [ContentType](#contenttype)         | Merged   | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-stringargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/RegisterModelStep/properties/Arguments/properties/ModelMetrics/properties/DeploymentSpecification/properties/TestInput/properties/ContentType")                                                                                                                         |
-| [DataSource](#datasource)           | `object` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-registermodelstep-properties-arguments-properties-modelmetrics-properties-deploymentspecification-properties-testinput-properties-datasource.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/RegisterModelStep/properties/Arguments/properties/ModelMetrics/properties/DeploymentSpecification/properties/TestInput/properties/DataSource") |
-| [SplitType](#splittype)             | Merged   | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-stringargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/RegisterModelStep/properties/Arguments/properties/ModelMetrics/properties/DeploymentSpecification/properties/TestInput/properties/SplitType")                                                                                                                           |
+| Property                            | Type     | Required | Nullable       | Defined by                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| :---------------------------------- | :------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [CompressionType](#compressiontype) | Merged   | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-stringargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/RegisterModelStep/properties/Arguments/properties/ModelMetrics/properties/DeploymentSpecification/properties/TestInput/properties/CompressionType")                                                                                                                     |
+| [ContentType](#contenttype)         | Merged   | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-stringargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/RegisterModelStep/properties/Arguments/properties/ModelMetrics/properties/DeploymentSpecification/properties/TestInput/properties/ContentType")                                                                                                                         |
+| [DataSource](#datasource)           | `object` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-registermodelstep-properties-arguments-properties-modelmetrics-properties-deploymentspecification-properties-testinput-properties-datasource.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/RegisterModelStep/properties/Arguments/properties/ModelMetrics/properties/DeploymentSpecification/properties/TestInput/properties/DataSource") |
+| [SplitType](#splittype)             | Merged   | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-stringargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/RegisterModelStep/properties/Arguments/properties/ModelMetrics/properties/DeploymentSpecification/properties/TestInput/properties/SplitType")                                                                                                                           |
 
 ## CompressionType
 
@@ -23,7 +23,7 @@
 
 *   cannot be null
 
-*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-stringargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/RegisterModelStep/properties/Arguments/properties/ModelMetrics/properties/DeploymentSpecification/properties/TestInput/properties/CompressionType")
+*   defined in: [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-stringargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/RegisterModelStep/properties/Arguments/properties/ModelMetrics/properties/DeploymentSpecification/properties/TestInput/properties/CompressionType")
 
 ### CompressionType Type
 
@@ -31,9 +31,9 @@ merged type ([Details](pipeline-definition-definitions-stringargumentvalue.md))
 
 one (and only one) of
 
-*   [Untitled string in SageMaker Pipeline Definition](pipeline-definition-definitions-stringargumentvalue-oneof-0.md "check type definition")
+*   [Untitled string in SageMaker Pipeline Definition Schema](pipeline-definition-definitions-stringargumentvalue-oneof-0.md "check type definition")
 
-*   [Untitled object in SageMaker Pipeline Definition](pipeline-definition-definitions-getfunction.md "check type definition")
+*   [Untitled object in SageMaker Pipeline Definition Schema](pipeline-definition-definitions-getfunction.md "check type definition")
 
 ## ContentType
 
@@ -47,7 +47,7 @@ one (and only one) of
 
 *   cannot be null
 
-*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-stringargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/RegisterModelStep/properties/Arguments/properties/ModelMetrics/properties/DeploymentSpecification/properties/TestInput/properties/ContentType")
+*   defined in: [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-stringargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/RegisterModelStep/properties/Arguments/properties/ModelMetrics/properties/DeploymentSpecification/properties/TestInput/properties/ContentType")
 
 ### ContentType Type
 
@@ -55,9 +55,9 @@ merged type ([Details](pipeline-definition-definitions-stringargumentvalue.md))
 
 one (and only one) of
 
-*   [Untitled string in SageMaker Pipeline Definition](pipeline-definition-definitions-stringargumentvalue-oneof-0.md "check type definition")
+*   [Untitled string in SageMaker Pipeline Definition Schema](pipeline-definition-definitions-stringargumentvalue-oneof-0.md "check type definition")
 
-*   [Untitled object in SageMaker Pipeline Definition](pipeline-definition-definitions-getfunction.md "check type definition")
+*   [Untitled object in SageMaker Pipeline Definition Schema](pipeline-definition-definitions-getfunction.md "check type definition")
 
 ## DataSource
 
@@ -71,7 +71,7 @@ one (and only one) of
 
 *   cannot be null
 
-*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-registermodelstep-properties-arguments-properties-modelmetrics-properties-deploymentspecification-properties-testinput-properties-datasource.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/RegisterModelStep/properties/Arguments/properties/ModelMetrics/properties/DeploymentSpecification/properties/TestInput/properties/DataSource")
+*   defined in: [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-registermodelstep-properties-arguments-properties-modelmetrics-properties-deploymentspecification-properties-testinput-properties-datasource.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/RegisterModelStep/properties/Arguments/properties/ModelMetrics/properties/DeploymentSpecification/properties/TestInput/properties/DataSource")
 
 ### DataSource Type
 
@@ -89,7 +89,7 @@ one (and only one) of
 
 *   cannot be null
 
-*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-stringargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/RegisterModelStep/properties/Arguments/properties/ModelMetrics/properties/DeploymentSpecification/properties/TestInput/properties/SplitType")
+*   defined in: [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-stringargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/RegisterModelStep/properties/Arguments/properties/ModelMetrics/properties/DeploymentSpecification/properties/TestInput/properties/SplitType")
 
 ### SplitType Type
 
@@ -97,6 +97,6 @@ merged type ([Details](pipeline-definition-definitions-stringargumentvalue.md))
 
 one (and only one) of
 
-*   [Untitled string in SageMaker Pipeline Definition](pipeline-definition-definitions-stringargumentvalue-oneof-0.md "check type definition")
+*   [Untitled string in SageMaker Pipeline Definition Schema](pipeline-definition-definitions-stringargumentvalue-oneof-0.md "check type definition")
 
-*   [Untitled object in SageMaker Pipeline Definition](pipeline-definition-definitions-getfunction.md "check type definition")
+*   [Untitled object in SageMaker Pipeline Definition Schema](pipeline-definition-definitions-getfunction.md "check type definition")

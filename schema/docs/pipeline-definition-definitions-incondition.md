@@ -4,11 +4,11 @@
 
 # 1 Properties
 
-| Property        | Type     | Required | Nullable       | Defined by                                                                                                                                                                                                                                     |
-| :-------------- | :------- | :------- | :------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Type](#type)   | `string` | Required | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-incondition-properties-type.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/InCondition/properties/Type")   |
-| [Value](#value) | Merged   | Required | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-incondition-properties-value.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/InCondition/properties/Value") |
-| [In](#in)       | `array`  | Required | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-incondition-properties-in.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/InCondition/properties/In")       |
+| Property        | Type     | Required | Nullable       | Defined by                                                                                                                                                                                                                                            |
+| :-------------- | :------- | :------- | :------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Type](#type)   | `string` | Required | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-incondition-properties-type.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/InCondition/properties/Type")   |
+| [Value](#value) | Merged   | Required | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-incondition-properties-value.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/InCondition/properties/Value") |
+| [In](#in)       | `array`  | Required | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-incondition-properties-in.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/InCondition/properties/In")       |
 
 ## Type
 
@@ -22,7 +22,7 @@
 
 *   cannot be null
 
-*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-incondition-properties-type.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/InCondition/properties/Type")
+*   defined in: [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-incondition-properties-type.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/InCondition/properties/Type")
 
 ### Type Type
 
@@ -49,7 +49,7 @@
 
 *   cannot be null
 
-*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-incondition-properties-value.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/InCondition/properties/Value")
+*   defined in: [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-incondition-properties-value.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/InCondition/properties/Value")
 
 ### Value Type
 
@@ -59,27 +59,27 @@ one (and only one) of
 
 *   one (and only one) of
 
-    *   [Untitled string in SageMaker Pipeline Definition](pipeline-definition-definitions-stringargumentvalue-oneof-0.md "check type definition")
+    *   [Untitled string in SageMaker Pipeline Definition Schema](pipeline-definition-definitions-stringargumentvalue-oneof-0.md "check type definition")
 
-    *   [Untitled object in SageMaker Pipeline Definition](pipeline-definition-definitions-getfunction.md "check type definition")
-
-*   one (and only one) of
-
-    *   [Untitled boolean in SageMaker Pipeline Definition](pipeline-definition-definitions-booleanargumentvalue-oneof-0.md "check type definition")
-
-    *   [Untitled object in SageMaker Pipeline Definition](pipeline-definition-definitions-getfunction.md "check type definition")
+    *   [Untitled object in SageMaker Pipeline Definition Schema](pipeline-definition-definitions-getfunction.md "check type definition")
 
 *   one (and only one) of
 
-    *   [Untitled integer in SageMaker Pipeline Definition](pipeline-definition-definitions-integerargumentvalue-oneof-0.md "check type definition")
+    *   [Untitled boolean in SageMaker Pipeline Definition Schema](pipeline-definition-definitions-booleanargumentvalue-oneof-0.md "check type definition")
 
-    *   [Untitled object in SageMaker Pipeline Definition](pipeline-definition-definitions-getfunction.md "check type definition")
+    *   [Untitled object in SageMaker Pipeline Definition Schema](pipeline-definition-definitions-getfunction.md "check type definition")
 
 *   one (and only one) of
 
-    *   [Untitled number in SageMaker Pipeline Definition](pipeline-definition-definitions-floatargumentvalue-oneof-0.md "check type definition")
+    *   [Untitled integer in SageMaker Pipeline Definition Schema](pipeline-definition-definitions-integerargumentvalue-oneof-0.md "check type definition")
 
-    *   [Untitled object in SageMaker Pipeline Definition](pipeline-definition-definitions-getfunction.md "check type definition")
+    *   [Untitled object in SageMaker Pipeline Definition Schema](pipeline-definition-definitions-getfunction.md "check type definition")
+
+*   one (and only one) of
+
+    *   [Untitled number in SageMaker Pipeline Definition Schema](pipeline-definition-definitions-floatargumentvalue-oneof-0.md "check type definition")
+
+    *   [Untitled object in SageMaker Pipeline Definition Schema](pipeline-definition-definitions-getfunction.md "check type definition")
 
 ## In
 
@@ -93,7 +93,7 @@ one (and only one) of
 
 *   cannot be null
 
-*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-incondition-properties-in.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/InCondition/properties/In")
+*   defined in: [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-incondition-properties-in.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/InCondition/properties/In")
 
 ### In Type
 

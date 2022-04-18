@@ -4,6 +4,6 @@ merged type ([Details](pipeline-definition-definitions-orcondition-properties-co
 
 any of
 
-*   [Untitled object in SageMaker Pipeline Definition](pipeline-definition-definitions-binarycondition.md "check type definition")
+*   [Untitled object in SageMaker Pipeline Definition Schema](pipeline-definition-definitions-binarycondition.md "check type definition")
 
-*   [Untitled object in SageMaker Pipeline Definition](pipeline-definition-definitions-incondition.md "check type definition")
+*   [Untitled object in SageMaker Pipeline Definition Schema](pipeline-definition-definitions-incondition.md "check type definition")

@@ -4,10 +4,10 @@
 
 # ResourceLimits Properties
 
-| Property                                            | Type      | Required | Nullable       | Defined by                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| :-------------------------------------------------- | :-------- | :------- | :------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [MaxNumberOfTrainingJobs](#maxnumberoftrainingjobs) | `integer` | Required | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-tuningstep-properties-arguments-properties-hyperparametertuningjobconfig-properties-resourcelimits-properties-maxnumberoftrainingjobs.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/Arguments/properties/HyperParameterTuningJobConfig/properties/ResourceLimits/properties/MaxNumberOfTrainingJobs") |
-| [MaxParallelTrainingJobs](#maxparalleltrainingjobs) | `integer` | Required | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-tuningstep-properties-arguments-properties-hyperparametertuningjobconfig-properties-resourcelimits-properties-maxparalleltrainingjobs.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/Arguments/properties/HyperParameterTuningJobConfig/properties/ResourceLimits/properties/MaxParallelTrainingJobs") |
+| Property                                            | Type      | Required | Nullable       | Defined by                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| :-------------------------------------------------- | :-------- | :------- | :------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [MaxNumberOfTrainingJobs](#maxnumberoftrainingjobs) | `integer` | Required | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-tuningstep-properties-arguments-properties-hyperparametertuningjobconfig-properties-resourcelimits-properties-maxnumberoftrainingjobs.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/Arguments/properties/HyperParameterTuningJobConfig/properties/ResourceLimits/properties/MaxNumberOfTrainingJobs") |
+| [MaxParallelTrainingJobs](#maxparalleltrainingjobs) | `integer` | Required | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-tuningstep-properties-arguments-properties-hyperparametertuningjobconfig-properties-resourcelimits-properties-maxparalleltrainingjobs.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/Arguments/properties/HyperParameterTuningJobConfig/properties/ResourceLimits/properties/MaxParallelTrainingJobs") |
 
 ## MaxNumberOfTrainingJobs
 
@@ -21,7 +21,7 @@
 
 *   cannot be null
 
-*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-tuningstep-properties-arguments-properties-hyperparametertuningjobconfig-properties-resourcelimits-properties-maxnumberoftrainingjobs.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/Arguments/properties/HyperParameterTuningJobConfig/properties/ResourceLimits/properties/MaxNumberOfTrainingJobs")
+*   defined in: [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-tuningstep-properties-arguments-properties-hyperparametertuningjobconfig-properties-resourcelimits-properties-maxnumberoftrainingjobs.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/Arguments/properties/HyperParameterTuningJobConfig/properties/ResourceLimits/properties/MaxNumberOfTrainingJobs")
 
 ### MaxNumberOfTrainingJobs Type
 
@@ -43,7 +43,7 @@
 
 *   cannot be null
 
-*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-tuningstep-properties-arguments-properties-hyperparametertuningjobconfig-properties-resourcelimits-properties-maxparalleltrainingjobs.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/Arguments/properties/HyperParameterTuningJobConfig/properties/ResourceLimits/properties/MaxParallelTrainingJobs")
+*   defined in: [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-tuningstep-properties-arguments-properties-hyperparametertuningjobconfig-properties-resourcelimits-properties-maxparalleltrainingjobs.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/Arguments/properties/HyperParameterTuningJobConfig/properties/ResourceLimits/properties/MaxParallelTrainingJobs")
 
 ### MaxParallelTrainingJobs Type
 

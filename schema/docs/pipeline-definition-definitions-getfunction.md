@@ -4,9 +4,9 @@
 
 # 1 Properties
 
-| Property    | Type     | Required | Nullable       | Defined by                                                                                                                                                                                                                                 |
-| :---------- | :------- | :------- | :------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Get](#get) | `string` | Required | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-getfunction-properties-get.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/GetFunction/properties/Get") |
+| Property    | Type     | Required | Nullable       | Defined by                                                                                                                                                                                                                                        |
+| :---------- | :------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [Get](#get) | `string` | Required | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-getfunction-properties-get.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/GetFunction/properties/Get") |
 
 ## Get
 
@@ -20,7 +20,7 @@
 
 *   cannot be null
 
-*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-getfunction-properties-get.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/GetFunction/properties/Get")
+*   defined in: [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-getfunction-properties-get.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/GetFunction/properties/Get")
 
 ### Get Type
 

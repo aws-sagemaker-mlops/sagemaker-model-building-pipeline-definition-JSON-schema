@@ -4,11 +4,11 @@
 
 # StepConfig Properties
 
-| Property                            | Type     | Required | Nullable       | Defined by                                                                                                                                                                                                                                                                                                                                       |
-| :---------------------------------- | :------- | :------- | :------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Name](#name)                       | Merged   | Required | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-stringargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/EMRStep/properties/Arguments/properties/StepConfig/properties/Name")                                                                      |
-| [HadoopJarStep](#hadoopjarstep)     | `object` | Required | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-emrstep-properties-arguments-properties-stepconfig-properties-hadoopjarstep.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/EMRStep/properties/Arguments/properties/StepConfig/properties/HadoopJarStep")     |
-| [ActionOnFailure](#actiononfailure) | `string` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-emrstep-properties-arguments-properties-stepconfig-properties-actiononfailure.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/EMRStep/properties/Arguments/properties/StepConfig/properties/ActionOnFailure") |
+| Property                            | Type     | Required | Nullable       | Defined by                                                                                                                                                                                                                                                                                                                                              |
+| :---------------------------------- | :------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [Name](#name)                       | Merged   | Required | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-stringargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/EMRStep/properties/Arguments/properties/StepConfig/properties/Name")                                                                      |
+| [HadoopJarStep](#hadoopjarstep)     | `object` | Required | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-emrstep-properties-arguments-properties-stepconfig-properties-hadoopjarstep.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/EMRStep/properties/Arguments/properties/StepConfig/properties/HadoopJarStep")     |
+| [ActionOnFailure](#actiononfailure) | `string` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-emrstep-properties-arguments-properties-stepconfig-properties-actiononfailure.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/EMRStep/properties/Arguments/properties/StepConfig/properties/ActionOnFailure") |
 
 ## Name
 
@@ -22,7 +22,7 @@
 
 *   cannot be null
 
-*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-stringargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/EMRStep/properties/Arguments/properties/StepConfig/properties/Name")
+*   defined in: [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-stringargumentvalue.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/EMRStep/properties/Arguments/properties/StepConfig/properties/Name")
 
 ### Name Type
 
@@ -30,9 +30,9 @@ merged type ([Details](pipeline-definition-definitions-stringargumentvalue.md))
 
 one (and only one) of
 
-*   [Untitled string in SageMaker Pipeline Definition](pipeline-definition-definitions-stringargumentvalue-oneof-0.md "check type definition")
+*   [Untitled string in SageMaker Pipeline Definition Schema](pipeline-definition-definitions-stringargumentvalue-oneof-0.md "check type definition")
 
-*   [Untitled object in SageMaker Pipeline Definition](pipeline-definition-definitions-getfunction.md "check type definition")
+*   [Untitled object in SageMaker Pipeline Definition Schema](pipeline-definition-definitions-getfunction.md "check type definition")
 
 ## HadoopJarStep
 
@@ -46,7 +46,7 @@ one (and only one) of
 
 *   cannot be null
 
-*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-emrstep-properties-arguments-properties-stepconfig-properties-hadoopjarstep.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/EMRStep/properties/Arguments/properties/StepConfig/properties/HadoopJarStep")
+*   defined in: [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-emrstep-properties-arguments-properties-stepconfig-properties-hadoopjarstep.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/EMRStep/properties/Arguments/properties/StepConfig/properties/HadoopJarStep")
 
 ### HadoopJarStep Type
 
@@ -64,7 +64,7 @@ one (and only one) of
 
 *   cannot be null
 
-*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-emrstep-properties-arguments-properties-stepconfig-properties-actiononfailure.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/EMRStep/properties/Arguments/properties/StepConfig/properties/ActionOnFailure")
+*   defined in: [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-emrstep-properties-arguments-properties-stepconfig-properties-actiononfailure.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/EMRStep/properties/Arguments/properties/StepConfig/properties/ActionOnFailure")
 
 ### ActionOnFailure Type
 

@@ -4,11 +4,11 @@
 
 # HyperParameterRanges Properties
 
-| Property                                                  | Type    | Required | Nullable       | Defined by                                                                                                                                                                                                                                                                                       |
-| :-------------------------------------------------------- | :------ | :------- | :------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [CategoricalParameterRanges](#categoricalparameterranges) | `array` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-parameterranges-properties-categoricalparameterranges.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ParameterRanges/properties/CategoricalParameterRanges") |
-| [IntegerParameterRanges](#integerparameterranges)         | `array` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-parameterranges-properties-integerparameterranges.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ParameterRanges/properties/IntegerParameterRanges")         |
-| [ContinuousParameterRanges](#continuousparameterranges)   | `array` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-parameterranges-properties-continuousparameterranges.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ParameterRanges/properties/ContinuousParameterRanges")   |
+| Property                                                  | Type    | Required | Nullable       | Defined by                                                                                                                                                                                                                                                                                              |
+| :-------------------------------------------------------- | :------ | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [CategoricalParameterRanges](#categoricalparameterranges) | `array` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-parameterranges-properties-categoricalparameterranges.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ParameterRanges/properties/CategoricalParameterRanges") |
+| [IntegerParameterRanges](#integerparameterranges)         | `array` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-parameterranges-properties-integerparameterranges.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ParameterRanges/properties/IntegerParameterRanges")         |
+| [ContinuousParameterRanges](#continuousparameterranges)   | `array` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-parameterranges-properties-continuousparameterranges.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ParameterRanges/properties/ContinuousParameterRanges")   |
 
 ## CategoricalParameterRanges
 
@@ -22,7 +22,7 @@
 
 *   cannot be null
 
-*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-parameterranges-properties-categoricalparameterranges.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ParameterRanges/properties/CategoricalParameterRanges")
+*   defined in: [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-parameterranges-properties-categoricalparameterranges.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ParameterRanges/properties/CategoricalParameterRanges")
 
 ### CategoricalParameterRanges Type
 
@@ -46,7 +46,7 @@
 
 *   cannot be null
 
-*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-parameterranges-properties-integerparameterranges.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ParameterRanges/properties/IntegerParameterRanges")
+*   defined in: [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-parameterranges-properties-integerparameterranges.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ParameterRanges/properties/IntegerParameterRanges")
 
 ### IntegerParameterRanges Type
 
@@ -70,7 +70,7 @@
 
 *   cannot be null
 
-*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-parameterranges-properties-continuousparameterranges.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ParameterRanges/properties/ContinuousParameterRanges")
+*   defined in: [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-parameterranges-properties-continuousparameterranges.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/ParameterRanges/properties/ContinuousParameterRanges")
 
 ### ContinuousParameterRanges Type
 

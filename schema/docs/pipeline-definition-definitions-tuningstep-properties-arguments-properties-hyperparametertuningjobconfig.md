@@ -4,14 +4,14 @@
 
 # HyperParameterTuningJobConfig Properties
 
-| Property                                                              | Type     | Required | Nullable       | Defined by                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| :-------------------------------------------------------------------- | :------- | :------- | :------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [HyperParameterTuningJobObjective](#hyperparametertuningjobobjective) | `object` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-tuningstep-properties-arguments-properties-hyperparametertuningjobconfig-properties-hyperparametertuningjobobjective.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/Arguments/properties/HyperParameterTuningJobConfig/properties/HyperParameterTuningJobObjective") |
-| [ParameterRanges](#parameterranges)                                   | `object` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-parameterranges.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/Arguments/properties/HyperParameterTuningJobConfig/properties/ParameterRanges")                                                                                                                       |
-| [ResourceLimits](#resourcelimits)                                     | `object` | Required | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-tuningstep-properties-arguments-properties-hyperparametertuningjobconfig-properties-resourcelimits.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/Arguments/properties/HyperParameterTuningJobConfig/properties/ResourceLimits")                                     |
-| [Strategy](#strategy)                                                 | `string` | Required | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-tuningstep-properties-arguments-properties-hyperparametertuningjobconfig-properties-strategy.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/Arguments/properties/HyperParameterTuningJobConfig/properties/Strategy")                                                 |
-| [TrainingJobEarlyStoppingType](#trainingjobearlystoppingtype)         | `string` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-tuningstep-properties-arguments-properties-hyperparametertuningjobconfig-properties-trainingjobearlystoppingtype.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/Arguments/properties/HyperParameterTuningJobConfig/properties/TrainingJobEarlyStoppingType")         |
-| [TuningJobCompletionCriteria](#tuningjobcompletioncriteria)           | `object` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-tuningstep-properties-arguments-properties-hyperparametertuningjobconfig-properties-tuningjobcompletioncriteria.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/Arguments/properties/HyperParameterTuningJobConfig/properties/TuningJobCompletionCriteria")           |
+| Property                                                              | Type     | Required | Nullable       | Defined by                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| :-------------------------------------------------------------------- | :------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [HyperParameterTuningJobObjective](#hyperparametertuningjobobjective) | `object` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-tuningstep-properties-arguments-properties-hyperparametertuningjobconfig-properties-hyperparametertuningjobobjective.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/Arguments/properties/HyperParameterTuningJobConfig/properties/HyperParameterTuningJobObjective") |
+| [ParameterRanges](#parameterranges)                                   | `object` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-parameterranges.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/Arguments/properties/HyperParameterTuningJobConfig/properties/ParameterRanges")                                                                                                                       |
+| [ResourceLimits](#resourcelimits)                                     | `object` | Required | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-tuningstep-properties-arguments-properties-hyperparametertuningjobconfig-properties-resourcelimits.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/Arguments/properties/HyperParameterTuningJobConfig/properties/ResourceLimits")                                     |
+| [Strategy](#strategy)                                                 | `string` | Required | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-tuningstep-properties-arguments-properties-hyperparametertuningjobconfig-properties-strategy.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/Arguments/properties/HyperParameterTuningJobConfig/properties/Strategy")                                                 |
+| [TrainingJobEarlyStoppingType](#trainingjobearlystoppingtype)         | `string` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-tuningstep-properties-arguments-properties-hyperparametertuningjobconfig-properties-trainingjobearlystoppingtype.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/Arguments/properties/HyperParameterTuningJobConfig/properties/TrainingJobEarlyStoppingType")         |
+| [TuningJobCompletionCriteria](#tuningjobcompletioncriteria)           | `object` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-tuningstep-properties-arguments-properties-hyperparametertuningjobconfig-properties-tuningjobcompletioncriteria.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/Arguments/properties/HyperParameterTuningJobConfig/properties/TuningJobCompletionCriteria")           |
 
 ## HyperParameterTuningJobObjective
 
@@ -25,7 +25,7 @@
 
 *   cannot be null
 
-*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-tuningstep-properties-arguments-properties-hyperparametertuningjobconfig-properties-hyperparametertuningjobobjective.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/Arguments/properties/HyperParameterTuningJobConfig/properties/HyperParameterTuningJobObjective")
+*   defined in: [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-tuningstep-properties-arguments-properties-hyperparametertuningjobconfig-properties-hyperparametertuningjobobjective.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/Arguments/properties/HyperParameterTuningJobConfig/properties/HyperParameterTuningJobObjective")
 
 ### HyperParameterTuningJobObjective Type
 
@@ -43,7 +43,7 @@
 
 *   cannot be null
 
-*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-parameterranges.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/Arguments/properties/HyperParameterTuningJobConfig/properties/ParameterRanges")
+*   defined in: [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-parameterranges.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/Arguments/properties/HyperParameterTuningJobConfig/properties/ParameterRanges")
 
 ### ParameterRanges Type
 
@@ -61,7 +61,7 @@
 
 *   cannot be null
 
-*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-tuningstep-properties-arguments-properties-hyperparametertuningjobconfig-properties-resourcelimits.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/Arguments/properties/HyperParameterTuningJobConfig/properties/ResourceLimits")
+*   defined in: [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-tuningstep-properties-arguments-properties-hyperparametertuningjobconfig-properties-resourcelimits.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/Arguments/properties/HyperParameterTuningJobConfig/properties/ResourceLimits")
 
 ### ResourceLimits Type
 
@@ -79,7 +79,7 @@
 
 *   cannot be null
 
-*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-tuningstep-properties-arguments-properties-hyperparametertuningjobconfig-properties-strategy.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/Arguments/properties/HyperParameterTuningJobConfig/properties/Strategy")
+*   defined in: [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-tuningstep-properties-arguments-properties-hyperparametertuningjobconfig-properties-strategy.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/Arguments/properties/HyperParameterTuningJobConfig/properties/Strategy")
 
 ### Strategy Type
 
@@ -106,7 +106,7 @@
 
 *   cannot be null
 
-*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-tuningstep-properties-arguments-properties-hyperparametertuningjobconfig-properties-trainingjobearlystoppingtype.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/Arguments/properties/HyperParameterTuningJobConfig/properties/TrainingJobEarlyStoppingType")
+*   defined in: [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-tuningstep-properties-arguments-properties-hyperparametertuningjobconfig-properties-trainingjobearlystoppingtype.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/Arguments/properties/HyperParameterTuningJobConfig/properties/TrainingJobEarlyStoppingType")
 
 ### TrainingJobEarlyStoppingType Type
 
@@ -133,7 +133,7 @@
 
 *   cannot be null
 
-*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-tuningstep-properties-arguments-properties-hyperparametertuningjobconfig-properties-tuningjobcompletioncriteria.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/Arguments/properties/HyperParameterTuningJobConfig/properties/TuningJobCompletionCriteria")
+*   defined in: [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-tuningstep-properties-arguments-properties-hyperparametertuningjobconfig-properties-tuningjobcompletioncriteria.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/TuningStep/properties/Arguments/properties/HyperParameterTuningJobConfig/properties/TuningJobCompletionCriteria")
 
 ### TuningJobCompletionCriteria Type
 

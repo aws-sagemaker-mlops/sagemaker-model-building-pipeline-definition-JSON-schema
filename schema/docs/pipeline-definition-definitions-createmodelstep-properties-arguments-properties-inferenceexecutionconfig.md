@@ -4,9 +4,9 @@
 
 # InferenceExecutionConfig Properties
 
-| Property      | Type     | Required | Nullable       | Defined by                                                                                                                                                                                                                                                                                                                                                             |
-| :------------ | :------- | :------- | :------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Mode](#mode) | `string` | Optional | cannot be null | [SageMaker Pipeline Definition](pipeline-definition-definitions-createmodelstep-properties-arguments-properties-inferenceexecutionconfig-properties-mode.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/CreateModelStep/properties/Arguments/properties/InferenceExecutionConfig/properties/Mode") |
+| Property      | Type     | Required | Nullable       | Defined by                                                                                                                                                                                                                                                                                                                                                                    |
+| :------------ | :------- | :------- | :------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Mode](#mode) | `string` | Optional | cannot be null | [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-createmodelstep-properties-arguments-properties-inferenceexecutionconfig-properties-mode.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/CreateModelStep/properties/Arguments/properties/InferenceExecutionConfig/properties/Mode") |
 
 ## Mode
 
@@ -20,7 +20,7 @@
 
 *   cannot be null
 
-*   defined in: [SageMaker Pipeline Definition](pipeline-definition-definitions-createmodelstep-properties-arguments-properties-inferenceexecutionconfig-properties-mode.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/CreateModelStep/properties/Arguments/properties/InferenceExecutionConfig/properties/Mode")
+*   defined in: [SageMaker Pipeline Definition Schema](pipeline-definition-definitions-createmodelstep-properties-arguments-properties-inferenceexecutionconfig-properties-mode.md "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/#/definitions/CreateModelStep/properties/Arguments/properties/InferenceExecutionConfig/properties/Mode")
 
 ### Mode Type
 
