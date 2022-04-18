@@ -22,15 +22,15 @@ jobs:
 
       - name: Auto-gen human readbale json schema html
         run: |
-          rm -rf build
-          mkdir build
-          generate-schema-doc schema/pipeline-definition.schema.json build/index.html --config no_link_to_reused_ref
+          rm -rf docs
+          mkdir docs
+          generate-schema-doc schema/pipeline-definition.schema.json docs/index.html --config no_link_to_reused_ref
 
       - name: publish to gh-pages
         uses: JamesIves/github-pages-deploy-action@v4.3.0
         with:
           branch: gh-pages
-          folder: build
+          folder: docs
         if: github.event_name != 'pull_request'
 
 
