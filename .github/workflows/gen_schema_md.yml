@@ -17,7 +17,11 @@ jobs:
         run: npm install
 
       - name: Install deps
-        run: npm install -g @adobe/jsonschema2md && python -m pip install json-schema-for-humans
+        run: |
+          npm install -g @adobe/jsonschema2md
+          python -m pip install --upgrade pip
+          python -m pip install json-schema-for-humans
+          pip install awscli
 
       - name: Check out repo
         uses: actions/checkout@v2
