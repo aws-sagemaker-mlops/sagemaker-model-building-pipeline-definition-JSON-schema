@@ -291,7 +291,23 @@
 				"MaxAttempts": {
 					"type": "integer"
 				}
-			}
+			},
+			"required": ["ExceptionType"],
+			"additionalProperties": false
+		},
+		"CacheConfig": {
+			"type": "object",
+			"properties": {
+				"Enabled": {"type": "boolean"},
+				"ExpireAfter": {
+					"type": "string",
+					"description": "ISO 8601 duration string"
+				}
+			},
+			"required": [
+
+			],
+			"additionalProperties": false
 		},
 		"Tag": {
 			"type": "object",
@@ -917,6 +933,7 @@
 						"$ref": "#/definitions/RetryPolicy"
 					}
 				},
+				"CacheConfig": {"$ref": "#/definitions/CacheConfig"},
 				"Arguments": {
 					"type": "object",
 					"properties": {
@@ -1249,6 +1266,7 @@
 						"$ref": "#/definitions/RetryPolicy"
 					}
 				},
+				"CacheConfig": {"$ref": "#/definitions/CacheConfig"},
 				"Arguments": {
 					"$ref": "#/definitions/ProcessingArgs"
 				}
@@ -1284,6 +1302,7 @@
 						"$ref": "#/definitions/RetryPolicy"
 					}
 				},
+				"CacheConfig": {"$ref": "#/definitions/CacheConfig"},
 				"Arguments": {
 					"type": "object",
 					"properties": {
@@ -1868,6 +1887,7 @@
 				"FunctionArn": {
 					"type": "string"
 				},
+				"CacheConfig": {"$ref": "#/definitions/CacheConfig"},
 				"Arguments": {
 					"type": "object"
 				},
@@ -1916,6 +1936,7 @@
 				"SqsQueueUrl": {
 					"type": "string"
 				},
+				"CacheConfig": {"$ref": "#/definitions/CacheConfig"},
 				"Arguments": {
 					"type": "object"
 				},
@@ -1967,6 +1988,7 @@
 						"$ref": "#/definitions/RetryPolicy"
 					}
 				},
+				"CacheConfig": {"$ref": "#/definitions/CacheConfig"},
 				"Arguments": {
 					"type": "object",
 					"properties": {
@@ -2104,6 +2126,7 @@
 						"$ref": "#/definitions/RetryPolicy"
 					}
 				},
+				"CacheConfig": {"$ref": "#/definitions/CacheConfig"},
 				"CheckType": {
 					"type": "string",
 					"enum": ["DATA_BIAS", "MODEL_BIAS", "MODEL_EXPLAINABILITY"]
@@ -2158,6 +2181,7 @@
 						"$ref": "#/definitions/RetryPolicy"
 					}
 				},
+				"CacheConfig": {"$ref": "#/definitions/CacheConfig"},
 				"CheckType": {
 					"type": "string",
 					"enum": ["DATA_QUALITY", "MODEL_QUALITY"]
@@ -2206,6 +2230,7 @@
 				"Description": {
 					"$ref": "#/definitions/ParameterDescription"
 				},
+				"CacheConfig": {"$ref": "#/definitions/CacheConfig"},
 				"Arguments": {
 					"type": "object",
 					"properties": {
