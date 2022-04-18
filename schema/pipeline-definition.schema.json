@@ -1,7 +1,7 @@
 {
 	"$schema": "http://json-schema.org/schema#",
 	"$id": "https://github.com/jerrypeng7773/sagemaker-model-building-pipeline-definition-JSON-schema/schema/",
-	"title": "SageMaker Pipeline Definition",
+	"title": "SageMaker Pipeline Definition Schema",
 	"type": "object",
 	"definitions": {
 		"ParameterName": {
@@ -651,21 +651,6 @@
 							"$ref": "#/definitions/StringArgumentValue"
 						}
 					}
-				},
-				"ExperimentConfig": {
-					"type": "object",
-					"properties": {
-						"ExperimentName": {
-							"$ref": "#/definitions/StringArgumentValue"
-						},
-						"TrialComponentDisplayName": {
-							"$ref": "#/definitions/StringArgumentValue"
-						},
-						"TrialName": {
-							"$ref": "#/definitions/StringArgumentValue"
-						}
-					},
-					"additionalProperties": false
 				},
 				"NetworkConfig": {
 					"type": "object",
@@ -1327,21 +1312,6 @@
 									"$ref": "#/definitions/StringArgumentValue"
 								}
 							}
-						},
-						"ExperimentConfig": {
-							"type": "object",
-							"properties": {
-								"ExperimentName": {
-									"$ref": "#/definitions/StringArgumentValue"
-								},
-								"TrialComponentDisplayName": {
-									"$ref": "#/definitions/StringArgumentValue"
-								},
-								"TrialName": {
-									"$ref": "#/definitions/StringArgumentValue"
-								}
-							},
-							"additionalProperties": false
 						},
 						"MaxConcurrentTransforms": {
 							"$ref": "#/definitions/IntegerArgumentValue"
