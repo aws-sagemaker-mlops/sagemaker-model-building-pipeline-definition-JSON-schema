@@ -1,3 +1,0 @@
-## MaxAttempts Type
-
-`integer`

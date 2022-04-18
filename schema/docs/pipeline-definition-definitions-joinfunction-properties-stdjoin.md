@@ -1,3 +1,0 @@
-## Std:Join Type
-
-unknown

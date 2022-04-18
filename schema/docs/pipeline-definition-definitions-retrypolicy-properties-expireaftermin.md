@@ -1,3 +1,0 @@
-## ExpireAfterMin Type
-
-`integer`

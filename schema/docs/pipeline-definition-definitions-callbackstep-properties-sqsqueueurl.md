@@ -1,3 +1,0 @@
-## SqsQueueUrl Type
-
-`string`

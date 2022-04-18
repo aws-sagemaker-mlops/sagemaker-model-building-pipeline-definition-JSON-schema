@@ -1,3 +1,0 @@
-## BackoffRate Type
-
-`number`

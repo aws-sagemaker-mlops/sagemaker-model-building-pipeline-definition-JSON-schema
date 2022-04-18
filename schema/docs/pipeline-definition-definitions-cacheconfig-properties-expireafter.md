@@ -1,3 +1,0 @@
-## ExpireAfter Type
-
-`string`

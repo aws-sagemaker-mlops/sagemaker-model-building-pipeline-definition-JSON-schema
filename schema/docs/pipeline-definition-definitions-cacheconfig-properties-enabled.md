@@ -1,3 +1,0 @@
-## Enabled Type
-
-`boolean`
