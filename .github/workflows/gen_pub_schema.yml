@@ -1,0 +1,37 @@
+name: geneate and publish schema workflow
+
+on:
+    push:
+    pull_request:
+      branches:
+        - main
+
+jobs:
+
+  gen-schema:
+    runs-on: ubuntu-latest
+    container: python:3.7
+    steps:
+      - name: Install deps
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install json-schema-for-humans
+
+      - name: Check out repo
+        uses: actions/checkout@v2
+
+      - name: Auto-gen human readbale json schema html
+        run: |
+          rm -rf build
+          mkdir build
+          generate-schema-doc schema/pipeline-definition.schema.json build/index.html --config no_link_to_reused_ref
+
+      - name: publish to gh-pages
+        uses: JamesIves/github-pages-deploy-action@v4.3.0
+        with:
+          branch: gh-pages
+          folder: build
+        if: github.event_name != 'pull_request'
+
+
+
