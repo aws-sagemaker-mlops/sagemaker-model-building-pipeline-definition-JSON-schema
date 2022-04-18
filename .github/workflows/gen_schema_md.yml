@@ -26,9 +26,9 @@ jobs:
 
       - name: Auto-gen human readbale json schema html
         run: |
-          rm -rf html
-          mkdir html
-          generate-schema-doc schema/pipeline-definition.schema.json html/index.html --config no_link_to_reused_ref
+          rm -rf docs
+          mkdir docs
+          generate-schema-doc schema/pipeline-definition.schema.json docs/index.html --config no_link_to_reused_ref
 
       - name: Commit auto generated human readbale json schema html
         uses: stefanzweifel/git-auto-commit-action@v4
