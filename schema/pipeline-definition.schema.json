@@ -2328,6 +2328,201 @@
 			},
 			"required": ["Name", "Type", "Arguments"],
 			"additionalProperties": false
+		},
+		"AutoMLStep": {
+			"type": "object",
+			"properties": {
+				"Name": {
+					"$ref": "#/definitions/StepName"
+				},
+				"Type": {
+					"type": "string",
+					"enum": ["AutoML"]
+				},
+				"DependsOn": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/StepName"
+					}
+				},
+				"DisplayName": {
+					"$ref": "#/definitions/StepName"
+				},
+				"Description": {
+					"$ref": "#/definitions/ParameterDescription"
+				},
+				"RetryPolicies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/RetryPolicy"
+					}
+				},
+				"CacheConfig": {"$ref": "#/definitions/CacheConfig"},
+				"Arguments": {
+					"type": "object",
+					"properties": {
+						"AutoMLJobConfig": {
+							"type": "object",
+							"properties": {
+								"CandidateGenerationConfig": {
+									"type": "object",
+									"properties": {
+										"FeatureSpecificationS3Uri": {
+											"$ref": "#/definitions/StringArgumentValue"
+										}
+									},
+									"additionalProperties": false
+								},
+								"CompletionCriteria": {
+									"type": "object",
+									"properties": {
+										"MaxAutoMLJobRuntimeInSeconds": {
+											"type": "integer",
+											"minLength": 1
+										},
+										"MaxCandidates": {
+											"type": "integer",
+											"minLength": 1
+										},
+										"MaxRuntimePerTrainingJobInSeconds": {
+											"type": "integer",
+											"minLength": 1
+										}
+									},
+									"additionalProperties": false
+								},
+								"DataSplitConfig": {
+									"type": "object",
+									"properties": {
+										"ValidationFraction": {
+											"$ref": "#/definitions/FloatArgumentValue"
+										}
+									}
+								},
+								"Mode": {
+									"type": "string",
+									"enum": ["ENSEMBLING"]
+								},
+								"SecurityConfig": {
+									"type": "object",
+									"properties": {
+										"EnableInterContainerTrafficEncryption": {
+											"type": "boolean"
+										},
+										"VolumeKmsKeyId": {
+											"type": "string"
+										},
+										"VpcConfig": {
+											"type": "object",
+											"properties": {
+												"SecurityGroupIds": {
+													"type": "array",
+													"items": {
+														"$ref": "#/definitions/StringArgumentValue"
+													}
+												},
+												"Subnets": {
+													"type": "array",
+													"items": {
+														"$ref": "#/definitions/StringArgumentValue"
+													}
+												}
+											},
+											"additionalProperties": false
+										}
+									},
+									"additionalProperties": false
+								}
+							},
+							"required": ["Mode"],
+							"additionalProperties": false
+						},
+						"AutoMLJobObjective": {
+							"type": "object",
+							"properties": {
+								"MetricName": {
+									"type": "string",
+									"enum": ["Accuracy", "MSE", "F1", "F1macro", "AUC"]
+								}
+							},
+							"additionalProperties": false
+						},
+						"InputDataConfig": {
+							"type": "array",
+							"items": {
+								"type": "object",
+								"properties": {
+									"ChannelType": {
+										"type": "string",
+										"enum": ["training", "validation"]
+									},
+									"CompressionType": {
+										"type": "string",
+										"enum": ["None", "Gzip"]
+									},
+									"ContentType": {
+										"type": "string",
+										"enum": ["text/csv;header=present", "x-application/vnd.amazon+parquet"]
+									},
+									"DataSource": {
+										"type": "object",
+										"properties": {
+											"S3DataSource": {
+												"type": "object",
+												"properties": {
+													"S3DataType": {
+														"$ref": "#/definitions/StringArgumentValue"
+													},
+													"S3Uri": {
+														"$ref": "#/definitions/StringArgumentValue"
+													}
+												},
+												"additionalProperties": false
+											}
+										},
+										"additionalProperties": false
+									},
+									"TargetAttributeName": {
+										"$ref": "#/definitions/StringArgumentValue"
+									}
+								}
+							},
+							"minItems": 1,
+							"maxItems": 2,
+							"additionalProperties": false
+						},
+						"OutputDataConfig": {
+							"type": "object",
+							"properties": {
+								"KmsKeyId": {
+									"$ref": "#/definitions/StringArgumentValue"
+								},
+								"S3OutputPath": {
+									"$ref": "#/definitions/StringArgumentValue"
+								}
+							},
+							"additionalProperties": false
+						},
+						"RoleArn": {
+							"$ref": "#/definitions/StringArgumentValue"
+						},
+						"ProblemType": {
+							"type": "string",
+							"enum": ["BinaryClassification", "MulticlassClassification", "Regression"]
+						},
+						"Tags": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/Tag"
+							}
+						}
+					},
+					"required": ["AutoMLJobConfig", "InputDataConfig", "OutputDataConfig", "RoleArn"],
+					"additionalProperties": false
+				}
+			},
+			"required": ["Type", "Name", "Arguments"],
+			"additionalProperties": false
 		}
 	},
 	"properties": {
@@ -2401,6 +2596,12 @@
 					},
 					{
 						"$ref": "#/definitions/EMRStep"
+					},
+					{
+						"$ref": "#/definitions/FailStep"
+					},
+					{
+						"$ref": "#/definitions/AutoMLStep"
 					}
 				]
 			}
