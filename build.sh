@@ -12,10 +12,12 @@
 # ANY KIND, either express or implied. See the License for the specific
 # language governing permissions and limitations under the License.
 
-python -m ensurepip --upgrade
-python -m pip install json-schema-for-humans
+python3 -m venv pipeline-definition-json-schema
+source pipeline-definition-json-schema/bin/activate
+python3 -m ensurepip --upgrade
+python3 -m pip install json-schema-for-humans
 rm -rf ./build
 mkdir ./build
 generate-schema-doc schema/pipeline-definition.schema.json ./build/index.html --config no_link_to_reused_ref
-
+deactivate
 

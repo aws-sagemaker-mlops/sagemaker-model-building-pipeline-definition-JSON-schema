@@ -295,6 +295,24 @@
 			"required": ["ExceptionType"],
 			"additionalProperties": false
 		},
+		"VpcConfig": {
+			"type": "object",
+			"properties": {
+				"SecurityGroupIds": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/StringArgumentValue"
+					}
+				},
+				"Subnets": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/StringArgumentValue"
+					}
+				}
+			},
+			"additionalProperties": false
+		},
 		"CacheConfig": {
 			"type": "object",
 			"properties": {
@@ -320,6 +338,105 @@
 				}
 			},
 			"additionalProperties": false
+		},
+		"ProductionVariants": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"properties": {
+					"VariantName": {
+						"$ref": "#/definitions/StringArgumentValue"
+					},
+					"AcceleratorType": {
+						"$ref": "#/definitions/StringArgumentValue"
+					},
+					"ContainerStartupHealthCheckTimeoutInSeconds": {
+						"$ref": "#/definitions/IntegerArgumentValue"
+					},
+					"CoreDumpConfig": {
+						"type": "object",
+						"properties": {
+							"DestinationS3Uri": {
+								"$ref": "#/definitions/StringArgumentValue"
+							},
+							"KmsKeyId": {
+								"$ref": "#/definitions/StringArgumentValue"
+							}
+						},
+						"required": ["DestinationS3Uri"],
+						"additionalProperties": false
+					},
+					"EnableSSMAccess": {
+						"$ref": "#/definitions/BooleanArgumentValue"
+					},
+					"InferenceAmiVersion": {
+						"$ref": "#/definitions/StringArgumentValue"
+					},
+					"InitialInstanceCount": {
+						"$ref": "#/definitions/IntegerArgumentValue"
+					},
+					"InitialVariantWeight": {
+						"$ref": "#/definitions/IntegerArgumentValue"
+					},
+					"InstanceType": {
+						"$ref": "#/definitions/StringArgumentValue"
+					},
+					"ManagedInstanceScaling": {
+						"type": "object",
+						"properties": {
+							"MaxInstanceCount": {
+								"$ref": "#/definitions/IntegerArgumentValue"
+							},
+							"MinInstanceCount": {
+								"$ref": "#/definitions/IntegerArgumentValue"
+							},
+							"Status": {
+								"$ref": "#/definitions/StringArgumentValue"
+							}
+						},
+						"additionalProperties": false
+					},
+					"ModelDataDownloadTimeoutInSeconds": {
+						"$ref": "#/definitions/IntegerArgumentValue"
+					},
+					"ModelName": {
+						"$ref": "#/definitions/StringArgumentValue"
+					},
+					"RoutingConfig": {
+						"type": "object",
+						"properties": {
+							"RoutingStrategy": {
+								"$ref": "#/definitions/StringArgumentValue"
+							}
+						},
+						"required": ["RoutingStrategy"],
+						"additionalProperties": false
+					},
+					"ServerlessConfig": {
+						"type": "object",
+						"properties": {
+							"MaxConcurrency": {
+								"$ref": "#/definitions/IntegerArgumentValue"
+							},
+							"MemorySizeInMB": {
+								"$ref": "#/definitions/IntegerArgumentValue"
+							},
+							"ProvisionedConcurrency": {
+								"$ref": "#/definitions/IntegerArgumentValue"
+							}
+						},
+						"required": ["MaxConcurrency", "MemorySizeInMB"],
+						"additionalProperties": false
+					},
+					"VolumeSizeInGB": {
+						"$ref": "#/definitions/IntegerArgumentValue"
+					}
+				},
+				"required": ["VariantName"],
+				"additionalProperties": false
+			},
+			"minItems": 1,
+			"maxItems": 10
 		},
 		"ParameterRanges": {
 			"type": "object",
@@ -615,22 +732,7 @@
 					"additionalProperties": false
 				},
 				"VpcConfig": {
-					"type": "object",
-					"properties": {
-						"SecurityGroupIds": {
-							"type": "array",
-							"items": {
-								"$ref": "#/definitions/StringArgumentValue"
-							}
-						},
-						"Subnets": {
-							"type": "array",
-							"items": {
-								"$ref": "#/definitions/StringArgumentValue"
-							}
-						}
-					},
-					"additionalProperties": false
+					"$ref": "#/definitions/VpcConfig"
 				}
 			},
 			"required": ["AlgorithmSpecification", "OutputDataConfig", "ResourceConfig", "RoleArn", "StoppingCondition"],
@@ -678,22 +780,7 @@
 							"$ref": "#/definitions/BooleanArgumentValue"
 						},
 						"VpcConfig": {
-							"type": "object",
-							"properties": {
-								"SecurityGroupIds": {
-									"type": "array",
-									"items": {
-										"$ref": "#/definitions/StringArgumentValue"
-									}
-								},
-								"Subnets": {
-									"type": "array",
-									"items": {
-										"$ref": "#/definitions/StringArgumentValue"
-									}
-								}
-							},
-							"additionalProperties": false
+							"$ref": "#/definitions/VpcConfig"
 						}
 					},
 					"additionalProperties": false
@@ -811,6 +898,9 @@
 					"items": {
 						"$ref": "#/definitions/Tag"
 					}
+				},
+				"ProcessingJobName": {
+					"$ref": "#/definitions/StringArgumentValue"
 				}
 			},
 			"additionalProperties": false
@@ -1268,6 +1358,9 @@
 								"$ref": "#/definitions/Tag"
 							}
 						},
+						"TrainingJobName": {
+							"$ref": "#/definitions/StringArgumentValue"
+						},
 						"TensorBoardOutputConfig": {
 							"type": "object",
 							"properties": {
@@ -1281,22 +1374,7 @@
 							"additionalProperties": false
 						},
 						"VpcConfig": {
-							"type": "object",
-							"properties": {
-								"SecurityGroupIds": {
-									"type": "array",
-									"items": {
-										"$ref": "#/definitions/StringArgumentValue"
-									}
-								},
-								"Subnets": {
-									"type": "array",
-									"items": {
-										"$ref": "#/definitions/StringArgumentValue"
-									}
-								}
-							},
-							"additionalProperties": false
+							"$ref": "#/definitions/VpcConfig"
 						}
 					},
 					"additionalProperties": false
@@ -1564,23 +1642,11 @@
 								"$ref": "#/definitions/Tag"
 							}
 						},
+						"ModelName": {
+							"$ref": "#/definitions/StringArgumentValue"
+						},
 						"VpcConfig": {
-							"type": "object",
-							"properties": {
-								"SecurityGroupIds": {
-									"type": "array",
-									"items": {
-										"$ref": "#/definitions/StringArgumentValue"
-									}
-								},
-								"Subnets": {
-									"type": "array",
-									"items": {
-										"$ref": "#/definitions/StringArgumentValue"
-									}
-								}
-							},
-							"additionalProperties": false
+							"$ref": "#/definitions/VpcConfig"
 						}
 					},
 					"required": ["ExecutionRoleArn"],
@@ -1856,6 +1922,9 @@
 							"additionalProperties": false
 						}
 					},
+					"ModelPackageName": {
+						"$ref": "#/definitions/StringArgumentValue"
+					},
 					"additionalProperties": false
 				}
 			},
@@ -2054,6 +2123,9 @@
 							"items": {
 								"$ref": "#/definitions/Tag"
 							}
+						},
+						"HyperParameterTuningJobName": {
+							"$ref": "#/definitions/StringArgumentValue"
 						},
 						"TrainingJobDefinition": {
 							"$ref": "#/definitions/HyperParameterTrainingJobDefinition"
@@ -2413,22 +2485,7 @@
 											"type": "string"
 										},
 										"VpcConfig": {
-											"type": "object",
-											"properties": {
-												"SecurityGroupIds": {
-													"type": "array",
-													"items": {
-														"$ref": "#/definitions/StringArgumentValue"
-													}
-												},
-												"Subnets": {
-													"type": "array",
-													"items": {
-														"$ref": "#/definitions/StringArgumentValue"
-													}
-												}
-											},
-											"additionalProperties": false
+											"$ref": "#/definitions/VpcConfig"
 										}
 									},
 									"additionalProperties": false
@@ -2515,9 +2572,165 @@
 							"items": {
 								"$ref": "#/definitions/Tag"
 							}
+						},
+						"AutoMLJobName": {
+							"$ref": "#/definitions/StringArgumentValue"
 						}
 					},
 					"required": ["AutoMLJobConfig", "InputDataConfig", "OutputDataConfig", "RoleArn"],
+					"additionalProperties": false
+				}
+			},
+			"required": ["Type", "Name", "Arguments"],
+			"additionalProperties": false
+		},
+		"EndpointStep": {
+			"type": "object",
+			"properties": {
+				"Name": {
+					"$ref": "#/definitions/StepName"
+				},
+				"Type": {
+					"type": "string",
+					"enum": ["Endpoint"]
+				},
+				"DependsOn": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/StepName"
+					}
+				},
+				"DisplayName": {
+					"$ref": "#/definitions/StepName"
+				},
+				"Description": {
+					"$ref": "#/definitions/ParameterDescription"
+				},
+				"Arguments": {
+					"type": "object",
+					"properties": {
+						"EndpointConfigName": {
+							"$ref": "#/definitions/StringArgumentValue"
+						},
+						"Tags": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/Tag"
+							}
+						},
+						"EndpointName": {
+							"$ref": "#/definitions/StringArgumentValue"
+						}
+					},
+					"required": ["EndpointConfigName"],
+					"additionalProperties": false
+				}
+			},
+			"required": ["Type", "Name", "Arguments"],
+			"additionalProperties": false
+		},
+		"EndpointConfigStep": {
+			"type": "object",
+			"properties": {
+				"Name": {
+					"$ref": "#/definitions/StepName"
+				},
+				"Type": {
+					"type": "string",
+					"enum": ["Endpoint"]
+				},
+				"DependsOn": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/StepName"
+					}
+				},
+				"DisplayName": {
+					"$ref": "#/definitions/StepName"
+				},
+				"Description": {
+					"$ref": "#/definitions/ParameterDescription"
+				},
+				"Arguments": {
+					"type": "object",
+					"properties": {
+						"AsyncInferenceConfig": {
+							"type": "object",
+							"properties": {
+								"ClientConfig": {
+									"type": "object",
+									"properties": {
+										"MaxConcurrentInvocationsPerInstance": {
+											"$ref": "#/definitions/IntegerArgumentValue"
+										},
+										"OutputConfig": {
+											"type": "object",
+											"properties": {
+												"KmsKeyId": {
+													"$ref": "#/definitions/StringArgumentValue"
+												},
+												"NotificationConfig": {
+													"type": "object",
+													"properties": {
+														"ErrorTopic": {
+															"$ref": "#/definitions/StringArgumentValue"
+														},
+														"IncludeInferenceResponseIn": {
+															"type": "array",
+															"items": {
+																"$ref": "#/definitions/StringArgumentValue"
+															}
+														},
+														"SuccessTopic": {
+															"$ref": "#/definitions/StringArgumentValue"
+														}
+													},
+													"additionalProperties": false
+												},
+												"S3FailurePath": {
+													"$ref": "#/definitions/StringArgumentValue"
+												},
+												"S3OutputPath": {
+													"$ref": "#/definitions/StringArgumentValue"
+												}
+											},
+											"additionalProperties": false
+										}
+									},
+									"additionalProperties": false
+								}
+							},
+							"additionalProperties": false
+						},
+						"EnableNetworkIsolation": {
+							"$ref": "#/definitions/BooleanArgumentValue"
+						},
+						"ExecutionRoleArn": {
+							"$ref": "#/definitions/StringArgumentValue"
+						},
+						"KmsKeyId": {
+							"$ref": "#/definitions/StringArgumentValue"
+						},
+						"Tags": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/Tag"
+							}
+						},
+						"EndpointConfigName": {
+							"$ref": "#/definitions/StringArgumentValue"
+						},
+						"VpcConfig": {
+							"$ref": "#/definitions/VpcConfig"
+						},
+						"ProductionVariants": {
+							"$ref": "#/definitions/ProductionVariants"
+						},
+						"ShadowProductionVariants": {
+							"$ref": "#/definitions/ProductionVariants"
+						}
+					},
+					"required": ["ProductionVariants"],
 					"additionalProperties": false
 				}
 			},
@@ -2602,6 +2815,12 @@
 					},
 					{
 						"$ref": "#/definitions/AutoMLStep"
+					},
+					{
+						"$ref": "#/definitions/EndpointStep"
+					},
+					{
+						"$ref": "#/definitions/EndpointConfigStep"
 					}
 				]
 			}
