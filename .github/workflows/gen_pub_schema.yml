@@ -28,7 +28,7 @@ jobs:
           generate-schema-doc schema/pipeline-definition.schema.json docs/index.html --config no_link_to_reused_ref
 
       - name: publish to gh-pages
-        uses: JamesIves/github-pages-deploy-action@v4.3.0
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
           folder: docs
