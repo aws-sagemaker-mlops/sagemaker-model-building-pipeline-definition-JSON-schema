@@ -18,6 +18,6 @@ python3 -m ensurepip --upgrade
 python3 -m pip install json-schema-for-humans
 rm -rf ./build
 mkdir ./build
-generate-schema-doc schema/pipeline-definition.schema.json ./build/index.html --config no_link_to_reused_ref
+generate-schema-doc schema/pipeline-definition.schema.json ./build/index.html
 deactivate
 
