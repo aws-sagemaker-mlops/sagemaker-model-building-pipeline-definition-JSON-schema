@@ -149,65 +149,9 @@
 			"required": ["Std:Join"],
 			"additionalProperties": false
 		},
-		"StringArgumentValue": {
-			"oneOf": [
-				{
-					"type": "string"
-				},
-				{
-					"$ref": "#/definitions/GetFunction"
-				},
-				{
-					"$ref": "#/definitions/JoinFunction"
-				},
-				{
-					"$ref": "#/definitions/JsonGetFunction"
-				}
-			]
-		},
-		"IntegerArgumentValue": {
-			"oneOf": [
-				{
-					"type": "integer"
-				},
-				{
-					"$ref": "#/definitions/GetFunction"
-				},
-				{
-					"$ref": "#/definitions/JsonGetFunction"
-				}
-			]
-		},
-		"FloatArgumentValue": {
-			"oneOf": [
-				{
-					"type": "number"
-				},
-				{
-					"$ref": "#/definitions/GetFunction"
-				},
-				{
-					"$ref": "#/definitions/JsonGetFunction"
-				}
-			]
-		},
-		"BooleanArgumentValue": {
-			"oneOf": [
-				{
-					"type": "boolean"
-				},
-				{
-					"$ref": "#/definitions/GetFunction"
-				},
-				{
-					"$ref": "#/definitions/JsonGetFunction"
-				}
-			]
-		},
 		"StepName": {
 			"type": "string",
 			"pattern": "^[A-Za-z0-9\\-_]{1,64}$"
-
 		},
 		"StepDisplayName": {
 			"type": "string",
@@ -293,46 +237,6 @@
 			},
 			"required": ["Std:If"],
 			"additionalProperties": false
-		},
-		"api.String": {
-			"anyOf": [
-				{
-					"type": "string"
-				},
-				{
-					"$ref": "#/definitions/ArgumentFunction"
-				}
-			]
-		},
-		"api.Integer": {
-			"anyOf": [
-				{
-					"type": "integer"
-				},
-				{
-					"$ref": "#/definitions/ArgumentFunction"
-				}
-			]
-		},
-		"api.Number": {
-			"anyOf": [
-				{
-					"type": "number"
-				},
-				{
-					"$ref": "#/definitions/ArgumentFunction"
-				}
-			]
-		},
-		"api.Boolean": {
-			"anyOf": [
-				{
-					"type": "boolean"
-				},
-				{
-					"$ref": "#/definitions/ArgumentFunction"
-				}
-			]
 		},
 		"api.athena.AclConfiguration": {
 			"anyOf": [
@@ -421,7 +325,14 @@
 							]
 						},
 						"KmsKey": {
-							"$ref": "#/definitions/api.String"
+							"anyOf": [
+								{
+									"type": "string"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						}
 					},
 					"additionalProperties": false
@@ -578,7 +489,14 @@
 					"type": "object",
 					"properties": {
 						"OutputLocation": {
-							"$ref": "#/definitions/api.String"
+							"anyOf": [
+								{
+									"type": "string"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						},
 						"EncryptionConfiguration": {
 							"$ref": "#/definitions/api.athena.EncryptionConfiguration"
@@ -612,7 +530,14 @@
 					"type": "object",
 					"properties": {
 						"Enabled": {
-							"$ref": "#/definitions/api.Boolean"
+							"anyOf": [
+								{
+									"type": "boolean"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						},
 						"MaxAgeInMinutes": {
 							"anyOf": [
@@ -656,17 +581,38 @@
 					"type": "object",
 					"properties": {
 						"Name": {
-							"$ref": "#/definitions/api.String"
+							"anyOf": [
+								{
+									"type": "string"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						},
 						"Version": {
-							"$ref": "#/definitions/api.String"
+							"anyOf": [
+								{
+									"type": "string"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						},
 						"Args": {
 							"anyOf": [
 								{
 									"type": "array",
 									"items": {
-										"$ref": "#/definitions/api.String"
+										"anyOf": [
+											{
+												"type": "string"
+											},
+											{
+												"$ref": "#/definitions/ArgumentFunction"
+											}
+										]
 									}
 								},
 								{
@@ -679,7 +625,14 @@
 								{
 									"type": "object",
 									"additionalProperties": {
-										"$ref": "#/definitions/api.String"
+										"anyOf": [
+											{
+												"type": "string"
+											},
+											{
+												"$ref": "#/definitions/ArgumentFunction"
+											}
+										]
 									}
 								},
 								{
@@ -769,16 +722,44 @@
 							]
 						},
 						"EvaluationPeriods": {
-							"$ref": "#/definitions/api.Integer"
+							"anyOf": [
+								{
+									"type": "integer"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						},
 						"MetricName": {
-							"$ref": "#/definitions/api.String"
+							"anyOf": [
+								{
+									"type": "string"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						},
 						"Namespace": {
-							"$ref": "#/definitions/api.String"
+							"anyOf": [
+								{
+									"type": "string"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						},
 						"Period": {
-							"$ref": "#/definitions/api.Integer"
+							"anyOf": [
+								{
+									"type": "integer"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						},
 						"Statistic": {
 							"anyOf": [
@@ -840,7 +821,14 @@
 					"type": "object",
 					"properties": {
 						"Enabled": {
-							"$ref": "#/definitions/api.Boolean"
+							"anyOf": [
+								{
+									"type": "boolean"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						},
 						"LogGroupName": {
 							"anyOf": [
@@ -935,16 +923,44 @@
 							]
 						},
 						"MinimumCapacityUnits": {
-							"$ref": "#/definitions/api.Integer"
+							"anyOf": [
+								{
+									"type": "integer"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						},
 						"MaximumCapacityUnits": {
-							"$ref": "#/definitions/api.Integer"
+							"anyOf": [
+								{
+									"type": "integer"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						},
 						"MaximumOnDemandCapacityUnits": {
-							"$ref": "#/definitions/api.Integer"
+							"anyOf": [
+								{
+									"type": "integer"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						},
 						"MaximumCoreCapacityUnits": {
-							"$ref": "#/definitions/api.Integer"
+							"anyOf": [
+								{
+									"type": "integer"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						}
 					},
 					"additionalProperties": false
@@ -960,7 +976,14 @@
 					"type": "object",
 					"properties": {
 						"Classification": {
-							"$ref": "#/definitions/api.String"
+							"anyOf": [
+								{
+									"type": "string"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						},
 						"Configurations": {
 							"anyOf": [
@@ -980,7 +1003,14 @@
 								{
 									"type": "object",
 									"additionalProperties": {
-										"$ref": "#/definitions/api.String"
+										"anyOf": [
+											{
+												"type": "string"
+											},
+											{
+												"$ref": "#/definitions/ArgumentFunction"
+											}
+										]
 									}
 								},
 								{
@@ -1005,7 +1035,14 @@
 							"$ref": "#/definitions/api.emr.VolumeSpecification"
 						},
 						"VolumesPerInstance": {
-							"$ref": "#/definitions/api.Integer"
+							"anyOf": [
+								{
+									"type": "integer"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						}
 					},
 					"additionalProperties": false
@@ -1034,7 +1071,14 @@
 							]
 						},
 						"EbsOptimized": {
-							"$ref": "#/definitions/api.Boolean"
+							"anyOf": [
+								{
+									"type": "boolean"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						}
 					},
 					"additionalProperties": false
@@ -1307,7 +1351,14 @@
 							]
 						},
 						"InstanceCount": {
-							"$ref": "#/definitions/api.Integer"
+							"anyOf": [
+								{
+									"type": "integer"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						},
 						"Configurations": {
 							"anyOf": [
@@ -1601,10 +1652,24 @@
 					"type": "object",
 					"properties": {
 						"Key": {
-							"$ref": "#/definitions/api.String"
+							"anyOf": [
+								{
+									"type": "string"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						},
 						"Value": {
-							"$ref": "#/definitions/api.String"
+							"anyOf": [
+								{
+									"type": "string"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						}
 					},
 					"additionalProperties": false
@@ -1931,10 +1996,24 @@
 					"type": "object",
 					"properties": {
 						"MinCapacity": {
-							"$ref": "#/definitions/api.Integer"
+							"anyOf": [
+								{
+									"type": "integer"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						},
 						"MaxCapacity": {
-							"$ref": "#/definitions/api.Integer"
+							"anyOf": [
+								{
+									"type": "integer"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						}
 					},
 					"additionalProperties": false
@@ -1950,10 +2029,24 @@
 					"type": "object",
 					"properties": {
 						"Name": {
-							"$ref": "#/definitions/api.String"
+							"anyOf": [
+								{
+									"type": "string"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						},
 						"Description": {
-							"$ref": "#/definitions/api.String"
+							"anyOf": [
+								{
+									"type": "string"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						},
 						"Action": {
 							"$ref": "#/definitions/api.emr.ScalingAction"
@@ -2049,10 +2142,24 @@
 							]
 						},
 						"ScalingAdjustment": {
-							"$ref": "#/definitions/api.Integer"
+							"anyOf": [
+								{
+									"type": "integer"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						},
 						"CoolDown": {
-							"$ref": "#/definitions/api.Integer"
+							"anyOf": [
+								{
+									"type": "integer"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						}
 					},
 					"additionalProperties": false
@@ -2265,10 +2372,24 @@
 					"type": "object",
 					"properties": {
 						"Key": {
-							"$ref": "#/definitions/api.String"
+							"anyOf": [
+								{
+									"type": "string"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						},
 						"Value": {
-							"$ref": "#/definitions/api.String"
+							"anyOf": [
+								{
+									"type": "string"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						}
 					},
 					"additionalProperties": false
@@ -2284,13 +2405,34 @@
 					"type": "object",
 					"properties": {
 						"VolumeType": {
-							"$ref": "#/definitions/api.String"
+							"anyOf": [
+								{
+									"type": "string"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						},
 						"Iops": {
-							"$ref": "#/definitions/api.Integer"
+							"anyOf": [
+								{
+									"type": "integer"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						},
 						"SizeInGB": {
-							"$ref": "#/definitions/api.Integer"
+							"anyOf": [
+								{
+									"type": "integer"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						},
 						"Throughput": {
 							"anyOf": [
@@ -2579,10 +2721,24 @@
 							]
 						},
 						"ETag": {
-							"$ref": "#/definitions/api.String"
+							"anyOf": [
+								{
+									"type": "string"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						},
 						"ManifestEtag": {
-							"$ref": "#/definitions/api.String"
+							"anyOf": [
+								{
+									"type": "string"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						}
 					},
 					"additionalProperties": false
@@ -2694,7 +2850,14 @@
 							]
 						},
 						"EnableSageMakerMetricsTimeSeries": {
-							"$ref": "#/definitions/api.Boolean"
+							"anyOf": [
+								{
+									"type": "boolean"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						},
 						"ContainerEntrypoint": {
 							"anyOf": [
@@ -3599,7 +3762,14 @@
 							]
 						},
 						"LocalModeEnabled": {
-							"$ref": "#/definitions/api.Boolean"
+							"anyOf": [
+								{
+									"type": "boolean"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						},
 						"ExternalFeatureTransformers": {
 							"$ref": "#/definitions/api.sagemaker.AutoMLExternalFeatureTransformers"
@@ -3727,7 +3897,14 @@
 							]
 						},
 						"EnableInterContainerTrafficEncryption": {
-							"$ref": "#/definitions/api.Boolean"
+							"anyOf": [
+								{
+									"type": "boolean"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						},
 						"VpcConfig": {
 							"$ref": "#/definitions/api.sagemaker.VpcConfig"
@@ -4001,7 +4178,14 @@
 							]
 						},
 						"GenerateInferenceId": {
-							"$ref": "#/definitions/api.Boolean"
+							"anyOf": [
+								{
+									"type": "boolean"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						}
 					},
 					"additionalProperties": false
@@ -4278,7 +4462,14 @@
 							"$ref": "#/definitions/api.sagemaker.ShuffleConfig"
 						},
 						"EnableFFM": {
-							"$ref": "#/definitions/api.Boolean"
+							"anyOf": [
+								{
+									"type": "boolean"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						}
 					},
 					"additionalProperties": false
@@ -5634,13 +5825,34 @@
 							"$ref": "#/definitions/api.sagemaker.StoppingCondition"
 						},
 						"EnableNetworkIsolation": {
-							"$ref": "#/definitions/api.Boolean"
+							"anyOf": [
+								{
+									"type": "boolean"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						},
 						"EnableInterContainerTrafficEncryption": {
-							"$ref": "#/definitions/api.Boolean"
+							"anyOf": [
+								{
+									"type": "boolean"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						},
 						"EnableManagedSpotTraining": {
-							"$ref": "#/definitions/api.Boolean"
+							"anyOf": [
+								{
+									"type": "boolean"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						},
 						"CheckpointConfig": {
 							"$ref": "#/definitions/api.sagemaker.CheckpointConfig"
@@ -6476,7 +6688,14 @@
 					"type": "object",
 					"properties": {
 						"EnableCaching": {
-							"$ref": "#/definitions/api.Boolean"
+							"anyOf": [
+								{
+									"type": "boolean"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						}
 					},
 					"additionalProperties": false
@@ -6807,7 +7026,14 @@
 					"type": "object",
 					"properties": {
 						"EnableInfraCheck": {
-							"$ref": "#/definitions/api.Boolean"
+							"anyOf": [
+								{
+									"type": "boolean"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						}
 					},
 					"additionalProperties": false
@@ -6870,7 +7096,14 @@
 					"type": "object",
 					"properties": {
 						"EnableMultipleJobs": {
-							"$ref": "#/definitions/api.Boolean"
+							"anyOf": [
+								{
+									"type": "boolean"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						},
 						"PlacementSpecifications": {
 							"anyOf": [
@@ -7239,13 +7472,34 @@
 					"type": "object",
 					"properties": {
 						"EnableEnhancedMetrics": {
-							"$ref": "#/definitions/api.Boolean"
+							"anyOf": [
+								{
+									"type": "boolean"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						},
 						"EnableDetailedObservability": {
-							"$ref": "#/definitions/api.Boolean"
+							"anyOf": [
+								{
+									"type": "boolean"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						},
 						"MetricPublishFrequencyInSeconds": {
-							"$ref": "#/definitions/api.Integer"
+							"anyOf": [
+								{
+									"type": "integer"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						}
 					},
 					"additionalProperties": false
@@ -7273,7 +7527,14 @@
 							]
 						},
 						"MetricPublishFrequencyInSeconds": {
-							"$ref": "#/definitions/api.Integer"
+							"anyOf": [
+								{
+									"type": "integer"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						}
 					},
 					"additionalProperties": false
@@ -7387,7 +7648,14 @@
 					"type": "object",
 					"properties": {
 						"AcceptEula": {
-							"$ref": "#/definitions/api.Boolean"
+							"anyOf": [
+								{
+									"type": "boolean"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						}
 					},
 					"additionalProperties": false
@@ -7711,7 +7979,14 @@
 							"$ref": "#/definitions/api.sagemaker.ModelInput"
 						},
 						"Framework": {
-							"$ref": "#/definitions/api.String"
+							"anyOf": [
+								{
+									"type": "string"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						},
 						"FrameworkVersion": {
 							"anyOf": [
@@ -7726,7 +8001,14 @@
 							]
 						},
 						"NearestModelName": {
-							"$ref": "#/definitions/api.String"
+							"anyOf": [
+								{
+									"type": "string"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						},
 						"SamplePayloadUrl": {
 							"anyOf": [
@@ -7759,10 +8041,24 @@
 							"$ref": "#/definitions/api.sagemaker.AdditionalS3DataSource"
 						},
 						"ModelDataETag": {
-							"$ref": "#/definitions/api.String"
+							"anyOf": [
+								{
+									"type": "string"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						},
 						"IsCheckpoint": {
-							"$ref": "#/definitions/api.Boolean"
+							"anyOf": [
+								{
+									"type": "boolean"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						},
 						"BaseModel": {
 							"$ref": "#/definitions/api.sagemaker.BaseModel"
@@ -7896,10 +8192,24 @@
 					"type": "object",
 					"properties": {
 						"EnableInterContainerTrafficEncryption": {
-							"$ref": "#/definitions/api.Boolean"
+							"anyOf": [
+								{
+									"type": "boolean"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						},
 						"EnableNetworkIsolation": {
-							"$ref": "#/definitions/api.Boolean"
+							"anyOf": [
+								{
+									"type": "boolean"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						},
 						"VpcConfig": {
 							"$ref": "#/definitions/api.sagemaker.VpcConfig"
@@ -7954,7 +8264,14 @@
 							]
 						},
 						"ContinuousUpload": {
-							"$ref": "#/definitions/api.Boolean"
+							"anyOf": [
+								{
+									"type": "boolean"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						},
 						"KmsKeyId": {
 							"anyOf": [
@@ -8039,10 +8356,24 @@
 							]
 						},
 						"RemoveJobNameFromS3OutputPath": {
-							"$ref": "#/definitions/api.Boolean"
+							"anyOf": [
+								{
+									"type": "boolean"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						},
 						"DisableModelUpload": {
-							"$ref": "#/definitions/api.Boolean"
+							"anyOf": [
+								{
+									"type": "boolean"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						},
 						"Channels": {
 							"anyOf": [
@@ -8403,7 +8734,14 @@
 					"type": "object",
 					"properties": {
 						"OutputName": {
-							"$ref": "#/definitions/api.String"
+							"anyOf": [
+								{
+									"type": "string"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						},
 						"S3Output": {
 							"$ref": "#/definitions/api.sagemaker.ProcessingS3Output"
@@ -8412,7 +8750,14 @@
 							"$ref": "#/definitions/api.sagemaker.ProcessingFeatureStoreOutput"
 						},
 						"AppManaged": {
-							"$ref": "#/definitions/api.Boolean"
+							"anyOf": [
+								{
+									"type": "boolean"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						}
 					},
 					"additionalProperties": false
@@ -8775,7 +9120,14 @@
 							]
 						},
 						"EnableSSMAccess": {
-							"$ref": "#/definitions/api.Boolean"
+							"anyOf": [
+								{
+									"type": "boolean"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						},
 						"ManagedInstanceScaling": {
 							"$ref": "#/definitions/api.sagemaker.ProductionVariantManagedInstanceScaling"
@@ -8821,7 +9173,14 @@
 								{
 									"type": "array",
 									"items": {
-										"$ref": "#/definitions/api.String"
+										"anyOf": [
+											{
+												"type": "string"
+											},
+											{
+												"$ref": "#/definitions/ArgumentFunction"
+											}
+										]
 									},
 									"minItems": 0,
 									"maxItems": 1
@@ -9154,7 +9513,14 @@
 							]
 						},
 						"ProfilingIntervalInMilliseconds": {
-							"$ref": "#/definitions/api.Integer"
+							"anyOf": [
+								{
+									"type": "integer"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						},
 						"ProfilingParameters": {
 							"anyOf": [
@@ -9179,7 +9545,14 @@
 							]
 						},
 						"DisableProfiler": {
-							"$ref": "#/definitions/api.Boolean"
+							"anyOf": [
+								{
+									"type": "boolean"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						}
 					},
 					"additionalProperties": false
@@ -9300,7 +9673,14 @@
 					"type": "object",
 					"properties": {
 						"EnableRemoteDebug": {
-							"$ref": "#/definitions/api.Boolean"
+							"anyOf": [
+								{
+									"type": "boolean"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						}
 					},
 					"additionalProperties": false
@@ -9452,7 +9832,14 @@
 							]
 						},
 						"UseReservedCapacity": {
-							"$ref": "#/definitions/api.Boolean"
+							"anyOf": [
+								{
+									"type": "boolean"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						},
 						"InstancePlacementConfig": {
 							"$ref": "#/definitions/api.sagemaker.InstancePlacementConfig"
@@ -9794,10 +10181,24 @@
 							]
 						},
 						"ETag": {
-							"$ref": "#/definitions/api.String"
+							"anyOf": [
+								{
+									"type": "string"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						},
 						"ManifestEtag": {
-							"$ref": "#/definitions/api.String"
+							"anyOf": [
+								{
+									"type": "string"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						}
 					},
 					"additionalProperties": false
@@ -9825,7 +10226,14 @@
 							]
 						},
 						"AcceptEula": {
-							"$ref": "#/definitions/api.Boolean"
+							"anyOf": [
+								{
+									"type": "boolean"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						},
 						"JobType": {
 							"anyOf": [
@@ -9872,7 +10280,14 @@
 							]
 						},
 						"EvaluatorArn": {
-							"$ref": "#/definitions/api.String"
+							"anyOf": [
+								{
+									"type": "string"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						},
 						"SequenceLength": {
 							"anyOf": [
@@ -9900,7 +10315,14 @@
 					"type": "object",
 					"properties": {
 						"EnableSessionTagChaining": {
-							"$ref": "#/definitions/api.Boolean"
+							"anyOf": [
+								{
+									"type": "boolean"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						}
 					},
 					"additionalProperties": false
@@ -9916,7 +10338,14 @@
 					"type": "object",
 					"properties": {
 						"Seed": {
-							"$ref": "#/definitions/api.Integer"
+							"anyOf": [
+								{
+									"type": "integer"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						}
 					},
 					"additionalProperties": false
@@ -10631,7 +11060,14 @@
 					"type": "object",
 					"properties": {
 						"TargetObjectiveMetricValue": {
-							"$ref": "#/definitions/api.Number"
+							"anyOf": [
+								{
+									"type": "number"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						},
 						"BestObjectiveNotImproving": {
 							"$ref": "#/definitions/api.sagemaker.BestObjectiveNotImproving"
@@ -10695,7 +11131,14 @@
 							]
 						},
 						"EnableS3ContextKeysOnInputData": {
-							"$ref": "#/definitions/api.Boolean"
+							"anyOf": [
+								{
+									"type": "boolean"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						},
 						"ExecutionRole": {
 							"anyOf": [
@@ -10846,32 +11289,118 @@
 				"LeftValue": {
 					"anyOf": [
 						{
-							"$ref": "#/definitions/StringArgumentValue"
+							"oneOf": [
+								{
+									"type": "string"
+								},
+								{
+									"$ref": "#/definitions/GetFunction"
+								},
+								{
+									"$ref": "#/definitions/JoinFunction"
+								},
+								{
+									"$ref": "#/definitions/JsonGetFunction"
+								}
+							]
 						},
 						{
-							"$ref": "#/definitions/BooleanArgumentValue"
+							"oneOf": [
+								{
+									"type": "boolean"
+								},
+								{
+									"$ref": "#/definitions/GetFunction"
+								},
+								{
+									"$ref": "#/definitions/JsonGetFunction"
+								}
+							]
 						},
 						{
-							"$ref": "#/definitions/IntegerArgumentValue"
+							"oneOf": [
+								{
+									"type": "integer"
+								},
+								{
+									"$ref": "#/definitions/GetFunction"
+								},
+								{
+									"$ref": "#/definitions/JsonGetFunction"
+								}
+							]
 						},
 						{
-							"$ref": "#/definitions/FloatArgumentValue"
+							"oneOf": [
+								{
+									"type": "number"
+								},
+								{
+									"$ref": "#/definitions/GetFunction"
+								},
+								{
+									"$ref": "#/definitions/JsonGetFunction"
+								}
+							]
 						}
 					]
 				},
 				"RightValue": {
 					"anyOf": [
 						{
-							"$ref": "#/definitions/StringArgumentValue"
+							"oneOf": [
+								{
+									"type": "string"
+								},
+								{
+									"$ref": "#/definitions/GetFunction"
+								},
+								{
+									"$ref": "#/definitions/JoinFunction"
+								},
+								{
+									"$ref": "#/definitions/JsonGetFunction"
+								}
+							]
 						},
 						{
-							"$ref": "#/definitions/BooleanArgumentValue"
+							"oneOf": [
+								{
+									"type": "boolean"
+								},
+								{
+									"$ref": "#/definitions/GetFunction"
+								},
+								{
+									"$ref": "#/definitions/JsonGetFunction"
+								}
+							]
 						},
 						{
-							"$ref": "#/definitions/IntegerArgumentValue"
+							"oneOf": [
+								{
+									"type": "integer"
+								},
+								{
+									"$ref": "#/definitions/GetFunction"
+								},
+								{
+									"$ref": "#/definitions/JsonGetFunction"
+								}
+							]
 						},
 						{
-							"$ref": "#/definitions/FloatArgumentValue"
+							"oneOf": [
+								{
+									"type": "number"
+								},
+								{
+									"$ref": "#/definitions/GetFunction"
+								},
+								{
+									"$ref": "#/definitions/JsonGetFunction"
+								}
+							]
 						}
 					]
 				},
@@ -10893,16 +11422,59 @@
 				"QueryValue": {
 					"anyOf": [
 						{
-							"$ref": "#/definitions/StringArgumentValue"
+							"oneOf": [
+								{
+									"type": "string"
+								},
+								{
+									"$ref": "#/definitions/GetFunction"
+								},
+								{
+									"$ref": "#/definitions/JoinFunction"
+								},
+								{
+									"$ref": "#/definitions/JsonGetFunction"
+								}
+							]
 						},
 						{
-							"$ref": "#/definitions/BooleanArgumentValue"
+							"oneOf": [
+								{
+									"type": "boolean"
+								},
+								{
+									"$ref": "#/definitions/GetFunction"
+								},
+								{
+									"$ref": "#/definitions/JsonGetFunction"
+								}
+							]
 						},
 						{
-							"$ref": "#/definitions/IntegerArgumentValue"
+							"oneOf": [
+								{
+									"type": "integer"
+								},
+								{
+									"$ref": "#/definitions/GetFunction"
+								},
+								{
+									"$ref": "#/definitions/JsonGetFunction"
+								}
+							]
 						},
 						{
-							"$ref": "#/definitions/FloatArgumentValue"
+							"oneOf": [
+								{
+									"type": "number"
+								},
+								{
+									"$ref": "#/definitions/GetFunction"
+								},
+								{
+									"$ref": "#/definitions/JsonGetFunction"
+								}
+							]
 						}
 					]
 				},
@@ -10911,16 +11483,59 @@
 					"items": {
 						"anyOf": [
 							{
-								"$ref": "#/definitions/StringArgumentValue"
+								"oneOf": [
+									{
+										"type": "string"
+									},
+									{
+										"$ref": "#/definitions/GetFunction"
+									},
+									{
+										"$ref": "#/definitions/JoinFunction"
+									},
+									{
+										"$ref": "#/definitions/JsonGetFunction"
+									}
+								]
 							},
 							{
-								"$ref": "#/definitions/BooleanArgumentValue"
+								"oneOf": [
+									{
+										"type": "boolean"
+									},
+									{
+										"$ref": "#/definitions/GetFunction"
+									},
+									{
+										"$ref": "#/definitions/JsonGetFunction"
+									}
+								]
 							},
 							{
-								"$ref": "#/definitions/IntegerArgumentValue"
+								"oneOf": [
+									{
+										"type": "integer"
+									},
+									{
+										"$ref": "#/definitions/GetFunction"
+									},
+									{
+										"$ref": "#/definitions/JsonGetFunction"
+									}
+								]
 							},
 							{
-								"$ref": "#/definitions/FloatArgumentValue"
+								"oneOf": [
+									{
+										"type": "number"
+									},
+									{
+										"$ref": "#/definitions/GetFunction"
+									},
+									{
+										"$ref": "#/definitions/JsonGetFunction"
+									}
+								]
 							}
 						]
 					}
@@ -10999,25 +11614,51 @@
 		"CacheConfig": {
 			"type": "object",
 			"properties": {
-				"Enabled": {"type": "boolean"},
+				"Enabled": {
+					"type": "boolean"
+				},
 				"ExpireAfter": {
 					"type": "string",
 					"description": "ISO 8601 duration string"
 				}
 			},
-			"required": [
-
-			],
+			"required": [],
 			"additionalProperties": false
 		},
 		"Tag": {
 			"type": "object",
 			"properties": {
 				"Key": {
-					"$ref": "#/definitions/StringArgumentValue"
+					"oneOf": [
+						{
+							"type": "string"
+						},
+						{
+							"$ref": "#/definitions/GetFunction"
+						},
+						{
+							"$ref": "#/definitions/JoinFunction"
+						},
+						{
+							"$ref": "#/definitions/JsonGetFunction"
+						}
+					]
 				},
 				"Value": {
-					"$ref": "#/definitions/StringArgumentValue"
+					"oneOf": [
+						{
+							"type": "string"
+						},
+						{
+							"$ref": "#/definitions/GetFunction"
+						},
+						{
+							"$ref": "#/definitions/JoinFunction"
+						},
+						{
+							"$ref": "#/definitions/JsonGetFunction"
+						}
+					]
 				}
 			},
 			"additionalProperties": false
@@ -11374,13 +12015,34 @@
 							"$ref": "#/definitions/api.sagemaker.ResourceTags"
 						},
 						"EnableNetworkIsolation": {
-							"$ref": "#/definitions/api.Boolean"
+							"anyOf": [
+								{
+									"type": "boolean"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						},
 						"EnableInterContainerTrafficEncryption": {
-							"$ref": "#/definitions/api.Boolean"
+							"anyOf": [
+								{
+									"type": "boolean"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						},
 						"EnableManagedSpotTraining": {
-							"$ref": "#/definitions/api.Boolean"
+							"anyOf": [
+								{
+									"type": "boolean"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						},
 						"CheckpointConfig": {
 							"$ref": "#/definitions/api.sagemaker.CheckpointConfig"
@@ -11465,7 +12127,14 @@
 							]
 						},
 						"DisableEFA": {
-							"$ref": "#/definitions/api.Boolean"
+							"anyOf": [
+								{
+									"type": "boolean"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						},
 						"Environment": {
 							"anyOf": [
@@ -11568,20 +12237,20 @@
 							"$ref": "#/definitions/api.sagemaker.MlflowConfig"
 						},
 						"WithWarmPoolValidationError": {
-							"$ref": "#/definitions/api.Boolean"
+							"anyOf": [
+								{
+									"type": "boolean"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						},
 						"ModelPackageConfig": {
 							"$ref": "#/definitions/api.sagemaker.ModelPackageConfig"
 						}
 					},
 					"additionalProperties": false
-				},
-				"VirtualStepType": {
-					"type": "string",
-					"enum": ["FineTune", "ExecuteCode", "DeployModel"]
-				},
-				"VirtualStepName": {
-					"$ref": "#/definitions/StepName"
 				}
 			},
 			"required": ["Type", "Name"],
@@ -11638,10 +12307,24 @@
 												"type": "object",
 												"properties": {
 													"InputName": {
-														"$ref": "#/definitions/api.String"
+														"anyOf": [
+															{
+																"type": "string"
+															},
+															{
+																"$ref": "#/definitions/ArgumentFunction"
+															}
+														]
 													},
 													"AppManaged": {
-														"$ref": "#/definitions/api.Boolean"
+														"anyOf": [
+															{
+																"type": "boolean"
+															},
+															{
+																"$ref": "#/definitions/ArgumentFunction"
+															}
+														]
 													},
 													"S3Input": {
 														"$ref": "#/definitions/api.sagemaker.ProcessingS3Input"
@@ -12429,7 +13112,14 @@
 							"$ref": "#/definitions/api.sagemaker.VpcConfig"
 						},
 						"EnableNetworkIsolation": {
-							"$ref": "#/definitions/api.Boolean"
+							"anyOf": [
+								{
+									"type": "boolean"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						}
 					},
 					"additionalProperties": false
@@ -12521,10 +13211,24 @@
 							"$ref": "#/definitions/api.sagemaker.InferenceSpecification"
 						},
 						"RequireImageScan": {
-							"$ref": "#/definitions/api.Boolean"
+							"anyOf": [
+								{
+									"type": "boolean"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						},
 						"WorkflowDisabled": {
-							"$ref": "#/definitions/api.Boolean"
+							"anyOf": [
+								{
+									"type": "boolean"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						},
 						"Tags": {
 							"anyOf": [
@@ -12574,10 +13278,24 @@
 							]
 						},
 						"Domain": {
-							"$ref": "#/definitions/api.String"
+							"anyOf": [
+								{
+									"type": "string"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						},
 						"Task": {
-							"$ref": "#/definitions/api.String"
+							"anyOf": [
+								{
+									"type": "string"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						},
 						"SamplePayloadUrl": {
 							"anyOf": [
@@ -12592,7 +13310,14 @@
 							]
 						},
 						"SamplePayloadContentType": {
-							"$ref": "#/definitions/api.String"
+							"anyOf": [
+								{
+									"type": "string"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						},
 						"CustomerMetadataProperties": {
 							"anyOf": [
@@ -12709,7 +13434,9 @@
 				"FunctionArn": {
 					"type": "string"
 				},
-				"CacheConfig": {"$ref": "#/definitions/CacheConfig"},
+				"CacheConfig": {
+					"$ref": "#/definitions/CacheConfig"
+				},
 				"Arguments": {
 					"type": "object"
 				},
@@ -12719,7 +13446,20 @@
 						"type": "object",
 						"properties": {
 							"OutputName": {
-								"$ref": "#/definitions/StringArgumentValue"
+								"oneOf": [
+									{
+										"type": "string"
+									},
+									{
+										"$ref": "#/definitions/GetFunction"
+									},
+									{
+										"$ref": "#/definitions/JoinFunction"
+									},
+									{
+										"$ref": "#/definitions/JsonGetFunction"
+									}
+								]
 							},
 							"OutputType": {
 								"type": "string",
@@ -12758,7 +13498,9 @@
 				"SqsQueueUrl": {
 					"type": "string"
 				},
-				"CacheConfig": {"$ref": "#/definitions/CacheConfig"},
+				"CacheConfig": {
+					"$ref": "#/definitions/CacheConfig"
+				},
 				"Arguments": {
 					"type": "object"
 				},
@@ -12768,7 +13510,20 @@
 						"type": "object",
 						"properties": {
 							"OutputName": {
-								"$ref": "#/definitions/StringArgumentValue"
+								"oneOf": [
+									{
+										"type": "string"
+									},
+									{
+										"$ref": "#/definitions/GetFunction"
+									},
+									{
+										"$ref": "#/definitions/JoinFunction"
+									},
+									{
+										"$ref": "#/definitions/JsonGetFunction"
+									}
+								]
 							},
 							"OutputType": {
 								"type": "string",
@@ -12914,19 +13669,78 @@
 					"enum": ["DATA_BIAS", "MODEL_BIAS", "MODEL_EXPLAINABILITY"]
 				},
 				"ModelPackageGroupName": {
-					"$ref": "#/definitions/StringArgumentValue"
+					"oneOf": [
+						{
+							"type": "string"
+						},
+						{
+							"$ref": "#/definitions/GetFunction"
+						},
+						{
+							"$ref": "#/definitions/JoinFunction"
+						},
+						{
+							"$ref": "#/definitions/JsonGetFunction"
+						}
+					]
 				},
 				"SuppliedBaselineConstraints": {
-					"$ref": "#/definitions/StringArgumentValue"
+					"oneOf": [
+						{
+							"type": "string"
+						},
+						{
+							"$ref": "#/definitions/GetFunction"
+						},
+						{
+							"$ref": "#/definitions/JoinFunction"
+						},
+						{
+							"$ref": "#/definitions/JsonGetFunction"
+						}
+					]
 				},
 				"SkipCheck": {
-					"$ref": "#/definitions/BooleanArgumentValue"
+					"oneOf": [
+						{
+							"type": "boolean"
+						},
+						{
+							"$ref": "#/definitions/GetFunction"
+						},
+						{
+							"$ref": "#/definitions/JsonGetFunction"
+						}
+					]
 				},
 				"RegisterNewBaseline": {
-					"$ref": "#/definitions/BooleanArgumentValue"
+					"oneOf": [
+						{
+							"type": "boolean"
+						},
+						{
+							"$ref": "#/definitions/GetFunction"
+						},
+						{
+							"$ref": "#/definitions/JsonGetFunction"
+						}
+					]
 				},
 				"ModelName": {
-					"$ref": "#/definitions/StringArgumentValue"
+					"oneOf": [
+						{
+							"type": "string"
+						},
+						{
+							"$ref": "#/definitions/GetFunction"
+						},
+						{
+							"$ref": "#/definitions/JoinFunction"
+						},
+						{
+							"$ref": "#/definitions/JsonGetFunction"
+						}
+					]
 				},
 				"Arguments": {
 					"description": "The SageMaker CreateProcessingJob request for the check job.",
@@ -12942,10 +13756,24 @@
 												"type": "object",
 												"properties": {
 													"InputName": {
-														"$ref": "#/definitions/api.String"
+														"anyOf": [
+															{
+																"type": "string"
+															},
+															{
+																"$ref": "#/definitions/ArgumentFunction"
+															}
+														]
 													},
 													"AppManaged": {
-														"$ref": "#/definitions/api.Boolean"
+														"anyOf": [
+															{
+																"type": "boolean"
+															},
+															{
+																"$ref": "#/definitions/ArgumentFunction"
+															}
+														]
 													},
 													"S3Input": {
 														"$ref": "#/definitions/api.sagemaker.ProcessingS3Input"
@@ -13419,19 +14247,78 @@
 					"enum": ["DATA_QUALITY", "MODEL_QUALITY"]
 				},
 				"ModelPackageGroupName": {
-					"$ref": "#/definitions/StringArgumentValue"
+					"oneOf": [
+						{
+							"type": "string"
+						},
+						{
+							"$ref": "#/definitions/GetFunction"
+						},
+						{
+							"$ref": "#/definitions/JoinFunction"
+						},
+						{
+							"$ref": "#/definitions/JsonGetFunction"
+						}
+					]
 				},
 				"SuppliedBaselineConstraints": {
-					"$ref": "#/definitions/StringArgumentValue"
+					"oneOf": [
+						{
+							"type": "string"
+						},
+						{
+							"$ref": "#/definitions/GetFunction"
+						},
+						{
+							"$ref": "#/definitions/JoinFunction"
+						},
+						{
+							"$ref": "#/definitions/JsonGetFunction"
+						}
+					]
 				},
 				"SuppliedBaselineStatistics": {
-					"$ref": "#/definitions/StringArgumentValue"
+					"oneOf": [
+						{
+							"type": "string"
+						},
+						{
+							"$ref": "#/definitions/GetFunction"
+						},
+						{
+							"$ref": "#/definitions/JoinFunction"
+						},
+						{
+							"$ref": "#/definitions/JsonGetFunction"
+						}
+					]
 				},
 				"SkipCheck": {
-					"$ref": "#/definitions/BooleanArgumentValue"
+					"oneOf": [
+						{
+							"type": "boolean"
+						},
+						{
+							"$ref": "#/definitions/GetFunction"
+						},
+						{
+							"$ref": "#/definitions/JsonGetFunction"
+						}
+					]
 				},
 				"RegisterNewBaseline": {
-					"$ref": "#/definitions/BooleanArgumentValue"
+					"oneOf": [
+						{
+							"type": "boolean"
+						},
+						{
+							"$ref": "#/definitions/GetFunction"
+						},
+						{
+							"$ref": "#/definitions/JsonGetFunction"
+						}
+					]
 				},
 				"Arguments": {
 					"description": "The SageMaker CreateProcessingJob request for the check job.",
@@ -13447,10 +14334,24 @@
 												"type": "object",
 												"properties": {
 													"InputName": {
-														"$ref": "#/definitions/api.String"
+														"anyOf": [
+															{
+																"type": "string"
+															},
+															{
+																"$ref": "#/definitions/ArgumentFunction"
+															}
+														]
 													},
 													"AppManaged": {
-														"$ref": "#/definitions/api.Boolean"
+														"anyOf": [
+															{
+																"type": "boolean"
+															},
+															{
+																"$ref": "#/definitions/ArgumentFunction"
+															}
+														]
 													},
 													"S3Input": {
 														"$ref": "#/definitions/api.sagemaker.ProcessingS3Input"
@@ -14020,7 +14921,14 @@
 													]
 												},
 												"InstanceCount": {
-													"$ref": "#/definitions/api.Integer"
+													"anyOf": [
+														{
+															"type": "integer"
+														},
+														{
+															"$ref": "#/definitions/ArgumentFunction"
+														}
+													]
 												},
 												"InstanceGroups": {
 													"anyOf": [
@@ -14064,10 +14972,24 @@
 													"$ref": "#/definitions/api.emr.PlacementType"
 												},
 												"TerminationProtected": {
-													"$ref": "#/definitions/api.Boolean"
+													"anyOf": [
+														{
+															"type": "boolean"
+														},
+														{
+															"$ref": "#/definitions/ArgumentFunction"
+														}
+													]
 												},
 												"UnhealthyNodeReplacement": {
-													"$ref": "#/definitions/api.Boolean"
+													"anyOf": [
+														{
+															"type": "boolean"
+														},
+														{
+															"$ref": "#/definitions/ArgumentFunction"
+														}
+													]
 												},
 												"HadoopVersion": {
 													"anyOf": [
@@ -14290,7 +15212,14 @@
 									]
 								},
 								"VisibleToAllUsers": {
-									"$ref": "#/definitions/api.Boolean"
+									"anyOf": [
+										{
+											"type": "boolean"
+										},
+										{
+											"$ref": "#/definitions/ArgumentFunction"
+										}
+									]
 								},
 								"JobFlowRole": {
 									"anyOf": [
@@ -14377,7 +15306,14 @@
 									]
 								},
 								"EbsRootVolumeSize": {
-									"$ref": "#/definitions/api.Integer"
+									"anyOf": [
+										{
+											"type": "integer"
+										},
+										{
+											"$ref": "#/definitions/ArgumentFunction"
+										}
+									]
 								},
 								"RepoUpgradeOnBoot": {
 									"anyOf": [
@@ -14394,7 +15330,14 @@
 									"$ref": "#/definitions/api.emr.KerberosAttributes"
 								},
 								"StepConcurrencyLevel": {
-									"$ref": "#/definitions/api.Integer"
+									"anyOf": [
+										{
+											"type": "integer"
+										},
+										{
+											"$ref": "#/definitions/ArgumentFunction"
+										}
+									]
 								},
 								"ManagedScalingPolicy": {
 									"$ref": "#/definitions/api.emr.ManagedScalingPolicy"
@@ -14425,19 +15368,47 @@
 									]
 								},
 								"EbsRootVolumeIops": {
-									"$ref": "#/definitions/api.Integer"
+									"anyOf": [
+										{
+											"type": "integer"
+										},
+										{
+											"$ref": "#/definitions/ArgumentFunction"
+										}
+									]
 								},
 								"EbsRootVolumeThroughput": {
-									"$ref": "#/definitions/api.Integer"
+									"anyOf": [
+										{
+											"type": "integer"
+										},
+										{
+											"$ref": "#/definitions/ArgumentFunction"
+										}
+									]
 								},
 								"ExtendedSupport": {
-									"$ref": "#/definitions/api.Boolean"
+									"anyOf": [
+										{
+											"type": "boolean"
+										},
+										{
+											"$ref": "#/definitions/ArgumentFunction"
+										}
+									]
 								},
 								"MonitoringConfiguration": {
 									"$ref": "#/definitions/api.emr.MonitoringConfiguration"
 								},
 								"SessionEnabled": {
-									"$ref": "#/definitions/api.Boolean"
+									"anyOf": [
+										{
+											"type": "boolean"
+										},
+										{
+											"$ref": "#/definitions/ArgumentFunction"
+										}
+									]
 								}
 							},
 							"additionalProperties": false,
@@ -14508,7 +15479,20 @@
 					"type": "object",
 					"properties": {
 						"ErrorMessage": {
-							"$ref": "#/definitions/StringArgumentValue"
+							"oneOf": [
+								{
+									"type": "string"
+								},
+								{
+									"$ref": "#/definitions/GetFunction"
+								},
+								{
+									"$ref": "#/definitions/JoinFunction"
+								},
+								{
+									"$ref": "#/definitions/JsonGetFunction"
+								}
+							]
 						}
 					}
 				}
@@ -14863,7 +15847,14 @@
 							"$ref": "#/definitions/api.sagemaker.VpcConfig"
 						},
 						"EnableNetworkIsolation": {
-							"$ref": "#/definitions/api.Boolean"
+							"anyOf": [
+								{
+									"type": "boolean"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						},
 						"MetricsConfig": {
 							"$ref": "#/definitions/api.sagemaker.MetricsConfig"
@@ -14982,10 +15973,36 @@
 			"type": "object",
 			"properties": {
 				"ExperimentName": {
-					"$ref": "#/definitions/StringArgumentValue"
+					"oneOf": [
+						{
+							"type": "string"
+						},
+						{
+							"$ref": "#/definitions/GetFunction"
+						},
+						{
+							"$ref": "#/definitions/JoinFunction"
+						},
+						{
+							"$ref": "#/definitions/JsonGetFunction"
+						}
+					]
 				},
 				"TrialName": {
-					"$ref": "#/definitions/StringArgumentValue"
+					"oneOf": [
+						{
+							"type": "string"
+						},
+						{
+							"$ref": "#/definitions/GetFunction"
+						},
+						{
+							"$ref": "#/definitions/JoinFunction"
+						},
+						{
+							"$ref": "#/definitions/JsonGetFunction"
+						}
+					]
 				}
 			},
 			"additionalProperties": false
@@ -14994,10 +16011,36 @@
 			"type": "object",
 			"properties": {
 				"MlflowResourceArn": {
-					"$ref": "#/definitions/StringArgumentValue"
+					"oneOf": [
+						{
+							"type": "string"
+						},
+						{
+							"$ref": "#/definitions/GetFunction"
+						},
+						{
+							"$ref": "#/definitions/JoinFunction"
+						},
+						{
+							"$ref": "#/definitions/JsonGetFunction"
+						}
+					]
 				},
 				"MlflowExperimentName": {
-					"$ref": "#/definitions/StringArgumentValue"
+					"oneOf": [
+						{
+							"type": "string"
+						},
+						{
+							"$ref": "#/definitions/GetFunction"
+						},
+						{
+							"$ref": "#/definitions/JoinFunction"
+						},
+						{
+							"$ref": "#/definitions/JsonGetFunction"
+						}
+					]
 				}
 			},
 			"additionalProperties": false
@@ -15009,7 +16052,20 @@
 					"type": "object",
 					"properties": {
 						"Arn": {
-							"$ref": "#/definitions/StringArgumentValue"
+							"oneOf": [
+								{
+									"type": "string"
+								},
+								{
+									"$ref": "#/definitions/GetFunction"
+								},
+								{
+									"$ref": "#/definitions/JoinFunction"
+								},
+								{
+									"$ref": "#/definitions/JsonGetFunction"
+								}
+							]
 						}
 					},
 					"required": ["Arn"],
@@ -15019,7 +16075,20 @@
 					"type": "object",
 					"properties": {
 						"Name": {
-							"$ref": "#/definitions/StringArgumentValue"
+							"oneOf": [
+								{
+									"type": "string"
+								},
+								{
+									"$ref": "#/definitions/GetFunction"
+								},
+								{
+									"$ref": "#/definitions/JoinFunction"
+								},
+								{
+									"$ref": "#/definitions/JsonGetFunction"
+								}
+							]
 						},
 						"Type": {
 							"type": "string",
@@ -15067,10 +16136,36 @@
 					"description": "Runs an EMR Serverless job on an existing application (ApplicationId) or on a new application the step creates (ApplicationConfig).",
 					"properties": {
 						"ExecutionRoleArn": {
-							"$ref": "#/definitions/StringArgumentValue"
+							"oneOf": [
+								{
+									"type": "string"
+								},
+								{
+									"$ref": "#/definitions/GetFunction"
+								},
+								{
+									"$ref": "#/definitions/JoinFunction"
+								},
+								{
+									"$ref": "#/definitions/JsonGetFunction"
+								}
+							]
 						},
 						"ApplicationId": {
-							"$ref": "#/definitions/StringArgumentValue"
+							"oneOf": [
+								{
+									"type": "string"
+								},
+								{
+									"$ref": "#/definitions/GetFunction"
+								},
+								{
+									"$ref": "#/definitions/JoinFunction"
+								},
+								{
+									"$ref": "#/definitions/JsonGetFunction"
+								}
+							]
 						},
 						"ApplicationConfig": {
 							"type": "object",
@@ -15092,7 +16187,20 @@
 						"Tags": {
 							"type": "object",
 							"additionalProperties": {
-								"$ref": "#/definitions/StringArgumentValue"
+								"oneOf": [
+									{
+										"type": "string"
+									},
+									{
+										"$ref": "#/definitions/GetFunction"
+									},
+									{
+										"$ref": "#/definitions/JoinFunction"
+									},
+									{
+										"$ref": "#/definitions/JsonGetFunction"
+									}
+								]
 							}
 						}
 					},
@@ -15406,7 +16514,14 @@
 							]
 						},
 						"HubName": {
-							"$ref": "#/definitions/api.String"
+							"anyOf": [
+								{
+									"type": "string"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						},
 						"HubContentDisplayName": {
 							"anyOf": [
@@ -15572,7 +16687,14 @@
 							"$ref": "#/definitions/api.athena.ResultConfiguration"
 						},
 						"WorkGroup": {
-							"$ref": "#/definitions/api.String"
+							"anyOf": [
+								{
+									"type": "string"
+								},
+								{
+									"$ref": "#/definitions/ArgumentFunction"
+								}
+							]
 						},
 						"ExecutionParameters": {
 							"anyOf": [
@@ -15651,7 +16773,20 @@
 											"S3Uris": {
 												"type": "array",
 												"items": {
-													"$ref": "#/definitions/StringArgumentValue"
+													"oneOf": [
+														{
+															"type": "string"
+														},
+														{
+															"$ref": "#/definitions/GetFunction"
+														},
+														{
+															"$ref": "#/definitions/JoinFunction"
+														},
+														{
+															"$ref": "#/definitions/JsonGetFunction"
+														}
+													]
 												}
 											}
 										},
@@ -15980,7 +17115,20 @@
 										"$ref": "#/definitions/LineageEntityReference"
 									},
 									"AssociationType": {
-										"$ref": "#/definitions/StringArgumentValue"
+										"oneOf": [
+											{
+												"type": "string"
+											},
+											{
+												"$ref": "#/definitions/GetFunction"
+											},
+											{
+												"$ref": "#/definitions/JoinFunction"
+											},
+											{
+												"$ref": "#/definitions/JsonGetFunction"
+											}
+										]
 									}
 								},
 								"required": ["Source", "Destination"],
@@ -16210,7 +17358,8 @@
 		"Parameters": {
 			"type": "array",
 			"items": {
-				"oneOf": [{
+				"oneOf": [
+					{
 						"$ref": "#/definitions/StringParameter"
 					},
 					{
@@ -16249,9 +17398,6 @@
 			"type": "array",
 			"items": {
 				"oneOf": [
-					{
-						"$ref": "#/definitions/ConditionStep"
-					},
 					{
 						"$ref": "#/definitions/TrainingStep"
 					},
@@ -16317,6 +17463,9 @@
 					},
 					{
 						"$ref": "#/definitions/LineageStep"
+					},
+					{
+						"$ref": "#/definitions/ConditionStep"
 					},
 					{
 						"$ref": "#/definitions/ForEachStep"
